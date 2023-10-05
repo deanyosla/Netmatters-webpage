@@ -3,60 +3,58 @@
 // ==========================================
 
 .footer-outer {
-    display: flex;
-    flex-grow: 1;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: #323544;
+  background-color: #323544;
+  width: 100%;
+}
 
-  }
-
- .footer-container {
+.footer-container {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  margin: 2rem auto 0; 
+  margin: 2rem auto 0;
 }
 footer h4 {
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 400;
-    margin-bottom: 26px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 26px;
 }
 
 .links-container :first-child {
-    margin-top: 0;
-  }
-  
+  margin-top: 0;
+}
+
 .links-container {
-    background-color: none;
-    display: flex;
-    flex-direction: column;
-  }
+  background-color: none;
+  display: flex;
+  flex-direction: column;
+}
 .footer-bottom {
-    background: #212330;
-    color: white;
-    bottom: 0;
+  background: #212330;
+  color: white;
+  bottom: 0;
 }
 
 .sitemap {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 .sitemap:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-.footer-container,
-.socials-container,
-.links-container {
-    margin-bottom: 1rem;
-}    
+// .footer-container,
+// .socials-container,
+// .links-container {
+//     margin-bottom: 1rem;
+// }
+.socials img {
+  width: 250px;
+}
+
 .main-links a {
-    color: white;
-    font-size: 12px;
-    text-decoration: none;
+  color: white;
+  font-size: 13px;
+  text-decoration: none;
 }
 .main-links a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

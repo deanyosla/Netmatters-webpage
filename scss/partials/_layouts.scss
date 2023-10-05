@@ -1,0 +1,26 @@
+// ==========================================
+// Layouts
+// ==========================================
+
+.inner-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .inner-container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .inner-container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .inner-container {
+    width: 1170px;
+  }
+}
