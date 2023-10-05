@@ -1,0 +1,54 @@
+// ==========================================
+// Media queries
+// ===========================================
+
+@media screen and (min-width: 768px) {
+  .header-wrap {
+    min-height: calc(100vh - 400px);
+  }  
+  .links-container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      border: 2px solid red;
+    }
+  
+    .main-links {
+      width: 45%;
+    }
+  
+    .links-container:first-child {
+      margin-top: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .main-links {
+      width: 20%;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .main-links {
+      width: 23%;
+    }
+  }
+  
+  @media screen and (min-width: 1200px) {
+    .footer-container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .socials-container {
+      width: 40%;
+      margin-bottom: 0;
+    }
+  
+    .links-container {
+      width: 55%;
+      margin-bottom: 40px;
+    }
+  }
+  
