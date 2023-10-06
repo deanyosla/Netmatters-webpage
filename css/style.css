@@ -371,6 +371,7 @@ footer h4 {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 26px;
+  padding-left: 5px;
 }
 
 .socials-container a {
@@ -384,15 +385,14 @@ footer h4 {
   text-decoration: underline;
 }
 
+.nm-logo-wh {
+  margin-top: 3rem;
+}
+
 .links-container {
   display: flex;
   flex-direction: column;
-}
-
-.footer-bottom {
-  background: #212330;
-  color: white;
-  padding-top: 10px;
+  width: 800px;
 }
 
 .sitemap {
@@ -406,6 +406,7 @@ footer h4 {
 
 .socials-container img {
   width: 250px;
+  padding-left: 2px;
 }
 
 .socials {
@@ -413,7 +414,11 @@ footer h4 {
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  max-width: 100px;
+  max-width: 150px;
+}
+
+.link-title {
+  padding: 0;
 }
 
 .main-links a {
@@ -429,22 +434,35 @@ footer h4 {
 .footer-bottom {
   display: flex;
   flex-direction: row;
+  background: #212330;
+  color: white;
   gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 13px;
 }
 
+.copyright::before {
+  white-space: pre;
+}
+
 @media screen and (min-width: 768px) {
   .links-container {
     flex-direction: row;
     flex-wrap: wrap;
-    border: 2px solid red;
   }
   .main-links {
     width: 45%;
     margin: 0 0 1.5rem 0;
     padding: 0;
+  }
+  .hyphen {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 768px) {
+  .hyphen {
+    display: none;
   }
 }
 @media screen and (min-width: 992px) {
@@ -460,6 +478,9 @@ footer h4 {
   .main-links {
     padding: 0 1rem;
     width: 25%;
+  }
+  .link-title {
+    padding-top: 35px;
   }
   .links-container {
     margin-bottom: 40px;
@@ -489,6 +510,15 @@ footer h4 {
   text-decoration: none;
 }
 
+.social-icon-fb,
+.social-icon-li,
+.social-icon-tw,
+.social-icon-in {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: white;
+}
+
 .fb-ico:hover {
   background-color: #3b5998;
 }
@@ -503,15 +533,6 @@ footer h4 {
 
 .tw-ico:hover {
   background-color: #00aced;
-}
-
-.social-icon-fb,
-.social-icon-li,
-.social-icon-tw,
-.social-icon-in {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: white;
 }
 
 @media (min-width: 600px) {

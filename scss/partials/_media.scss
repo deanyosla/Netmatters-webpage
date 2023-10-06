@@ -6,13 +6,20 @@
   .links-container {
     flex-direction: row;
     flex-wrap: wrap;
-    border: 2px solid red;
   }
 
   .main-links {
     width: 45%;
     margin: 0 0 1.5rem 0;
     padding: 0;
+  }
+  .hyphen {
+    padding: 0 5px;
+  }
+}
+@media (max-width: 768px) {
+  .hyphen {
+    display: none;
   }
 }
 
@@ -31,7 +38,9 @@
     padding: 0 1rem;
     width: 25%;
   }
-
+  .link-title {
+    padding-top: 35px;
+  }
   .links-container {
     margin-bottom: 40px;
   }

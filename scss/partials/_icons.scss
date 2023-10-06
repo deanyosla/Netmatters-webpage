@@ -19,8 +19,18 @@
   margin: 0.25rem;
   text-decoration: none;
 }
+.social-icon-fb,
+.social-icon-li,
+.social-icon-tw,
+.social-icon-in {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: white;
+}
 
+// ==============================================
 // Hover styles
+// ==============================================
 
 .fb-ico:hover {
   background-color: #3b5998;
@@ -34,16 +44,10 @@
 .tw-ico:hover {
   background-color: #00aced;
 }
-.social-icon-fb,
-.social-icon-li,
-.social-icon-tw,
-.social-icon-in {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: white;
-}
 
+// ====================================================
 // Media queries
+// ====================================================
 
 @media (min-width: 600px) {
   .socials {

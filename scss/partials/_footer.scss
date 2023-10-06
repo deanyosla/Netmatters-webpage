@@ -17,6 +17,7 @@ footer h4 {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 26px;
+  padding-left: 5px;
 }
 .socials-container a {
   color: white;
@@ -28,14 +29,13 @@ footer h4 {
   text-decoration: underline;
 }
 
+.nm-logo-wh {
+  margin-top: 3rem;
+}
 .links-container {
   display: flex;
   flex-direction: column;
-}
-.footer-bottom {
-  background: #212330;
-  color: white;
-  padding-top: 10px;
+  width: 800px;
 }
 
 .sitemap {
@@ -48,13 +48,18 @@ footer h4 {
 
 .socials-container img {
   width: 250px;
+  padding-left: 2px;
 }
 .socials {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  max-width: 100px;
+  max-width: 150px;
+}
+
+.link-title {
+  padding: 0;
 }
 .main-links a {
   color: white;
@@ -67,8 +72,14 @@ footer h4 {
 .footer-bottom {
   display: flex;
   flex-direction: row;
+  background: #212330;
+  color: white;
   gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 13px;
+}
+
+.copyright::before {
+  white-space: pre;
 }
