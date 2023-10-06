@@ -317,9 +317,9 @@ template {
     width: 1170px;
   }
 }
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -338,6 +338,10 @@ footer {
 
 p {
   margin-bottom: 1rem;
+}
+
+ul {
+  padding: 0;
 }
 
 li {
@@ -410,6 +414,8 @@ footer h4 {
   }
   .main-links {
     width: 45%;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
   }
 }
 @media screen and (min-width: 992px) {

@@ -2,9 +2,9 @@
 // Base styles
 // ===================================================================
 
-* {
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -29,6 +29,9 @@ p {
   margin-bottom: 1rem;
 }
 
+ul {
+  padding: 0;
+}
 li {
   list-style: none;
   display: list-item;
