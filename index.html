@@ -11,11 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link href="/icons/icons.svg" />
   </head>
   <body>
     <div class="header-wrap">
       <header>
-        <h1>Netmatters Title</h1>
+        <h1><img src="img/f-logo.png" alt="Netmatters logo black" /></h1>
         <p>
           lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu
           mauris dui. Proin laoreet euismod dignissim. Donec ornare ipsum in
@@ -67,13 +68,29 @@
       <footer>
         <div class="footer-container inner-container">
           <div class="socials-container">
+            <img src="img/nm-logo-white-med.png" alt="Netmatters logo white" />
+            <h4>Follow us on</h4>
             <div class="socials">
-              <img src="img/nm-logo-white-med.png" alt="Netmatters logo" />
-              <h4>Follow us on</h4>
-              <p>Facebook</p>
-              <p>Linkedin</p>
-              <p>Twitter</p>
-              <p>Instagram</p>
+              <a class="fb-ico" href="#">
+                <svg class="social-icon-fb">
+                  <use href="icons/icons.svg#fb-icon"></use>
+                </svg>
+              </a>
+              <a class="li-ico" href="#">
+                <svg class="social-icon-li">
+                  <use href="icons/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+              <a class="tw-ico" href="#">
+                <svg class="social-icon-tw">
+                  <use href="icons/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+              <a class="in-ico" href="#">
+                <svg class="social-icon-in">
+                  <use href="icons/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -131,7 +148,8 @@
         </div>
         <div class="footer-bottom">
           <div class="license inner-container">
-            &copy; Copyright Netmatters 2023. All rights reserved.
+            <span>&copy;Copyright Netmatters 2023.</span>
+            <span>All rights reserved.</span>
             <a href="#" class="sitemap">Sitemap</a>
           </div>
         </div>

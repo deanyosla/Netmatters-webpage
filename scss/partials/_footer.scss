@@ -18,6 +18,15 @@ footer h4 {
   font-weight: 400;
   margin-bottom: 26px;
 }
+.socials-container a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+.socials-container a:hover {
+  text-decoration: underline;
+}
 
 .links-container {
   display: flex;
@@ -36,10 +45,16 @@ footer h4 {
   text-decoration: underline;
 }
 
-.socials img {
+.socials-container img {
   width: 250px;
 }
-
+.socials {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  max-width: 100px;
+}
 .main-links a {
   color: white;
   font-size: 13px;
@@ -47,4 +62,11 @@ footer h4 {
 }
 .main-links a:hover {
   text-decoration: underline;
+}
+.license {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
