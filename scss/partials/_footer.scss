@@ -19,19 +19,13 @@ footer h4 {
   margin-bottom: 26px;
 }
 
-.links-container :first-child {
-  margin-top: 0;
-}
-
 .links-container {
-  background-color: none;
   display: flex;
   flex-direction: column;
 }
 .footer-bottom {
   background: #212330;
   color: white;
-  bottom: 0;
 }
 
 .sitemap {
@@ -41,11 +35,7 @@ footer h4 {
 .sitemap:hover {
   text-decoration: underline;
 }
-// .footer-container,
-// .socials-container,
-// .links-container {
-//     margin-bottom: 1rem;
-// }
+
 .socials img {
   width: 250px;
 }

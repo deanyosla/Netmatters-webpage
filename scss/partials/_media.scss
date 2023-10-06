@@ -5,16 +5,12 @@
 @media screen and (min-width: 768px) {
   .links-container {
     flex-direction: row;
-    border: 2px solid red;
     flex-wrap: wrap;
+    border: 2px solid red;
   }
 
   .main-links {
     width: 45%;
-  }
-
-  .links-container:first-child {
-    margin-top: 1rem;
   }
 }
 
@@ -24,19 +20,14 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1260px) {
   .footer-container {
     flex-direction: row;
     justify-content: space-between;
   }
   .main-links {
     padding: 0 1rem;
-    width: auto;
-    flex: 1 100px;
-  }
-
-  .socials-container {
-    margin-bottom: 0;
+    width: 25%;
   }
 
   .links-container {
