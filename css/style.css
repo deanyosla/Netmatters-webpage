@@ -392,6 +392,7 @@ footer h4 {
 .footer-bottom {
   background: #212330;
   color: white;
+  padding-top: 10px;
 }
 
 .sitemap {
@@ -425,12 +426,13 @@ footer h4 {
   text-decoration: underline;
 }
 
-.license {
+.footer-bottom {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  font-size: 13px;
 }
 
 @media screen and (min-width: 768px) {
