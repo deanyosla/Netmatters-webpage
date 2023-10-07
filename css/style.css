@@ -323,6 +323,11 @@ template {
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: rgb(231, 200, 200);
@@ -409,14 +414,6 @@ footer h4 {
   padding-left: 2px;
 }
 
-.socials {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-  max-width: 150px;
-}
-
 .link-title {
   padding: 0;
 }
@@ -497,7 +494,7 @@ footer h4 {
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  max-width: 100px;
+  max-width: 150px;
 }
 
 .socials a {
