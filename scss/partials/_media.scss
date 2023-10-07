@@ -53,13 +53,17 @@
 }
 
 @media (max-width: 768px) {
+  .footer-bottom .license {
+    padding-bottom: 0;
+  }
   .inner-container {
     text-align: left;
     flex: auto;
-    padding-left: 10px;
   }
-  .license span {
+  .license span,
+  .license .sitemap {
     display: block;
+    padding-left: 0;
   }
   .license .hyphen {
     display: none;

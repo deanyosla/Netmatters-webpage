@@ -35,7 +35,7 @@ footer h4 {
 .links-container {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
 }
 
 .sitemap {
@@ -75,16 +75,13 @@ footer h4 {
   background: #212330;
   color: white;
   gap: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   font-size: 13px;
 }
-@media (max-width: 767px) {
-  .footer-bottom .license {
-    padding: 5px 0 10px;
-    flex-direction: column;
-  }
-}
-.copyright::before {
-  white-space: pre;
-}
+// @media (max-width: 767px) {
+//   .footer-bottom .license {
+//     padding: 5px 0 10px;
+//     flex-direction: column;
+//   }
+// }
