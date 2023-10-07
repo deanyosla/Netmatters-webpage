@@ -397,7 +397,7 @@ footer h4 {
 .links-container {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 100vw;
 }
 
 .sitemap {
