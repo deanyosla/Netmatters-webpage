@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400;1,600&display=swap"
       rel="stylesheet"
     />
     <link href="/icons/icons.svg" />
@@ -72,21 +72,23 @@
         <h2>Email Newsletter Sign-Up</h2>
         <form id="signup-form">
           <div class="input-group">
-            <label for="name">Name<span>*</span></label>
+            <label for="name" class="required">Your Name</label>
             <input type="text" id="name" name="name" required />
           </div>
           <div class="input-group">
-            <label for="email">Email<span>*</span></label>
+            <label for="email" class="required">Your Email</label>
             <input type="email" id="email" name="email" required />
           </div>
-          <div class="input-group checkbox">
+          <div class="checkbox-wrap">
             <input type="checkbox" id="subscribe" name="subscribe" />
             <label for="subscribe"
               >Please tick this box if you wish to receive marketing information
-              from us.</label
+              from us. Please see our
+              <a href="#" target="_blank" class="privacy">Privacy Policy</a> for
+              more information on how we keep your data safe.</label
             >
           </div>
-          <button type="submit">Subscribe</button>
+          <button type="submit" class="submit">Subscribe</button>
         </form>
       </div>
     </div>

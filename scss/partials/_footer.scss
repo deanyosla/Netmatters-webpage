@@ -65,14 +65,15 @@ footer h4 {
   color: white;
   font-size: 13px;
   text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
-.main-links a:hover {
-  text-decoration: underline;
-}
+
 .footer-bottom {
   display: flex;
   flex-direction: row;
-  background: #212330;
+  background: $vdark-bg;
   color: white;
   gap: 1rem;
   padding-top: 0.8rem;

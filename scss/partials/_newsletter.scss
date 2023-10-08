@@ -3,8 +3,79 @@
 // ========================================================================
 
 .news-bg {
-  background-color: #ddd;
+  background-color: $med-bg;
   h2 {
-    font-weight: 400;
+    font-weight: $font-light;
+    font-size: 2rem;
+  }
+  label {
+    line-height: 32px;
+    font-weight: $font-bold;
+    color: $dark-txt;
+  }
+}
+.required::after {
+  content: "*";
+  color: red;
+}
+.submit {
+  color: white;
+  background-color: $dark-bg;
+  height: auto;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+  &:hover {
+    background-color: $vdark-bg;
+    cursor: pointer;
+  }
+}
+
+.privacy {
+  color: $dark-bg;
+  &:hover {
+    color: $vdark-bg;
+  }
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+#name,
+#email {
+  width: 100%;
+  height: 47px;
+  padding: 5px 15px;
+  border-color: #ccc;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+
+  &:focus {
+    border-color: #5bc0de;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 8px rgba(91, 192, 222, 0.6);
+  }
+}
+#subscribe {
+  border-radius: 3px;
+  border: 3px solid #333645;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  margin-right: 20px;
+}
+
+.checkbox-wrap {
+  display: flex;
+  label:hover {
+    cursor: pointer;
   }
 }
