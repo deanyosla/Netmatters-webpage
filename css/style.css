@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -378,7 +379,6 @@ li a {
 .footer-container {
   display: flex;
   flex-direction: column;
-  margin: 2rem auto 0;
 }
 
 footer h4 {
@@ -630,6 +630,7 @@ footer h4 {
   padding: 5px 15px;
   text-transform: uppercase;
   font-size: 1.063rem;
+  border: none;
   border-radius: 3px;
   white-space: normal;
 }
@@ -668,20 +669,41 @@ footer h4 {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
-#subscribe {
-  border-radius: 3px;
-  border: 3px solid #333645;
-  height: 32px;
-  width: 32px;
-  position: relative;
-  margin-right: 20px;
+.checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
 }
 
-.checkbox-wrap {
-  display: flex;
+.checkbox__input {
+  display: none;
 }
-.checkbox-wrap label:hover {
-  cursor: pointer;
+
+.checkbox__box {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid #000000;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.checkbox__box::after {
+  content: "✔";
+  color: #fff;
+  transform: scale(0);
+}
+
+.checkbox__input:checked + .checkbox__box {
+  background: #15191f;
+  border-color: #15191f;
+}
+
+.checkbox__input:checked + .checkbox__box::after {
+  transform: scale(1);
 }
 
 /*# sourceMappingURL=style.css.map */

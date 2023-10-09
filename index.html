@@ -80,13 +80,21 @@
             <input type="email" id="email" name="email" required />
           </div>
           <div class="checkbox-wrap">
-            <input type="checkbox" id="subscribe" name="subscribe" />
-            <label for="subscribe"
-              >Please tick this box if you wish to receive marketing information
+            <label class="checkbox" for="myCheckboxId">
+              <input
+                class="checkbox__input"
+                type="checkbox"
+                name="myCheckboxName"
+                id="myCheckboxId"
+              />
+              <div class="checkbox__box"></div>
+              Please tick this box if you wish to receive marketing information
               from us. Please see our
               <a href="#" target="_blank" class="privacy">Privacy Policy</a> for
-              more information on how we keep your data safe.</label
-            >
+              more information on how we keep your data safe.
+            </label>
+
+            <label for="subscribe" class="subscribe"></label>
           </div>
           <button type="submit" class="submit">Subscribe</button>
         </form>
