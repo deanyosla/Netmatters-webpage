@@ -510,6 +510,10 @@ footer h4 {
     display: none;
   }
 }
+.welcome-section {
+  background-color: #323544;
+}
+
 .socials {
   fill: white;
   display: flex;
@@ -628,6 +632,7 @@ footer h4 {
   height: auto;
   line-height: 35px;
   padding: 5px 15px;
+  margin-top: 1.5rem;
   text-transform: uppercase;
   font-size: 1.063rem;
   border: none;
@@ -669,8 +674,15 @@ footer h4 {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(91, 192, 222, 0.6);
 }
 
+.pointy {
+  display: table-cell;
+  vertical-align: top;
+  cursor: pointer;
+}
+
 .checkbox {
-  display: inline-flex;
+  display: table-cell;
+  vertical-align: top;
   align-items: center;
   cursor: pointer;
 }
@@ -698,8 +710,8 @@ footer h4 {
 }
 
 .checkbox__input:checked + .checkbox__box {
-  background: #15191f;
-  border-color: #15191f;
+  background: #323544;
+  border-color: #323544;
 }
 
 .checkbox__input:checked + .checkbox__box::after {

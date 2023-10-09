@@ -18,12 +18,14 @@
   content: "*";
   color: red;
 }
+
 .submit {
   color: white;
   background-color: $dark-bg;
   height: auto;
   line-height: 35px;
   padding: 5px 15px;
+  margin-top: 1.5rem;
   text-transform: uppercase;
   font-size: 1.063rem;
   border: none;
@@ -66,12 +68,15 @@
   }
 }
 
-// .subscribe {
-//   cursor: pointer;
-// }
+.pointy {
+  display: table-cell;
+  vertical-align: top;
+  cursor: pointer;
+}
 
 .checkbox {
-  display: inline-flex;
+  display: table-cell;
+  vertical-align: top;
   align-items: center;
   cursor: pointer;
 }
@@ -99,8 +104,8 @@
 }
 
 .checkbox__input:checked + .checkbox__box {
-  background: #15191f;
-  border-color: #15191f;
+  background: $dark-bg;
+  border-color: $dark-bg;
 }
 
 .checkbox__input:checked + .checkbox__box::after {
