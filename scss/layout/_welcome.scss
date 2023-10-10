@@ -1,0 +1,86 @@
+// ==============================================================================================
+// Welcome section styles
+// ==============================================================================================
+
+.welcome-section {
+  background-color: $dark-bg;
+  padding-top: 50px;
+}
+
+.div-one,
+.div-two {
+  padding-left: 15px;
+  padding-right: 15px;
+  p {
+    line-height: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: $font-light;
+    color: #fff;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.div-btn {
+  width: 100%;
+  display: grid;
+  justify-items: start;
+  margin-bottom: 25px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+.btn-prim {
+  text-transform: uppercase;
+  line-height: 2rem;
+  font-size: 1.25rem;
+  padding: 10px 30px;
+  border-radius: 6px;
+  background-color: $btn-dark;
+  margin-right: 15px;
+  &:hover {
+    background-color: $btn-vdark;
+  }
+}
+.ico-arrow-right {
+  height: 1rem;
+  width: 1rem;
+  line-height: 2rem;
+  fill: #fff;
+}
+.div-two {
+  p {
+    font-weight: $font-bold;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  .quote-author {
+    font-weight: $font-bold;
+    color: #a3a8ac;
+    font-size: 1.1rem;
+  }
+}
+.h1 {
+  margin-top: -6px;
+  margin-bottom: 40px;
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: #fff;
+  &:first-child {
+    font-weight: $font-bold;
+  }
+}
+.stars {
+  display: inline-flex;
+  .icon-star {
+    height: 3rem;
+    width: 3rem;
+    flex-shrink: 0;
+    margin-bottom: 25px;
+    padding-right: 5px;
+  }
+}

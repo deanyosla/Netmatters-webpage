@@ -1,0 +1,93 @@
+// ========================================================================================
+// Mixins
+// ========================================================================================
+
+// Media queries ==========================================================================
+
+@mixin small {
+  @media (min-width: $small) {
+    @content;
+  }
+}
+
+@mixin med-min {
+  @media (min-width: $med) {
+    @content;
+  }
+}
+@mixin med-max {
+  @media (max-width: $med) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: $larg) {
+    @content;
+  }
+}
+
+@mixin x-large {
+  @media (min-width: $xlarg) {
+    @content;
+  }
+}
+
+// @mixin mq($break) {
+//     @if $break == "x-small" {
+//        @media (min-width: 1px) and (max-width: $break-sml) {
+//           @content;
+//        }
+//     }
+//     @else if $break == "small" {
+//       @media (min-width: $break-sml) {
+//          @content;
+//       }
+//    }
+//     @else if $break == "medium" {
+//        @media (min-width: $break-med) {
+//           @content;
+//        }
+//     }
+//     @else if $break == "large" {
+//        @media (min-width: $break-lrg) {
+//           @content;
+//        }
+//     }
+//     @else if $break == "x-large" {
+//        @media (min-width: $break-xlrg) {
+//           @content;
+//        }
+//     }
+// }
+// or this with an error
+// @mixin mq($break) {
+//    @if $break == "x-small" {
+//       @media (min-width: $break--x-sml) and (max-width: $break--sml) {
+//          @content;
+//       }
+//    }
+//    @else if $break == "small" {
+//       @media (min-width: $break--sml + 1) {
+//          @content;
+//       }
+//    }
+//    @else if $break == "medium" {
+//       @media (min-width: $break--med + 1) {
+//          @content;
+//       }
+//    }
+//    @else if $break == "large" {
+//       @media (min-width: $break--lrg + 1) {
+//          @content;
+//       }
+//    }
+//    @else if $break == "x-large" {
+//       @media (min-width: $break--x-lrg + 1) {
+//          @content;
+//       }
+//    }
+//    @else {
+//       @error "#{$break} isnt a valid media query size!!";
+//    }
+// }

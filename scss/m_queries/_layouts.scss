@@ -1,5 +1,5 @@
 // ==========================================
-// Layouts
+// Layout media queries
 // ==========================================
 
 .inner-container {
@@ -8,18 +8,18 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-@media (min-width: 768px) {
+@include med-min {
   .inner-container {
     width: 750px;
   }
 }
-@media (min-width: 992px) {
+@include large {
   .inner-container {
     width: 970px;
   }
 }
 
-@media (min-width: 1260px) {
+@include x-large {
   .inner-container {
     width: 1170px;
   }
