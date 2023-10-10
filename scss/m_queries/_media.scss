@@ -75,6 +75,16 @@
   }
 }
 
+@include large {
+  .div-one,
+  .div-two {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
 // Newsletter =============================================================================
 
 // @media (min-width: 992px) {

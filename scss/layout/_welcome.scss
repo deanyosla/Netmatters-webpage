@@ -3,6 +3,9 @@
 // ==============================================================================================
 
 .welcome-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   background-color: $dark-bg;
   padding-top: 50px;
 }
@@ -27,8 +30,10 @@
 }
 .div-btn {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-items: start;
+  margin-top: 15px;
   margin-bottom: 25px;
   a:hover {
     text-decoration: none;
@@ -62,6 +67,18 @@
     font-weight: $font-bold;
     color: #a3a8ac;
     font-size: 1.1rem;
+  }
+  .google {
+    background-color: $btn-google;
+    &:hover {
+      background-color: $google-hover;
+    }
+  }
+  .trustpilot {
+    background-color: $btn-trustp;
+    &:hover {
+      background-color: $trstp-hover;
+    }
   }
 }
 .h1 {

@@ -638,6 +638,9 @@ footer h4 {
 }
 
 .welcome-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   background-color: #323544;
   padding-top: 50px;
 }
@@ -666,8 +669,10 @@ footer h4 {
 
 .div-btn {
   width: 100%;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   justify-items: start;
+  margin-top: 15px;
   margin-bottom: 25px;
 }
 .div-btn a:hover {
@@ -703,6 +708,18 @@ footer h4 {
   font-weight: 600;
   color: #a3a8ac;
   font-size: 1.1rem;
+}
+.div-two .google {
+  background-color: #4387f6;
+}
+.div-two .google:hover {
+  background-color: #166af4;
+}
+.div-two .trustpilot {
+  background-color: #00b67b;
+}
+.div-two .trustpilot:hover {
+  background-color: #009b69;
 }
 
 .h1 {
@@ -787,6 +804,15 @@ footer h4 {
   }
   .license .hyphen {
     display: none;
+  }
+}
+@media (min-width: 992px) {
+  .div-one,
+  .div-two {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 .inner-container {
