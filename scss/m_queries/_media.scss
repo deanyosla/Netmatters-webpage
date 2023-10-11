@@ -75,8 +75,11 @@
   .div-one,
   .div-two {
     width: 45%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+  }
+}
+
+@include mq(large) {
+  .welcome-section {
+    flex-direction: unset;
   }
 }
