@@ -8,18 +8,18 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-@include med-min {
+@include mq(medium) {
   .inner-container {
     width: 750px;
   }
 }
-@include large {
+@include mq(large) {
   .inner-container {
     width: 970px;
   }
 }
 
-@include x-large {
+@include mq(x-large) {
   .inner-container {
     width: 1170px;
   }

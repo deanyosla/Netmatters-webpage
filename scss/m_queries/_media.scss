@@ -2,7 +2,7 @@
 // Media queries
 // ===========================================
 
-@include med-min {
+@include mq(medium) {
   .links-container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,19 +17,14 @@
     padding: 0 5px;
   }
 }
-@include med-max {
-  .hyphen {
-    display: none;
-  }
-}
 
-@include large {
+@include mq(large) {
   .main-links {
     width: 25%;
   }
 }
 
-@include x-large {
+@include mq(x-large) {
   .footer-container {
     flex-direction: row;
     justify-content: space-between;
@@ -46,9 +41,15 @@
   }
 }
 
-@include small {
+@include mq(x-small) {
   .socials-container img {
     width: 320px;
+  }
+}
+@include mq(large) {
+  .input-wrap {
+    display: flex;
+    column-gap: 2rem;
   }
 }
 // @media (min-width: 480px) {
@@ -57,7 +58,7 @@
 //   }
 // }
 
-@include med-max {
+@media (max-width: 768px) {
   .footer-bottom .license {
     padding-bottom: 0;
   }
@@ -75,13 +76,12 @@
   }
 }
 
-@include large {
+@include mq(large) {
   .div-one,
   .div-two {
     width: 45%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
   }
 }
 

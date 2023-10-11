@@ -23,7 +23,8 @@ $font-bold: 600;
 
 // breakpoints
 
-$small: 480px;
-$med: 768px;
-$larg: 992px;
-$xlarg: 1200px;
+$break--x-sml: 1px;
+$break--sml: 460px;
+$break--med: 768px;
+$break--lrg: 992px;
+$break--x-lrg: 1200px;
