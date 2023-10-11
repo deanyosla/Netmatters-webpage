@@ -745,6 +745,11 @@ footer h4 {
   padding-right: 5px;
 }
 
+.clients-wrapper {
+  background-color: #fff;
+  padding: 50px 0;
+}
+
 @media (min-width: 769px) {
   .links-container {
     flex-direction: row;
@@ -814,6 +819,7 @@ footer h4 {
     width: 45%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 .inner-container {
