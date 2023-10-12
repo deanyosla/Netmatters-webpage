@@ -711,14 +711,14 @@ footer h4 {
   font-size: 1.1rem;
 }
 .div-two .google {
-  margin-top: 30px;
+  margin-top: 25px;
   background-color: #4387f6;
 }
 .div-two .google:hover {
   background-color: #166af4;
 }
 .div-two .trustpilot {
-  margin-top: 30px;
+  margin-top: 25px;
   background-color: #00b67b;
 }
 .div-two .trustpilot:hover {
@@ -822,8 +822,9 @@ footer h4 {
   }
 }
 @media (min-width: 993px) {
-  .welcome-section {
-    flex-direction: unset;
+  .welcome-section .inner-container {
+    display: flex;
+    flex-direction: row;
   }
 }
 .inner-container {

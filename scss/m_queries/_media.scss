@@ -80,6 +80,9 @@
 
 @include mq(large) {
   .welcome-section {
-    flex-direction: unset;
+    .inner-container {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
