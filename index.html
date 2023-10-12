@@ -14,11 +14,39 @@
     <link href="/icons/icons.svg" />
   </head>
   <body>
-    <div class="header-wrap">
-      <header>
-        <h1><img src="img/f-logo.png" alt="Netmatters logo black" /></h1>
-      </header>
-    </div>
+    <header>
+      <div class="header-container inner-container">
+        <div class="header-content">
+          <a href="#">
+            <img src="img/f-logo.png" alt="Netmatters logo black" />
+          </a>
+        </div>
+
+        <div class="header-btn">
+          <a class="phone" href="#">
+            <svg class="icon-phone">
+              <use href="icons/icons.svg#icon-phone"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg class="icon-menu">
+              <use href="icons/icons.svg#icon-menu"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="search-mobile">
+        <input type="text" placeholder="Search..." />
+        <button type="submit">
+          <a href="#">
+            <svg class="icon-search">
+              <use href="icons/icons.svg#icon-search"></use>
+            </svg>
+          </a>
+        </button>
+      </div>
+    </header>
+
     <!-- =================================== Welcome section ================================  -->
     <div class="welcome-section">
       <div class="inner-container">
@@ -159,7 +187,7 @@
               more information on how we keep your data safe.</label
             >
           </div>
-          <button type="submit" class="submit">Subscribe</button>
+          <button type="submit" class="subscribe">Subscribe</button>
         </form>
       </div>
     </div>
