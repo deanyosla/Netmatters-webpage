@@ -29,3 +29,11 @@
     @error "#{$break} isnt a valid media query size!!";
   }
 }
+
+// Max width 768px
+
+@mixin medium-max {
+  @media (max-width: 768px) {
+    @content;
+  }
+}

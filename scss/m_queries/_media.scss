@@ -53,7 +53,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@include medium-max {
   .footer-bottom .license {
     padding-bottom: 0;
   }
@@ -84,5 +84,23 @@
       display: flex;
       flex-direction: row;
     }
+  }
+}
+
+@include mq(medium) {
+  .phone,
+  .search-mobile {
+    display: none;
+  }
+  .search-bar {
+    max-width: 243px;
+    background-color: #999aa2;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 1em;
+  }
+  .search-box {
+    background-color: #fff;
+    max-width: 175px;
   }
 }

@@ -327,6 +327,13 @@ footer {
   padding-bottom: 50px;
 }
 
+.inner-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .socials p {
   color: white;
 }
@@ -372,7 +379,7 @@ li a {
 
 .phone {
   text-decoration: none;
-  padding: 0 20px;
+  padding-right: 20px;
 }
 .phone:hover {
   text-decoration: underline;
@@ -415,10 +422,27 @@ li a {
   border-radius: 5px 0 0 5px;
   outline: none;
 }
+.search-mobile .search-bar {
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin-top: 0;
+  margin-right: 0 !important;
+  height: 57px !important;
+}
+.search-mobile .search-box {
+  border: 1px solid #ccc;
+  flex: 1;
+}
+.search-mobile .search-bar {
+  padding: 10px;
+  width: 2em;
+  height: 2em;
+  fill: #fff;
+}
 .search-mobile button[type=submit] {
   background-color: #e9e9e9;
   border: none;
-  border-radius: 0 5px 5px 0;
   color: #fff;
   cursor: pointer;
 }
@@ -901,13 +925,23 @@ footer h4 {
     flex-direction: row;
   }
 }
-.inner-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+@media (min-width: 769px) {
+  .phone,
+  .search-mobile {
+    display: none;
+  }
+  .search-bar {
+    max-width: 243px;
+    background-color: #999aa2;
+    color: #fff;
+    padding: 0 20px;
+    font-size: 1em;
+  }
+  .search-box {
+    background-color: #fff;
+    max-width: 175px;
+  }
 }
-
 @media (min-width: 769px) {
   .inner-container {
     width: 750px;
