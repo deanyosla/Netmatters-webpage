@@ -338,10 +338,6 @@ footer {
   color: white;
 }
 
-a {
-  margin-bottom: 1rem;
-}
-
 ul {
   padding: 0;
 }
@@ -376,6 +372,7 @@ li a {
   justify-content: flex-end;
   align-items: center;
   margin-left: 15px;
+  gap: 15px;
 }
 
 .icon-phone {
@@ -730,6 +727,7 @@ footer h4 {
 .div-two a {
   color: #fff;
   text-decoration: none;
+  margin-bottom: 1rem;
 }
 .div-one a:hover,
 .div-two a:hover {
@@ -914,7 +912,6 @@ footer h4 {
     flex: 1;
   }
   .search-bar {
-    width: 2em;
     height: 2em;
     fill: #fff;
   }
@@ -922,6 +919,7 @@ footer h4 {
     background-color: #e9e9e9;
     border: none;
     color: #fff;
+    padding: 1em;
   }
 }
 @media (max-width: 768px) {
