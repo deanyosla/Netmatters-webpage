@@ -40,6 +40,7 @@
   border-radius: 5%;
   padding: 13px 20px;
   font-size: 2em;
+  margin-left: 10px;
   &:hover {
     background-color: $vdark-bg;
   }
@@ -52,7 +53,7 @@
   position: relative;
   background-color: #e9e9e9;
   height: 45px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 0;
   margin-right: auto;
   margin-left: auto;
@@ -65,8 +66,15 @@
     border: none;
     outline: none;
   }
+  button[type="submit"] {
+    background-color: #e9e9e9;
+    border: none;
+    color: #fff;
+  }
 }
-
+.search-big {
+  font-size: 1.5em;
+}
 .icon-search {
   font-size: 20px;
   color: black;
