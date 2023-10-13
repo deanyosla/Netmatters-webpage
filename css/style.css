@@ -377,24 +377,24 @@ li a {
   margin-left: 15px;
 }
 
-.phone {
+.icon-phone {
   text-decoration: none;
   padding-right: 20px;
+  color: black;
+  font-size: 25px;
 }
-.phone:hover {
+.icon-phone:hover {
   text-decoration: underline;
 }
 
-.fa-bars::before {
+.hamburger-bars {
   color: #fff;
   background-color: #333645;
   border-radius: 5%;
   padding: 13px 20px;
   font-size: 2em;
-  width: 2em;
-  height: 2em;
 }
-.fa-bars:hover {
+.hamburger-bars:hover {
   background-color: #22242e;
 }
 
@@ -441,7 +441,7 @@ li a {
   color: #fff;
 }
 
-.fa-magnifying-glass::before {
+.icon-search {
   padding: 10px;
   font-size: 20px;
   color: black;
