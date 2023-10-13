@@ -385,14 +385,8 @@ li a {
   text-decoration: underline;
 }
 
-.icon-phone {
-  font-size: 2rem;
-  width: 30px;
-  height: 30px;
-}
-
-.icon-menu {
-  fill: #fff;
+.fa-bars::before {
+  color: #fff;
   background-color: #333645;
   border-radius: 5%;
   padding: 13px 20px;
@@ -400,7 +394,7 @@ li a {
   width: 2em;
   height: 2em;
 }
-.icon-menu:hover {
+.fa-bars:hover {
   background-color: #22242e;
 }
 
@@ -408,18 +402,19 @@ li a {
   display: flex;
   position: relative;
   background-color: #e9e9e9;
-  border: 1px solid #d4d4d4;
-  border-radius: 0;
-  margin: 10px;
-  max-width: 100%;
+  height: 45px;
   border: 1px solid #ccc;
+  border-radius: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - 16px);
+  margin-bottom: 20px;
 }
 .search-mobile input[type=text] {
   width: 100%;
   background-color: #e9e9e9;
   padding: 10px;
   border: none;
-  border-radius: 5px 0 0 5px;
   outline: none;
 }
 .search-mobile .search-bar {
@@ -444,14 +439,12 @@ li a {
   background-color: #e9e9e9;
   border: none;
   color: #fff;
-  cursor: pointer;
 }
 
-.icon-search {
+.fa-magnifying-glass::before {
   padding: 10px;
-  width: 2.5em;
-  height: 2.5em;
-  fill: black;
+  font-size: 20px;
+  color: black;
 }
 
 .footer-outer {
