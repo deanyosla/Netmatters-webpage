@@ -172,6 +172,14 @@
 
 // Grid media queries
 
+@media (max-width: 768px) {
+  .tab-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "tabone tabone" "tabtwo tabtwo" "tabthree tabthree" "tabfour tabfour"
+      "tabfive tabfive" "tabsix tabsix" "tabseven tabseven";
+  }
+}
 @include mq(medium) {
   .tab-container {
     grid-template-columns: 1fr 1fr;

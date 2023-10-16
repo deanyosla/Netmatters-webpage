@@ -5,11 +5,7 @@
 .service-head {
   position: relative;
 }
-.services {
-  color: $dark-txt;
-  font-size: 2.7em;
-  font-weight: 600;
-}
+
 .icon {
   color: #fff;
   background-color: #926fb1;
@@ -215,6 +211,11 @@
 }
 
 // Font styles
+.services {
+  color: $dark-txt;
+  font-size: 2.7em;
+  font-weight: 600;
+}
 .view-hidden {
   font-size: 1.6em;
   font-weight: 600;
@@ -270,4 +271,43 @@
 
 .tab7 {
   grid-area: tabseven;
+}
+
+// Work showcase styles
+
+.work-showcase {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.work-showcase a {
+  display: none;
+  cursor: default;
+  filter: grayscale(1);
+  margin: 20px 70px;
+  margin-left: 0;
+  max-height: 70px;
+  width: auto !important;
+}
+
+.work-showcase a:hover {
+  filter: none;
+}
+
+.work-showcase a:nth-child(-n + 3) {
+  display: inline-flex;
+}
+
+@media (min-width: 600px) {
+  .work-showcase a:nth-child(-n + 5) {
+    display: inline-flex;
+  }
+}
+
+@include mq(x-large) {
+  .work-showcase a:nth-child(-n + 12) {
+    display: flex;
+  }
 }

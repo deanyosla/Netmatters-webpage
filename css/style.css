@@ -314,9 +314,6 @@ body {
   letter-spacing: 0.4px;
   background-color: #fff;
 }
-body a:hover {
-  cursor: pointer;
-}
 
 main {
   overflow: hidden;
@@ -907,12 +904,6 @@ footer h4 {
   position: relative;
 }
 
-.services {
-  color: #333645;
-  font-size: 2.7em;
-  font-weight: 600;
-}
-
 .icon {
   color: #fff;
   background-color: #926fb1;
@@ -1123,6 +1114,12 @@ footer h4 {
   background-color: #fff;
 }
 
+.services {
+  color: #333645;
+  font-size: 2.7em;
+  font-weight: 600;
+}
+
 .view-hidden {
   font-size: 1.6em;
   font-weight: 600;
@@ -1179,6 +1176,41 @@ footer h4 {
   grid-area: tabseven;
 }
 
+.work-showcase {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.work-showcase a {
+  display: none;
+  cursor: default;
+  filter: grayscale(1);
+  margin: 20px 70px;
+  margin-left: 0;
+  max-height: 70px;
+  width: auto !important;
+}
+
+.work-showcase a:hover {
+  filter: none;
+}
+
+.work-showcase a:nth-child(-n+3) {
+  display: inline-flex;
+}
+
+@media (min-width: 600px) {
+  .work-showcase a:nth-child(-n+5) {
+    display: inline-flex;
+  }
+}
+@media (min-width: 1201px) {
+  .work-showcase a:nth-child(-n+12) {
+    display: flex;
+  }
+}
 @media (min-width: 769px) {
   .links-container {
     flex-direction: row;
@@ -1321,6 +1353,12 @@ footer h4 {
   }
   .view-work {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .tab-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tabone tabone" "tabtwo tabtwo" "tabthree tabthree" "tabfour tabfour" "tabfive tabfive" "tabsix tabsix" "tabseven tabseven";
   }
 }
 @media (min-width: 769px) {
