@@ -1,0 +1,58 @@
+// ========================================================================
+// Banner styles
+// ========================================================================
+.banner-container {
+  position: relative;
+  display: flex;
+}
+.first-image {
+  // First image styles //
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(40, 40, 40, 0.4)
+    ),
+    url(../img/slide-1.png);
+  background-position: 50% 5%;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 90px;
+  width: 100%;
+  height: 550px;
+}
+
+.image-container h3 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-top: -20px;
+  padding: 1.25em 0;
+  padding-bottom: 0.1em;
+  line-height: 1.25em;
+  cursor: default;
+}
+
+.image-container p {
+  font-size: 1.25em;
+  font-weight: 600;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 35px;
+  margin-top: -20px;
+  cursor: default;
+}
+
+.image-container a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  background-color: #926fb1;
+  display: inline-block;
+  margin: 0 auto 20px;
+  padding: 1em;
+  border-radius: 3px;
+  &:hover {
+    background-color: #7e57a0;
+  }
+}

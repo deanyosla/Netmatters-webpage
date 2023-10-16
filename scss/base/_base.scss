@@ -21,6 +21,15 @@ body {
     cursor: pointer;
   }
 }
+
+main {
+  overflow: hidden;
+  background-color: #fff;
+}
+header button {
+  border: none;
+  background-color: #fff;
+}
 footer {
   margin-top: auto;
 }
@@ -31,17 +40,15 @@ footer {
 }
 
 .inner-container {
-  margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
 }
+
 // ===================================================================
 // Text styles
 // ===================================================================
-// h4 {
-//   margin: 0 0 0.75rem;
-// }
 .socials p {
   color: white;
 }

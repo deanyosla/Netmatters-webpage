@@ -1,0 +1,273 @@
+// ===============================================================================
+// Grid styles
+// ===============================================================================
+
+.service-head {
+  position: relative;
+}
+.services {
+  color: $dark-txt;
+  font-size: 2.7em;
+  font-weight: 600;
+}
+.icon {
+  color: #fff;
+  background-color: #926fb1;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 1.7em;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+.icon i {
+  margin: auto;
+}
+.tab-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab-container h3 {
+  color: $dark-txt;
+  font-size: 1.3em;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.tab-container p {
+  color: $dark-txt;
+  font-size: 0.8em;
+  line-height: 1.8em;
+  margin: -10px 30px;
+  padding-bottom: 110px;
+}
+
+.tab-container a {
+  color: $dark-txt;
+  text-decoration: none;
+}
+
+.tab-container .button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 5%;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 30px 0 10px 0;
+  cursor: pointer;
+}
+.tab-container .tab1,
+.tab-container .tab2,
+.tab-container .tab3,
+.tab-container .tab4,
+.tab-container .tab5,
+.tab-container .tab6,
+.tab-container .tab7 {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  padding: 20px 20px;
+  box-shadow: 0px 0px 20px #e9e9e9;
+  position: relative;
+  top: 0;
+  transition: 0.5s ease;
+}
+
+.tab1 .icon,
+.tab1 .button {
+  background-color: #67809f;
+}
+
+.tab2 .icon,
+.tab2 .button {
+  background-color: #4183d7;
+}
+
+.tab3 .icon,
+.tab3 .button {
+  background-color: #2ecc71;
+}
+
+.tab4 .icon,
+.tab4 .button {
+  background-color: #d64541;
+}
+
+.tab5 .icon,
+.tab5 .button {
+  background-color: #926fb1;
+}
+
+.tab6 .icon,
+.tab6 .button {
+  background-color: #f62459;
+}
+
+.tab7 .icon,
+.tab7 .button {
+  background-color: #ce4125;
+}
+
+.tab1 .button,
+.tab2 .button,
+.tab3 .button,
+.tab4 .button,
+.tab5 .button,
+.tab6 .button,
+.tab7 .button {
+  display: inline-block;
+}
+
+// Hover styles
+.tab1:hover {
+  background-color: #67809f;
+  top: -10px;
+  transition: 0.5s ease;
+}
+
+.tab1:hover .button,
+.tab1:hover .icon {
+  color: #67809f;
+}
+.tab2:hover {
+  background-color: #4183d7;
+  top: -10px;
+  transition: 0.5s ease;
+}
+.tab2:hover .button,
+.tab2:hover .icon {
+  color: #4183d7;
+}
+
+.tab3:hover {
+  background-color: #2ecc71;
+  top: -10px;
+  transition: 0.5s ease;
+}
+.tab3:hover .button,
+.tab3:hover .icon {
+  color: #2ecc71;
+}
+
+.tab4:hover {
+  background-color: #d64541;
+  top: -10px;
+  transition: 0.5s ease;
+}
+
+.tab4:hover .button,
+.tab4:hover .icon {
+  color: #d64541;
+}
+
+.tab5:hover {
+  background-color: #926fb1;
+  top: -10px;
+  transition: 0.5s ease;
+}
+
+.tab5:hover .button,
+.tab5:hover .icon {
+  color: #926fb1;
+}
+
+.tab6:hover {
+  background-color: #f62459;
+  top: -10px;
+  transition: 0.5s ease;
+}
+
+.tab6:hover .button,
+.tab6:hover .icon {
+  color: #f62459;
+}
+
+.tab7:hover {
+  background-color: #ce4125;
+  top: -10px;
+  transition: 0.5s ease;
+}
+
+.tab7:hover .button,
+.tab7:hover .icon {
+  color: #ce4125;
+}
+.tab-container > div:hover h3,
+.tab-container > div:hover p {
+  color: #fff;
+}
+.tab-container > div:hover .icon,
+.tab-container > div:hover .button {
+  background-color: #fff;
+}
+
+// Font styles
+.view-hidden {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: $dark-txt;
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  text-align: center;
+  visibility: hidden;
+}
+.view-work {
+  font-size: 1.6em;
+  font-weight: 600;
+  color: $dark-txt;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin: 35px 0 0 0;
+}
+
+.view-hidden:hover,
+.view-work:hover {
+  text-decoration: underline;
+}
+
+// Grid areas
+
+.tab1 {
+  grid-area: tabone;
+}
+
+.tab2 {
+  grid-area: tabtwo;
+}
+
+.tab3 {
+  grid-area: tabthree;
+}
+
+.tab4 {
+  grid-area: tabfour;
+}
+
+.tab5 {
+  grid-area: tabfive;
+}
+
+.tab6 {
+  grid-area: tabsix;
+}
+
+.tab7 {
+  grid-area: tabseven;
+}

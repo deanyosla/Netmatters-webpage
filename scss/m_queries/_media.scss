@@ -58,7 +58,7 @@
     padding-bottom: 0;
   }
   .inner-container {
-    text-align: left;
+    // text-align: left;
     flex: auto;
   }
   .license span,
@@ -108,9 +108,10 @@
     fill: #fff;
   }
   input[type="text"] {
-    border: 1px solid #ccc; /* Set the initial border style */
-    outline: none; /* Remove the default outline */
+    border: 1px solid #ccc;
+    outline: none;
     font-size: 1em;
+    height: 57px;
   }
   .search-bar button {
     background-color: #999aa2;
@@ -138,5 +139,61 @@
 @include medium-max {
   .search-bar {
     display: none;
+  }
+}
+
+// Banner media queries
+
+// @include mq(medium) {
+//   main {
+//     margin-top: 120px;
+//   }
+// }
+
+@include mq(x-small) {
+  .image-container {
+    padding: 40px 0;
+  }
+}
+@media (min-width: 576px) {
+  .image-container {
+    padding: 75px 0;
+  }
+}
+
+@include mq(medium) {
+  .view-hidden {
+    visibility: visible;
+  }
+  .view-work {
+    display: none;
+  }
+}
+
+// Grid media queries
+
+@include mq(medium) {
+  .tab-container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "tabone tabone" "tabtwo tabtwo" "tabthree tabthree" "tabfour tabfive" "tabsix tabseven";
+  }
+}
+
+@include mq(large) {
+  .tab-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "tabone tabone tabtwo tabtwo tabthree tabthree"
+      "tabfour tabfour tabfour tabfive tabfive tabfive"
+      "tabsix tabsix tabsix tabseven tabseven tabseven";
+  }
+}
+
+@include mq(x-large) {
+  .tab-container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "tabone tabone tabone tabone tabtwo tabtwo tabtwo tabtwo tabthree tabthree tabthree tabthree"
+      "tabfour tabfour tabfour tabfive tabfive tabfive tabsix tabsix tabsix tabseven tabseven tabseven";
   }
 }
