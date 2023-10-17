@@ -89,17 +89,18 @@
 .checkbox__box {
   width: 2rem;
   height: 2rem;
-  border: 3px solid #000000;
-  border-radius: 3px;
+  border: 3px solid $dark-txt;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 10px;
+  margin-right: 20px;
   flex-shrink: 0;
 }
 
 .checkbox__box::after {
-  content: "\2714";
+  font-family: FontAwesome;
+  content: "\f00c";
   color: #fff;
   transform: scale(0);
 }
