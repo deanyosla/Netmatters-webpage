@@ -285,14 +285,16 @@
 .work-showcase a {
   display: none;
   cursor: default;
-  filter: grayscale(1);
   margin: 20px 70px;
-  margin-left: 0;
   max-height: 70px;
   width: auto !important;
 }
 
-.work-showcase a:hover {
+.greyscale {
+  filter: grayscale(1);
+}
+
+.greyscale:hover {
   filter: none;
 }
 
