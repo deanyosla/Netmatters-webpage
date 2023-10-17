@@ -940,6 +940,13 @@ hr {
   font-weight: 600;
 }
 
+.article-title1 span {
+  font-size: 0.9em;
+  color: #aaa;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 .article-title2,
 .article-title3 {
   color: #926fb1;
@@ -1020,6 +1027,7 @@ hr {
   }
 }
 .view-work-all {
+  color: #333645;
   font-size: 1.6em;
   font-weight: 600;
   color: #333645;
@@ -1049,6 +1057,11 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+  }
+}
+@media (min-width: 769px) {
+  .article3 {
+    display: none;
   }
 }
 .banner-container {

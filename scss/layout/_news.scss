@@ -100,6 +100,12 @@ hr {
   font-weight: $font-bold;
 }
 
+.article-title1 span {
+  font-size: 0.9em;
+  color: #aaa;
+  font-weight: 300;
+  text-transform: uppercase;
+}
 .article-title2,
 .article-title3 {
   color: #926fb1;
@@ -182,6 +188,7 @@ hr {
 }
 
 .view-work-all {
+  color: $dark-txt;
   font-size: 1.6em;
   font-weight: 600;
   color: $dark-txt;
@@ -215,5 +222,11 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+  }
+}
+
+@include mq(medium) {
+  .article3 {
+    display: none;
   }
 }
