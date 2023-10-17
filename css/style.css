@@ -1050,7 +1050,7 @@ hr {
   display: inline-block;
 }
 
-.tooltip-a {
+.tooltip a {
   margin-left: 70px;
 }
 
@@ -1074,6 +1074,10 @@ hr {
 .tooltiptext p {
   height: auto;
   text-wrap: wrap;
+}
+
+.tooltip-description {
+  font-size: 0.8em;
 }
 
 .tooltip .tooltiptext::after {
