@@ -67,18 +67,23 @@
     font-size: 1.1rem;
   }
   .google {
-    margin-top: 25px;
+    margin-top: auto;
     background-color: $btn-google;
     &:hover {
       background-color: $google-hover;
     }
   }
   .trustpilot {
-    margin-top: 25px;
+    margin-top: auto;
     background-color: $btn-trustp;
     &:hover {
       background-color: $trstp-hover;
     }
+  }
+}
+@include mq(x-small) {
+  .btn-prim {
+    font-size: 0.8em;
   }
 }
 .h1 {
