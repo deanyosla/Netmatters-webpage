@@ -18,9 +18,42 @@
 .header-btn {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   margin-left: 15px;
+}
+
+.icon-disabled {
+  display: none;
+}
+.icon-disabled i {
+  padding-right: 5px;
+}
+.icon-disabled a:nth-child(1) {
+  color: #fff;
+  background-color: #4183d7;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5%;
+  text-decoration: none;
+  margin-right: 15px;
+  &:hover {
+    background-color: #2a6ec6;
+  }
+}
+.icon-disabled a:nth-child(2) {
+  color: #fff;
+  background-color: #999aa2;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5%;
+  text-decoration: none;
+  margin-right: 15px;
+  &:hover {
+    background-color: #84858f;
+  }
 }
 
 .icon-phone {
@@ -98,4 +131,67 @@
   display: flex;
   align-items: center;
   margin-right: 15px;
+}
+
+// Navigation bar styles and media queries
+
+.desktop-nav {
+  display: none;
+  background-color: $dark-txt;
+  nav {
+    position: relative;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  i {
+    display: block;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px 0 15px 0;
+  }
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0 auto;
+  overflow: visible;
+  li {
+    list-style: none;
+  }
+}
+
+.main-nav > li > a {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+.main-nav > li:nth-child(1) i {
+  color: #67809f;
+}
+
+.main-nav li .hidden-nav {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100vw;
+}
+.main-nav > li:nth-child(1) .hidden-nav {
+  background-color: #526781;
+}
+.main-nav li:hover {
+  color: #fff;
+}
+
+.hidden-nav .inner-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 22px 40px 27px;
+}
+@include mq(large) {
+  .desktop-nav {
+    display: block;
+  }
 }

@@ -56,3 +56,41 @@
     background-color: #7e57a0;
   }
 }
+
+// Media styles
+@include mq(x-small) {
+  .first-image {
+    height: 530px;
+  }
+}
+
+@media (min-width: 380px) {
+  .first-image {
+    height: 600px;
+  }
+}
+
+@include mq(medium) {
+  .first-image h3 {
+    margin-top: 30px;
+  }
+}
+
+@include mq(large) {
+  .first-image {
+    text-align: left;
+    height: 600px;
+  }
+
+  .first-image h3 {
+    font-size: 4em;
+    padding: 0;
+  }
+}
+
+@include mq(large) {
+  .first-image p {
+    font-size: 1.625em;
+    margin-left: 0;
+  }
+}

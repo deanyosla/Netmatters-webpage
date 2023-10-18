@@ -310,6 +310,6 @@
 
 @include mq(x-large) {
   .work-showcase a:nth-child(-n + 12) {
-    display: flex;
+    display: inline-flex;
   }
 }

@@ -239,14 +239,15 @@ hr {
   font-size: 1.1em;
 }
 
-.tooltiptext a {
+.tooltiptext .a {
+  display: inline-flex;
   text-decoration: none;
   color: #fff;
   background-color: #67809f;
   margin: auto;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
-  padding: 10px;
+  padding: 15px;
   filter: none;
   border-radius: 3px;
   &:hover {
@@ -255,8 +256,8 @@ hr {
 }
 
 .tooltiptext i {
-  margin-top: 5px;
-  margin-right: 5px;
+  margin: 0;
+  margin-top: 2px;
 }
 .tooltiptext p {
   height: auto;
