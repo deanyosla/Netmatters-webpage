@@ -35,7 +35,7 @@
   padding: 15px 20px;
   font-size: 1.2em;
   border: none;
-  border-radius: 5%;
+  border-radius: 5px;
   text-decoration: none;
   margin-right: 15px;
   &:hover {
@@ -48,7 +48,7 @@
   padding: 15px 20px;
   font-size: 1.2em;
   border: none;
-  border-radius: 5%;
+  border-radius: 5px;
   text-decoration: none;
   margin-right: 15px;
   &:hover {
@@ -184,10 +184,6 @@
 .main-nav > li:nth-child(1):hover {
   background-color: #67809f;
 }
-.main-nav li:hover i {
-  color: #fff;
-}
-
 .main-nav > li:hover > a::after {
   display: block;
 }
@@ -195,6 +191,81 @@
   border-top-color: #67809f;
 }
 
+.main-nav > li:nth-child(2) .hidden-nav {
+  background-color: #286abd;
+}
+.main-nav > li:nth-child(2) i {
+  color: #4183d7;
+}
+.main-nav > li:nth-child(2):hover {
+  background-color: #4183d7;
+}
+.main-nav > li:nth-child(3) .hidden-nav {
+  background-color: #25a25a;
+}
+.main-nav > li:nth-child(3) i {
+  color: #2ecc71;
+}
+.main-nav > li:nth-child(3):hover {
+  background-color: #2ecc71;
+}
+.main-nav > li:nth-child(3) > a::after {
+  border-top-color: #2ecc71;
+}
+.main-nav > li:nth-child(4) .hidden-nav {
+  background-color: #bc2c28;
+}
+.main-nav > li:nth-child(4) i {
+  color: #d64541;
+}
+.main-nav > li:nth-child(4):hover {
+  background-color: #d64541;
+}
+.main-nav > li:nth-child(4) > a::after {
+  border-top-color: #d64541;
+}
+
+.main-nav > li:nth-child(5) .hidden-nav {
+  background-color: #79539a;
+}
+.main-nav > li:nth-child(5) i {
+  color: #926fb1;
+}
+.main-nav > li:nth-child(5):hover {
+  background-color: #926fb1;
+}
+.main-nav > li:nth-child(5) > a::after {
+  border-top-color: #926fb1;
+}
+
+.main-nav > li:nth-child(6) .hidden-nav {
+  background-color: #de093f;
+}
+.main-nav > li:nth-child(6) i {
+  color: #f62459;
+}
+.main-nav > li:nth-child(6):hover {
+  background-color: #f62459;
+}
+.main-nav > li:nth-child(6) > a::after {
+  border-top-color: #f62459;
+}
+
+.main-nav > li:nth-child(7) .hidden-nav {
+  background-color: #a3331d;
+}
+.main-nav > li:nth-child(7) i {
+  color: #ce4125;
+}
+.main-nav > li:nth-child(7):hover {
+  background-color: #ce4125;
+}
+.main-nav > li:nth-child(7) > a::after {
+  border-top-color: #ce4125;
+}
+.main-nav li:hover i {
+  color: #fff;
+}
 .main-nav > li > a::after {
   content: "";
   border-style: solid;
@@ -282,5 +353,14 @@
   .main-nav > li a:after {
     border-right-width: 80px;
     border-left-width: 84px;
+  }
+}
+
+@include mq(x-large) {
+  .hidden-nav a {
+    margin-left: -10px;
+  }
+  .hidden-nav .h2 {
+    margin-left: -10px;
   }
 }

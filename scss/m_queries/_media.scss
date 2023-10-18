@@ -139,7 +139,7 @@
     border-radius: 0 5% 5% 0;
     cursor: pointer;
     &:hover {
-      background-color: $dark-bg;
+      background-color: #84858f;
     }
   }
 }
@@ -181,10 +181,12 @@
       display: block;
       max-width: 240px;
     }
-    .search-bar button {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
+  }
+}
+@include mq(x-large) {
+  .search-bar button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }
 @include mq(large) {

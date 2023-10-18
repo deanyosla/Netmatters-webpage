@@ -43,21 +43,6 @@ footer {
   padding-right: 1em;
 }
 
-main {
-  overflow: hidden;
-  margin-top: 170px;
-  background-color: #fff;
-  @include mq(x-small) {
-    margin-top: 0;
-  }
-  @include mq(small) {
-    margin-top: 0;
-  }
-  @include mq(large) {
-    margin-top: 300px;
-  }
-}
-
 // ===================================================================
 // Text styles
 // ===================================================================
