@@ -340,6 +340,27 @@ footer {
   padding-right: 1em;
 }
 
+main {
+  overflow: hidden;
+  margin-top: 170px;
+  background-color: #fff;
+}
+@media (min-width: 1px) and (max-width: 460px) {
+  main {
+    margin-top: 0;
+  }
+}
+@media (min-width: 461px) {
+  main {
+    margin-top: 0;
+  }
+}
+@media (min-width: 993px) {
+  main {
+    margin-top: 300px;
+  }
+}
+
 .socials p {
   color: white;
 }
@@ -543,8 +564,42 @@ li a {
   background-color: #526781;
 }
 
-.main-nav li:hover {
+.main-nav > li:nth-child(1):hover {
+  background-color: #67809f;
+}
+
+.main-nav li:hover i {
   color: #fff;
+}
+
+.main-nav > li:hover > a::after {
+  display: block;
+}
+
+.main-nav > li:nth-child(1) > a::after {
+  border-top-color: #67809f;
+}
+
+.main-nav > li > a::after {
+  content: "";
+  border-style: solid;
+  border-width: 33px 51px 0;
+  border-color: #4183d7 transparent transparent transparent;
+  height: 0;
+  width: 0;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.hidden-nav {
+  display: none;
+}
+
+.main-nav > li:hover .hidden-nav {
+  display: block;
 }
 
 .hidden-nav .inner-container {
@@ -553,9 +608,70 @@ li a {
   padding: 0 22px 40px 27px;
 }
 
+.hidden-nav .h2 {
+  width: 100%;
+  display: block;
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hidden-nav a {
+  display: flex;
+  margin: 20px 0;
+}
+
+.hidden-nav span {
+  font-family: Poppins, sans-serif;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2em;
+  max-width: 75%;
+}
+.hidden-nav span:hover {
+  text-decoration: underline;
+}
+
+.hidden-nav li {
+  width: 33%;
+}
+
+.hidden-nav i {
+  padding: 0;
+  margin-top: 5px;
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+.nav-section {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.small {
+  font-size: 0.65em;
+  margin-bottom: 0;
+}
+
 @media (min-width: 993px) {
   .desktop-nav {
     display: block;
+  }
+  .main-nav > li a::after {
+    border-right-width: 67px;
+    border-left-width: 67px;
+  }
+}
+@media (min-width: 1201px) {
+  .main-nav > li a:after {
+    border-right-width: 80px;
+    border-left-width: 84px;
   }
 }
 .footer-outer {
@@ -915,7 +1031,7 @@ footer h4 {
   background-color: #166af4;
 }
 .div-two .trustpilot {
-  margin-top: 0;
+  margin-top: 25px;
   background-color: #00b67b;
 }
 .div-two .trustpilot:hover {
