@@ -195,13 +195,38 @@
   }
 }
 
-// Banner media queries
+// Banner image media queries
 
-// @include mq(medium) {
-//   main {
-//     margin-top: 120px;
-//   }
-// }
+@media (min-width: 380px) {
+  .first-image {
+    height: 600px;
+  }
+}
+
+@include mq(medium) {
+  .first-image h3 {
+    margin-top: 30px;
+  }
+}
+
+@include mq(large) {
+  .first-image {
+    text-align: left;
+    height: 600px;
+  }
+
+  .first-image h3 {
+    font-size: 4em;
+    padding: 0;
+  }
+}
+
+@include mq(large) {
+  .first-image p {
+    font-size: 1.625em;
+    margin-left: 0;
+  }
+}
 
 @include mq(x-small) {
   .image-container {

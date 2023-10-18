@@ -1047,8 +1047,8 @@ footer h4 {
 
 .div-one,
 .div-two {
-  padding-left: 15px;
-  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
 }
 .div-one p,
 .div-two p {
@@ -1073,7 +1073,7 @@ footer h4 {
   display: flex;
   flex-wrap: wrap;
   justify-items: start;
-  margin-top: 15px;
+  margin-top: auto;
   margin-bottom: 25px;
 }
 .div-btn a:hover {
@@ -1084,7 +1084,7 @@ footer h4 {
   text-transform: uppercase;
   line-height: 2rem;
   font-size: 1.25rem;
-  padding: 10px 30px;
+  padding: 10px 20px;
   border-radius: 6px;
   background-color: #272936;
   margin-right: 15px;
@@ -1493,34 +1493,17 @@ hr {
 }
 
 @media (min-width: 1px) and (max-width: 460px) {
-  .first-image {
+  .image-container {
     height: 530px;
   }
-}
-@media (min-width: 380px) {
-  .first-image {
-    height: 600px;
+  .image-container h3 {
+    font-size: 2em;
   }
-}
-@media (min-width: 769px) {
-  .first-image h3 {
-    margin-top: 30px;
+  .image-container p {
+    font-size: 1em;
   }
-}
-@media (min-width: 993px) {
-  .first-image {
-    text-align: left;
-    height: 600px;
-  }
-  .first-image h3 {
-    font-size: 4em;
-    padding: 0;
-  }
-}
-@media (min-width: 993px) {
-  .first-image p {
-    font-size: 1.625em;
-    margin-left: 0;
+  .image-container a {
+    font-size: 1.2em;
   }
 }
 .service-head {
@@ -2011,6 +1994,32 @@ hr {
 @media (min-width: 993px) {
   .icon-disabled {
     display: inline;
+  }
+}
+@media (min-width: 380px) {
+  .first-image {
+    height: 600px;
+  }
+}
+@media (min-width: 769px) {
+  .first-image h3 {
+    margin-top: 30px;
+  }
+}
+@media (min-width: 993px) {
+  .first-image {
+    text-align: left;
+    height: 600px;
+  }
+  .first-image h3 {
+    font-size: 4em;
+    padding: 0;
+  }
+}
+@media (min-width: 993px) {
+  .first-image p {
+    font-size: 1.625em;
+    margin-left: 0;
   }
 }
 @media (min-width: 1px) and (max-width: 460px) {

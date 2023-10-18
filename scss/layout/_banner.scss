@@ -22,6 +22,8 @@
   height: 550px;
 }
 
+// Media styles
+
 .image-container h3 {
   font-size: 2.5em;
   font-weight: 600;
@@ -31,7 +33,6 @@
   line-height: 1.25em;
   cursor: default;
 }
-
 .image-container p {
   font-size: 1.25em;
   font-weight: 600;
@@ -56,41 +57,17 @@
     background-color: #7e57a0;
   }
 }
-
-// Media styles
 @include mq(x-small) {
-  .first-image {
+  .image-container {
     height: 530px;
-  }
-}
-
-@media (min-width: 380px) {
-  .first-image {
-    height: 600px;
-  }
-}
-
-@include mq(medium) {
-  .first-image h3 {
-    margin-top: 30px;
-  }
-}
-
-@include mq(large) {
-  .first-image {
-    text-align: left;
-    height: 600px;
-  }
-
-  .first-image h3 {
-    font-size: 4em;
-    padding: 0;
-  }
-}
-
-@include mq(large) {
-  .first-image p {
-    font-size: 1.625em;
-    margin-left: 0;
+    h3 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1em;
+    }
+    a {
+      font-size: 1.2em;
+    }
   }
 }
