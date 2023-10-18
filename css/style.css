@@ -670,6 +670,7 @@ li a {
 }
 
 .main-nav > li:hover .hidden-nav {
+  z-index: 2;
   display: block;
 }
 
