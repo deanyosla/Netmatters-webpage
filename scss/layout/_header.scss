@@ -35,7 +35,7 @@
   padding: 15px 20px;
   font-size: 1.2em;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   text-decoration: none;
   margin-right: 15px;
   &:hover {
@@ -48,7 +48,7 @@
   padding: 15px 20px;
   font-size: 1.2em;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   text-decoration: none;
   margin-right: 15px;
   &:hover {
@@ -67,23 +67,30 @@
 }
 
 #hamburger-nav {
-  cursor: pointer;
   padding: 0;
   background: none;
   border: none;
 }
-.hamburger-bars {
-  cursor: pointer;
-  color: #fff;
+.hamburger-box {
   background-color: $dark-txt;
-  border-radius: 5%;
-  padding: 13px 20px;
+  border-radius: 3px;
+  height: 56px !important;
+  padding: 5px 30px;
   font-size: 2em;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin: 4px 10px 0 10px;
   &:hover {
     background-color: $vdark-bg;
   }
+}
+.hamburger-inner {
+  left: 10px;
+}
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+  display: block;
+  background-color: #fff !important;
+  border-radius: 0 !important;
 }
 
 // search box styles

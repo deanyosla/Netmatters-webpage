@@ -111,6 +111,9 @@ hr {
   color: #926fb1;
   font-weight: $font-bold;
 }
+.article-title2 {
+  margin-bottom: 40px;
+}
 
 .article-description {
   font-size: 0.822em;
@@ -121,7 +124,8 @@ hr {
 .readmore1 {
   background-color: #67809f;
   color: #fff;
-  padding: 10px 15px;
+  line-height: 35px;
+  padding: 5px 15px;
   text-transform: uppercase;
   font-size: 1.1em;
   border-radius: 3px;
@@ -133,7 +137,8 @@ hr {
 .readmore3 {
   background-color: #926fb1;
   color: #fff;
-  padding: 10px 15px;
+  line-height: 35px;
+  padding: 5px 15px;
   text-transform: uppercase;
   font-size: 1.1em;
   border-radius: 3px;
@@ -144,10 +149,9 @@ hr {
 .authors {
   display: flex;
   line-height: 1.25em;
-  margin-top: 20px;
   font-size: 0.9em;
   font-weight: 600;
-  margin-left: 25px;
+  margin: 20px auto -20px 25px;
 }
 
 .authors img {
@@ -252,6 +256,7 @@ hr {
   border-radius: 3px;
   &:hover {
     background-color: #526781;
+    cursor: pointer;
   }
 }
 
@@ -290,6 +295,8 @@ hr {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    margin-top: -40px;
+    margin-bottom: -20px;
   }
 }
 

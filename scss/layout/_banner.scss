@@ -23,23 +23,22 @@
 }
 
 // Media styles
+.image-container {
+  padding: 3.75rem 0;
+}
 
-.image-container h3 {
+.image-container .h1 {
   font-size: 2.5em;
   font-weight: 600;
-  margin-top: -20px;
-  padding: 1.25em 0;
-  padding-bottom: 0.1em;
-  line-height: 1.25em;
+  line-height: 3rem;
   cursor: default;
+  margin-bottom: 1.25rem;
 }
 .image-container p {
   font-size: 1.25em;
+  line-height: 1.75rem;
   font-weight: 600;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 35px;
-  margin-top: -20px;
+  margin: -10px 25px 0.375rem 25px;
   cursor: default;
 }
 
@@ -50,24 +49,37 @@
   text-transform: uppercase;
   background-color: #926fb1;
   display: inline-block;
-  margin: 0 auto 20px;
+  margin-top: 1.938rem;
+  margin-bottom: 1.125rem;
   padding: 1em;
   border-radius: 3px;
   &:hover {
     background-color: #7e57a0;
   }
 }
-@include mq(x-small) {
-  .image-container {
-    height: 530px;
-    h3 {
-      font-size: 2em;
-    }
-    p {
-      font-size: 1em;
-    }
-    a {
-      font-size: 1.2em;
-    }
+
+@media (min-width: 767px) and (min-height: 1024px) {
+  .image-container .h1 {
+    margin-top: 45px;
   }
 }
+@media (min-width: 375px) and (max-height: 950px) {
+  .image-container .h1 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+// @include mq(x-small) {
+//   .image-container {
+//     height: 530px;
+//     h3 {
+//       font-size: 2em;
+//     }
+//     p {
+//       font-size: 1em;
+//     }
+//     a {
+//       font-size: 1.2em;
+//     }
+//   }
+// }
