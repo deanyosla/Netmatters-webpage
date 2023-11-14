@@ -820,10 +820,6 @@ footer h4 {
   text-decoration: underline;
 }
 
-.socials-container {
-  padding-right: 5rem;
-}
-
 .socials-container img {
   width: 320px;
 }
@@ -1872,6 +1868,9 @@ hr {
   .footer-container {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .socials-container {
+    padding-right: 5rem;
   }
   .main-links {
     padding: 0 15px;
