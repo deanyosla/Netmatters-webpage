@@ -21,6 +21,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-left: 15px;
+  padding-left: 10px;
 }
 
 .icon-disabled {
@@ -51,6 +52,7 @@
   border-radius: 3px;
   text-decoration: none;
   margin-right: 15px;
+  margin-left: -5px;
   &:hover {
     background-color: #84858f;
   }
@@ -77,13 +79,18 @@
   height: 56px !important;
   padding: 5px 30px;
   font-size: 2em;
-  margin: 4px 10px 0 10px;
+  margin: 4px -7px 0 13px;
   &:hover {
     background-color: $vdark-bg;
   }
 }
 .hamburger-inner {
   left: 10px;
+}
+
+.hamburger.is-active:hover,
+.hamburger:hover {
+  opacity: 1 !important;
 }
 .hamburger-inner,
 .hamburger-inner::after,

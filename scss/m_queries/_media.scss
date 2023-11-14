@@ -12,6 +12,7 @@
     width: 45%;
     margin: 0 0 1.5rem 0;
     padding: 0;
+    padding-right: 15px;
   }
   .hyphen {
     padding: 0 5px;
@@ -30,20 +31,20 @@
     justify-content: space-between;
   }
   .main-links {
-    padding: 0 1rem;
+    padding: 0 15px;
     width: 25%;
+  }
+  .links-container {
+    min-width: 800px;
   }
   .link-title {
     padding-top: 35px;
-  }
-  .links-container {
-    margin-bottom: 40px;
   }
 }
 
 @include mq(x-small) {
   .socials-container img {
-    width: 320px;
+    width: 250px;
   }
 }
 @include mq(large) {
@@ -93,7 +94,6 @@
 @include mq(large) {
   .header-btn {
     width: 520px;
-    gap: 10px;
   }
 }
 @include mq(x-large) {
@@ -178,6 +178,7 @@
   .search-bar {
     max-width: 306px;
     justify-content: flex-end;
+    margin-left: -2px;
     .search-box {
       display: block;
       max-width: 240px;
@@ -198,7 +199,7 @@
 
 // Banner image media queries
 
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 460px) {
   .first-image {
     height: 580px;
   }
@@ -213,17 +214,14 @@
 @include mq(large) {
   .first-image {
     text-align: left;
-    height: 600px;
+    height: 547px;
   }
-
-  .first-image .h {
+  .first-image .h1 {
     font-size: 4em;
     line-height: 5rem;
     padding: 0;
+    margin-left: 0;
   }
-}
-
-@include mq(large) {
   .first-image p {
     font-size: 1.625em;
     margin-left: 0;
@@ -236,9 +234,19 @@
 //     padding: 40px 0;
 //   }
 // }
-@media (min-width: 576px) {
+@include mq(small) {
   .image-container {
-    padding: 75px 0;
+    padding: 87px 0;
+  }
+  @include mq(large) {
+    .image-container {
+      padding: 60px 0;
+    }
+    @include mq(x-large) {
+      .image-container {
+        padding: 87px 0;
+      }
+    }
   }
 }
 
@@ -266,23 +274,21 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "tabone tabone" "tabtwo tabtwo" "tabthree tabthree" "tabfour tabfive" "tabsix tabseven";
   }
-}
-
-@include mq(large) {
-  .tab-container {
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-areas:
-      "tabone tabone tabtwo tabtwo tabthree tabthree"
-      "tabfour tabfour tabfour tabfive tabfive tabfive"
-      "tabsix tabsix tabsix tabseven tabseven tabseven";
+  @include mq(large) {
+    .tab-container {
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-areas:
+        "tabone tabone tabtwo tabtwo tabthree tabthree"
+        "tabfour tabfour tabfour tabfive tabfive tabfive"
+        "tabsix tabsix tabsix tabseven tabseven tabseven";
+    }
   }
-}
-
-@include mq(x-large) {
-  .tab-container {
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-areas:
-      "tabone tabone tabone tabone tabtwo tabtwo tabtwo tabtwo tabthree tabthree tabthree tabthree"
-      "tabfour tabfour tabfour tabfive tabfive tabfive tabsix tabsix tabsix tabseven tabseven tabseven";
+  @include mq(x-large) {
+    .tab-container {
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas:
+        "tabone tabone tabone tabone tabtwo tabtwo tabtwo tabtwo tabthree tabthree tabthree tabthree"
+        "tabfour tabfour tabfour tabfive tabfive tabfive tabsix tabsix tabsix tabseven tabseven tabseven";
+    }
   }
 }

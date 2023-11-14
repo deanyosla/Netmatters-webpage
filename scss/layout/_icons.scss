@@ -8,24 +8,22 @@
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  max-width: 150px;
+  max-width: 200px;
 }
-.socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+.socials span {
+  cursor: pointer;
+  color: white;
+  padding: 12px 22px 16px;
   background-color: #212330;
-  margin: 0.25rem;
+  margin-right: 7px;
+  margin-bottom: 7px;
   text-decoration: none;
+  text-align: center;
+  font-size: 24px;
 }
-.social-icon-fb,
-.social-icon-li,
-.social-icon-tw,
-.social-icon-in {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: white;
+.socials .fb-ico {
+  text-decoration: none;
+  padding: 12px 26px 16px;
 }
 
 // ==============================================
@@ -70,7 +68,7 @@
 
 @media (min-width: 480px) {
   .socials {
-    max-width: 250px;
+    max-width: 300px;
   }
   .fb-ico,
   .li-ico,

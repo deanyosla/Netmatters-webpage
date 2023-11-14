@@ -378,6 +378,7 @@ li a {
   justify-content: flex-end;
   align-items: center;
   margin-left: 15px;
+  padding-left: 10px;
 }
 
 .icon-disabled {
@@ -411,6 +412,7 @@ li a {
   border-radius: 3px;
   text-decoration: none;
   margin-right: 15px;
+  margin-left: -5px;
 }
 .icon-disabled a:nth-child(2):hover {
   background-color: #84858f;
@@ -438,7 +440,7 @@ li a {
   height: 56px !important;
   padding: 5px 30px;
   font-size: 2em;
-  margin: 4px 10px 0 10px;
+  margin: 4px -7px 0 13px;
 }
 .hamburger-box:hover {
   background-color: #22242e;
@@ -446,6 +448,11 @@ li a {
 
 .hamburger-inner {
   left: 10px;
+}
+
+.hamburger.is-active:hover,
+.hamburger:hover {
+  opacity: 1 !important;
 }
 
 .hamburger-inner,
@@ -778,7 +785,6 @@ footer h4 {
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: 26px;
-  padding-left: 5px;
 }
 
 .socials-container a {
@@ -811,9 +817,12 @@ footer h4 {
   text-decoration: underline;
 }
 
+.socials-container {
+  padding-right: 5rem;
+}
+
 .socials-container img {
-  width: 250px;
-  padding-left: 2px;
+  width: 320px;
 }
 
 .link-title {
@@ -846,26 +855,24 @@ footer h4 {
   flex-direction: row;
   flex-wrap: wrap;
   margin-bottom: 30px;
-  max-width: 150px;
+  max-width: 200px;
 }
 
-.socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+.socials span {
+  cursor: pointer;
+  color: white;
+  padding: 12px 22px 16px;
   background-color: #212330;
-  margin: 0.25rem;
+  margin-right: 7px;
+  margin-bottom: 7px;
   text-decoration: none;
+  text-align: center;
+  font-size: 24px;
 }
 
-.social-icon-fb,
-.social-icon-li,
-.social-icon-tw,
-.social-icon-in {
-  width: 1.25rem;
-  height: 1.25rem;
-  fill: white;
+.socials .fb-ico {
+  text-decoration: none;
+  padding: 12px 26px 16px;
 }
 
 .fb-ico:hover {
@@ -903,7 +910,7 @@ footer h4 {
 }
 @media (min-width: 480px) {
   .socials {
-    max-width: 250px;
+    max-width: 300px;
   }
   .fb-ico,
   .li-ico,
@@ -1484,7 +1491,7 @@ hr {
   font-weight: 600;
   line-height: 3rem;
   cursor: default;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.8rem;
 }
 
 .image-container p {
@@ -1844,6 +1851,7 @@ hr {
     width: 45%;
     margin: 0 0 1.5rem 0;
     padding: 0;
+    padding-right: 15px;
   }
   .hyphen {
     padding: 0 5px;
@@ -1860,19 +1868,19 @@ hr {
     justify-content: space-between;
   }
   .main-links {
-    padding: 0 1rem;
+    padding: 0 15px;
     width: 25%;
+  }
+  .links-container {
+    min-width: 800px;
   }
   .link-title {
     padding-top: 35px;
   }
-  .links-container {
-    margin-bottom: 40px;
-  }
 }
 @media (min-width: 1px) and (max-width: 460px) {
   .socials-container img {
-    width: 320px;
+    width: 250px;
   }
 }
 @media (min-width: 992px) {
@@ -1913,7 +1921,6 @@ hr {
 @media (min-width: 992px) {
   .header-btn {
     width: 520px;
-    gap: 10px;
   }
 }
 @media (min-width: 1201px) {
@@ -1996,6 +2003,7 @@ hr {
   .search-bar {
     max-width: 306px;
     justify-content: flex-end;
+    margin-left: -2px;
   }
   .search-bar .search-box {
     display: block;
@@ -2013,7 +2021,7 @@ hr {
     display: inline;
   }
 }
-@media (min-width: 280px) {
+@media (min-width: 280px) and (max-width: 460px) {
   .first-image {
     height: 580px;
   }
@@ -2021,24 +2029,33 @@ hr {
 @media (min-width: 992px) {
   .first-image {
     text-align: left;
-    height: 600px;
+    height: 547px;
   }
-  .first-image .h {
+  .first-image .h1 {
     font-size: 4em;
     line-height: 5rem;
     padding: 0;
+    margin-left: 0;
   }
-}
-@media (min-width: 992px) {
   .first-image p {
     font-size: 1.625em;
     margin-left: 0;
     line-height: 2.5rem;
   }
 }
-@media (min-width: 576px) {
+@media (min-width: 461px) {
   .image-container {
-    padding: 75px 0;
+    padding: 87px 0;
+  }
+}
+@media (min-width: 461px) and (min-width: 992px) {
+  .image-container {
+    padding: 60px 0;
+  }
+}
+@media (min-width: 461px) and (min-width: 992px) and (min-width: 1201px) {
+  .image-container {
+    padding: 87px 0;
   }
 }
 @media (min-width: 768px) {
@@ -2061,13 +2078,13 @@ hr {
     grid-template-areas: "tabone tabone" "tabtwo tabtwo" "tabthree tabthree" "tabfour tabfive" "tabsix tabseven";
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) and (min-width: 992px) {
   .tab-container {
     grid-template-columns: repeat(6, 1fr);
     grid-template-areas: "tabone tabone tabtwo tabtwo tabthree tabthree" "tabfour tabfour tabfour tabfive tabfive tabfive" "tabsix tabsix tabsix tabseven tabseven tabseven";
   }
 }
-@media (min-width: 1201px) {
+@media (min-width: 768px) and (min-width: 1201px) {
   .tab-container {
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: "tabone tabone tabone tabone tabtwo tabtwo tabtwo tabtwo tabthree tabthree tabthree tabthree" "tabfour tabfour tabfour tabfive tabfive tabfive tabsix tabsix tabsix tabseven tabseven tabseven";
