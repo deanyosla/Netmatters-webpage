@@ -37,3 +37,143 @@
     @content;
   }
 }
+
+// Button maps and mixins
+
+$button-styles: (
+  banner: (
+    image-container: (
+      bg-color: #926fb1,
+      hover-bg-color: #7e57a0,
+    ),
+  ),
+  header: (
+    header-btn: (
+      primary: (
+        bg-color: #4183d7,
+        hover-bg-color: #2a6ec6,
+      ),
+      secondary: (
+        bg-color: #999aa2,
+        hover-bg-color: #84858f,
+      ),
+    ),
+    hamburger-nav: (
+      bg-color: $dark-txt,
+      hover-bg-color: $vdark-bg,
+    ),
+  ),
+  news: (
+    tag-1: (
+      bg-color: #67809f,
+      hover-bg-color: #526781,
+    ),
+    tag-2: (
+      bg-color: #926fb1,
+      hover-bg-color: #7e57a0,
+    ),
+    tag-3: (
+      bg-color: #926fb1,
+      hover-bg-color: #7e57a0,
+    ),
+    readmore1: (
+      bg-color: #67809f,
+      hover-bg-color: #526781,
+    ),
+    readmore2: (
+      bg-color: #926fb1,
+      hover-bg-color: #7e57a0,
+    ),
+    readmore3: (
+      bg-color: #926fb1,
+      hover-bg-color: #7e57a0,
+    ),
+    tooltiptext-a: (
+      bg-color: #67809f,
+      hover-bg-color: #526781,
+    ),
+  ),
+  newsletter: (
+    subscribe: (
+      bg-color: $dark-bg,
+      hover-bg-color: $vdark-bg,
+    ),
+  ),
+  services: (
+    tab-container: (
+      tab1: (
+        bg-color: #67809f,
+        hover-bg-color: #526781,
+      ),
+      tab2: (
+        bg-color: #4183d7,
+        hover-bg-color: #2a6ec6,
+      ),
+      tab3: (
+        bg-color: #2ecc71,
+        hover-bg-color: #1a8c5d,
+      ),
+      tab4: (
+        bg-color: #d64541,
+        hover-bg-color: #ae3a35,
+      ),
+      tab5: (
+        bg-color: #926fb1,
+        hover-bg-color: #7e57a0,
+      ),
+      tab6: (
+        bg-color: #f62459,
+        hover-bg-color: #d91e4f,
+      ),
+      tab7: (
+        bg-color: #ce4125,
+        hover-bg-color: #a9321d,
+      ),
+    ),
+  ),
+  welcome: (
+    btn-prim: (
+      bg-color: $btn-dark,
+      hover-bg-color: $btn-vdark,
+    ),
+    google: (
+      bg-color: $btn-google,
+      hover-bg-color: $google-hover,
+    ),
+    trustpilot: (
+      bg-color: $btn-trustp,
+      hover-bg-color: $trstp-hover,
+    ),
+  ),
+);
+
+@mixin button-style($type, $style) {
+  $style-props: map-get(map-get($button-styles, $type), $style);
+  @if $type == "newsletter" {
+    height: auto;
+    line-height: 35px;
+    padding: 5px 15px;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border: none;
+    border-radius: 3px;
+    white-space: normal;
+  } @else {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 1.938rem;
+    margin-bottom: 1.125rem;
+    padding: 1em;
+    border-radius: 3px;
+  }
+
+  background-color: map-get($style-props, bg-color);
+
+  &:hover {
+    background-color: map-get($style-props, hover-bg-color);
+  }
+}

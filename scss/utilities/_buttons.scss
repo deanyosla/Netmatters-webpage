@@ -1,19 +1,7 @@
 // ==========================  Banner buttons ============================================================================================
 
 .image-container a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  background-color: #926fb1;
-  display: inline-block;
-  margin-top: 1.938rem;
-  margin-bottom: 1.125rem;
-  padding: 1em;
-  border-radius: 3px;
-  &:hover {
-    background-color: #7e57a0;
-  }
+  @include button-style(banner, image-container);
 }
 
 // ==========================  Header buttons ============================================================================================
