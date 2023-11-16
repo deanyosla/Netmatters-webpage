@@ -2,6 +2,16 @@
 // Icon styles
 // ============================================
 
+.icon-phone {
+  text-decoration: none;
+  padding-right: 10px;
+  color: black;
+  font-size: 25px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .socials {
   fill: white;
   display: flex;

@@ -42,22 +42,6 @@
   cursor: default;
 }
 
-.image-container a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1.3em;
-  text-transform: uppercase;
-  background-color: #926fb1;
-  display: inline-block;
-  margin-top: 1.938rem;
-  margin-bottom: 1.125rem;
-  padding: 1em;
-  border-radius: 3px;
-  &:hover {
-    background-color: #7e57a0;
-  }
-}
-
 @media (min-width: 767px) and (min-height: 1024px) {
   .image-container .h1 {
     margin-top: 45px;
@@ -69,17 +53,3 @@
     margin-right: 10px;
   }
 }
-// @include mq(x-small) {
-//   .image-container {
-//     height: 530px;
-//     h3 {
-//       font-size: 2em;
-//     }
-//     p {
-//       font-size: 1em;
-//     }
-//     a {
-//       font-size: 1.2em;
-//     }
-//   }
-// }

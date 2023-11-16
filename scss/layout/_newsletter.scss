@@ -13,27 +13,9 @@
     font-weight: $font-bold;
     color: $dark-txt;
   }
-}
-.required::after {
-  content: "*";
-  color: red;
-}
-
-.subscribe {
-  color: white;
-  background-color: $dark-bg;
-  height: auto;
-  line-height: 35px;
-  padding: 5px 15px;
-  margin-top: 1.5rem;
-  text-transform: uppercase;
-  font-size: 1.063rem;
-  border: none;
-  border-radius: 3px;
-  white-space: normal;
-  &:hover {
-    background-color: $vdark-bg;
-    cursor: pointer;
+  .required::after {
+    content: "*";
+    color: red;
   }
 }
 
