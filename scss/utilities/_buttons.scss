@@ -34,9 +34,7 @@
     header,
     primary,
     $custom-font-size: 1.2em,
-    $custom-padding: 15px 20px,
-    $custom-margin-top: revert,
-    $custom-margin-bottom: revert
+    $custom-padding: 15px 20px
   );
   border: none;
   margin-right: 15px;
@@ -46,9 +44,7 @@
     header,
     secondary,
     $custom-font-size: 1.2em,
-    $custom-padding: 15px 20px,
-    $custom-margin-top: revert,
-    $custom-margin-bottom: revert
+    $custom-padding: 15px 20px
   );
   border: none;
   margin-right: 15px;
@@ -99,11 +95,10 @@
   border-radius: 0;
   right: 0;
   top: -3px;
-  font-weight: 600;
-  margin: revert;
+  font-weight: $font-bold;
   &:hover {
     text-decoration: underline;
-    background-color: #67809f;
+    background-color: $nav-color-1n;
   }
 }
 
@@ -119,11 +114,10 @@
   border-radius: 0;
   right: 0;
   top: -3px;
-  font-weight: 600;
-  margin: revert;
+  font-weight: $font-bold;
   &:hover {
     text-decoration: underline;
-    background-color: #926fb1;
+    background-color: $nav-color-5n;
   }
 }
 
@@ -186,7 +180,7 @@
   border-radius: 3px;
   color: #fff;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: $font-light;
   text-transform: uppercase;
   margin: 30px 0 10px 0;
   cursor: pointer;

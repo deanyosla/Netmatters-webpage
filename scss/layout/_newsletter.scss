@@ -38,13 +38,13 @@
   width: 100%;
   height: 47px;
   padding: 5px 15px;
-  border-color: #ccc;
+  border-color: $border-grey;
   border-radius: 2px;
   background-color: #fff;
-  border: 1px solid #e5e5e5;
+  border: 1px solid $input;
 
   &:focus {
-    border-color: #5bc0de;
+    border-color: $border;
     outline: 0;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
       0 0 8px rgba(91, 192, 222, 0.6);

@@ -185,31 +185,28 @@ hr {
   padding: 20px;
   overflow-wrap: break-word;
   font-size: 1.1em;
+  i {
+    margin: 0;
+    margin-top: 2px;
+  }
+  p {
+    height: auto;
+    text-wrap: wrap;
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -30px;
+    border-width: 30px;
+    border-style: solid;
+    border-color: $dark-txt transparent transparent transparent;
+  }
+  .tooltip-description {
+    font-size: 0.8em;
+  }
 }
-
-.tooltiptext i {
-  margin: 0;
-  margin-top: 2px;
-}
-.tooltiptext p {
-  height: auto;
-  text-wrap: wrap;
-}
-
-.tooltip-description {
-  font-size: 0.8em;
-}
-.tooltip .tooltiptext::after {
-  content: " ";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -30px;
-  border-width: 30px;
-  border-style: solid;
-  border-color: $dark-txt transparent transparent transparent;
-}
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
   filter: none;

@@ -43,18 +43,18 @@
 $button-styles: (
   banner: (
     image-container: (
-      bg-color: #926fb1,
-      hover-bg-color: #7e57a0,
+      bg-color: $nav-color-5n,
+      hover-bg-color: $nav-color-5dk,
     ),
   ),
   header: (
     primary: (
-      bg-color: #4183d7,
-      hover-bg-color: #2a6ec6,
+      bg-color: $nav-color-2n,
+      hover-bg-color: $nav-color-2dk,
     ),
     secondary: (
-      bg-color: #999aa2,
-      hover-bg-color: #84858f,
+      bg-color: $btn-contact,
+      hover-bg-color: $btn-contact-hov,
     ),
     hamburger-nav: (
       bg-color: $dark-txt,
@@ -63,32 +63,32 @@ $button-styles: (
   ),
   news: (
     tag-1: (
-      bg-color: #67809f,
-      hover-bg-color: #526781,
+      bg-color: $nav-color-1n,
+      hover-bg-color: $nav-color-1dk,
     ),
     tag-2: (
-      bg-color: #926fb1,
-      hover-bg-color: #7e57a0,
+      bg-color: $nav-color-5n,
+      hover-bg-color: $nav-color-5dk,
     ),
     tag-3: (
-      bg-color: #926fb1,
-      hover-bg-color: #7e57a0,
+      bg-color: $nav-color-5n,
+      hover-bg-color: $nav-color-5dk,
     ),
     readmore1: (
-      bg-color: #67809f,
-      hover-bg-color: #526781,
+      bg-color: $nav-color-1n,
+      hover-bg-color: $nav-color-1dk,
     ),
     readmore2: (
-      bg-color: #926fb1,
-      hover-bg-color: #7e57a0,
+      bg-color: $nav-color-5n,
+      hover-bg-color: $nav-color-5dk,
     ),
     readmore3: (
-      bg-color: #926fb1,
-      hover-bg-color: #7e57a0,
+      bg-color: $nav-color-5n,
+      hover-bg-color: $nav-color-5dk,
     ),
     tooltiptext-a: (
-      bg-color: #67809f,
-      hover-bg-color: #526781,
+      bg-color: $nav-color-1n,
+      hover-bg-color: $nav-color-1dk,
     ),
   ),
   newsletter: (
@@ -109,6 +109,24 @@ $button-styles: (
     trustpilot: (
       bg-color: $btn-trustp,
       hover-bg-color: $trstp-hover,
+    ),
+  ),
+  social: (
+    fb-icon: (
+      bg-color: $social-dark,
+      hover-bg-color: $fb-icon-hov,
+    ),
+    in-icon: (
+      bg-color: $social-dark,
+      hover-bg-color: $in-icon-hov,
+    ),
+    tw-icon: (
+      bg-color: $social-dark,
+      hover-bg-color: $tw-icon-hov,
+    ),
+    li-icon: (
+      bg-color: $social-dark,
+      hover-bg-color: $li-icon-hov,
     ),
   ),
 );

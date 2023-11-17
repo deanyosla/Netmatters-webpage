@@ -5,7 +5,7 @@
 .icon-phone {
   text-decoration: none;
   padding-right: 10px;
-  color: black;
+  color: #000;
   font-size: 25px;
   &:hover {
     text-decoration: underline;
@@ -13,7 +13,7 @@
 }
 
 .socials {
-  fill: white;
+  fill: #fff;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,9 +22,9 @@
 }
 .socials a {
   cursor: pointer;
-  color: white;
+  color: #fff;
   padding: 12px 22px 16px;
-  background-color: #212330;
+  background-color: $social-dark;
   margin-right: 7px;
   margin-bottom: 7px;
   text-decoration: none;
@@ -40,19 +40,19 @@
 // ==============================================
 
 .fb-ico:hover {
-  background-color: #3b5998;
+  background-color: $fb-icon-hov;
   text-decoration: none !important;
 }
 .in-ico:hover {
-  background-color: #d93175;
+  background-color: $in-icon-hov;
   text-decoration: none !important;
 }
 .li-ico:hover {
-  background-color: #0077b5;
+  background-color: $li-icon-hov;
   text-decoration: none !important;
 }
 .tw-ico:hover {
-  background-color: #00aced;
+  background-color: $tw-icon-hov;
   text-decoration: none !important;
 }
 

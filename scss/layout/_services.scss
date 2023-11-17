@@ -7,20 +7,21 @@
 }
 
 .icon {
-  color: #fff;
-  background-color: #926fb1;
+  @include button-style(
+    banner,
+    image-container,
+    $custom-padding: 15px,
+    $custom-font-size: 1.7em
+  );
+
   border-radius: 50%;
-  padding: 15px;
-  font-size: 1.7em;
   width: 65px;
   height: 65px;
   display: flex;
   margin: 0 auto;
-  margin-top: 15px;
-}
-
-.icon i {
-  margin: auto;
+  i {
+    margin: auto;
+  }
 }
 .tab-container {
   display: grid;
@@ -28,26 +29,23 @@
   gap: 2em;
   text-align: center;
   cursor: pointer;
-}
-
-.tab-container h3 {
-  color: $dark-txt;
-  font-size: 1.3em;
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-.tab-container p {
-  color: $dark-txt;
-  font-size: 0.8em;
-  line-height: 1.8em;
-  margin: -10px 30px;
-  padding-bottom: 110px;
-}
-
-.tab-container a {
-  color: $dark-txt;
-  text-decoration: none;
+  h3 {
+    color: $dark-txt;
+    font-size: 1.3em;
+    font-weight: $font-light;
+    margin-top: 10px;
+  }
+  p {
+    color: $dark-txt;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    margin: -10px 30px;
+    padding-bottom: 110px;
+  }
+  a {
+    color: $dark-txt;
+    text-decoration: none;
+  }
 }
 
 .tab-container .tab1,
@@ -58,10 +56,10 @@
 .tab-container .tab6,
 .tab-container .tab7 {
   background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid $border-grey;
   border-radius: 15px;
   padding: 20px 20px;
-  box-shadow: 0px 0px 20px #e9e9e9;
+  box-shadow: 0px 0px 20px $input;
   position: relative;
   top: 0;
   transition: 0.5s ease;
@@ -69,37 +67,37 @@
 
 // Hover styles
 .tab1:hover {
-  background-color: #67809f;
+  background-color: $nav-color-1n;
   top: -10px;
   transition: 0.5s ease;
 }
 .tab2:hover {
-  background-color: #4183d7;
+  background-color: $nav-color-2n;
   top: -10px;
   transition: 0.5s ease;
 }
 .tab3:hover {
-  background-color: #2ecc71;
+  background-color: $nav-color-3n;
   top: -10px;
   transition: 0.5s ease;
 }
 .tab4:hover {
-  background-color: #d64541;
+  background-color: $nav-color-4n;
   top: -10px;
   transition: 0.5s ease;
 }
 .tab5:hover {
-  background-color: #926fb1;
+  background-color: $nav-color-5n;
   top: -10px;
   transition: 0.5s ease;
 }
 .tab6:hover {
-  background-color: #f62459;
+  background-color: $nav-color-6n;
   top: -10px;
   transition: 0.5s ease;
 }
 .tab7:hover {
-  background-color: #ce4125;
+  background-color: $nav-color-7n;
   top: -10px;
   transition: 0.5s ease;
 }
@@ -116,7 +114,7 @@
 }
 .view-hidden {
   font-size: 1.6em;
-  font-weight: 600;
+  font-weight: $font-bold;
   color: $dark-txt;
   text-decoration: none;
   display: block;
@@ -128,7 +126,7 @@
 }
 .view-work {
   font-size: 1.6em;
-  font-weight: 600;
+  font-weight: $font-bold;
   color: $dark-txt;
   text-decoration: none;
   display: block;
@@ -190,10 +188,9 @@
 
 .greyscale {
   filter: grayscale(1);
-}
-
-.greyscale:hover {
-  filter: none;
+  &:hover {
+    filter: none;
+  }
 }
 
 .work-showcase a:nth-child(-n + 3) {
