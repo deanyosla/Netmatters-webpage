@@ -244,121 +244,6 @@
   cursor: pointer;
 }
 
-.tab1 .icon .tab1 .icon,
-.tab1 .icon .tab1 .button,
-.tab1 .button .tab1 .icon,
-.tab1 .button .tab1 .button {
-  background-color: #67809f;
-}
-.tab1 .icon .tab1:hover .button,
-.tab1 .icon .tab1:hover .icon,
-.tab1 .button .tab1:hover .button,
-.tab1 .button .tab1:hover .icon {
-  color: #67809f;
-}
-.tab1 .icon .tab2 .icon,
-.tab1 .icon .tab2 .button,
-.tab1 .button .tab2 .icon,
-.tab1 .button .tab2 .button {
-  background-color: #4183d7;
-}
-.tab1 .icon .tab2:hover .button,
-.tab1 .icon .tab2:hover .icon,
-.tab1 .button .tab2:hover .button,
-.tab1 .button .tab2:hover .icon {
-  color: #4183d7;
-}
-.tab1 .icon .tab3 .icon,
-.tab1 .icon .tab3 .button,
-.tab1 .button .tab3 .icon,
-.tab1 .button .tab3 .button {
-  background-color: #2ecc71;
-}
-.tab1 .icon .tab3:hover .button,
-.tab1 .icon .tab3:hover .icon,
-.tab1 .button .tab3:hover .button,
-.tab1 .button .tab3:hover .icon {
-  color: #2ecc71;
-}
-.tab1 .icon .tab4 .icon,
-.tab1 .icon .tab4 .button,
-.tab1 .button .tab4 .icon,
-.tab1 .button .tab4 .button {
-  background-color: #d64541;
-}
-.tab1 .icon .tab4:hover .button,
-.tab1 .icon .tab4:hover .icon,
-.tab1 .button .tab4:hover .button,
-.tab1 .button .tab4:hover .icon {
-  color: #d64541;
-}
-.tab1 .icon .tab5 .icon,
-.tab1 .icon .tab5 .button,
-.tab1 .button .tab5 .icon,
-.tab1 .button .tab5 .button {
-  background-color: #926fb1;
-}
-.tab1 .icon .tab5:hover .button,
-.tab1 .icon .tab5:hover .icon,
-.tab1 .button .tab5:hover .button,
-.tab1 .button .tab5:hover .icon {
-  color: #926fb1;
-}
-.tab1 .icon .tab6 .icon,
-.tab1 .icon .tab6 .button,
-.tab1 .button .tab6 .icon,
-.tab1 .button .tab6 .button {
-  background-color: #f62459;
-}
-.tab1 .icon .tab6:hover .button,
-.tab1 .icon .tab6:hover .icon,
-.tab1 .button .tab6:hover .button,
-.tab1 .button .tab6:hover .icon {
-  color: #f62459;
-}
-.tab1 .icon .tab7 .icon,
-.tab1 .icon .tab7 .button,
-.tab1 .button .tab7 .icon,
-.tab1 .button .tab7 .button {
-  background-color: #ce4125;
-}
-.tab1 .icon .tab7:hover .button,
-.tab1 .icon .tab7:hover .icon,
-.tab1 .button .tab7:hover .button,
-.tab1 .button .tab7:hover .icon {
-  color: #ce4125;
-}
-
-.tab2 .icon,
-.tab2 .button {
-  background-color: #4183d7;
-}
-
-.tab3 .icon,
-.tab3 .button {
-  background-color: #2ecc71;
-}
-
-.tab4 .icon,
-.tab4 .button {
-  background-color: #d64541;
-}
-
-.tab5 .icon,
-.tab5 .button {
-  background-color: #926fb1;
-}
-
-.tab6 .icon,
-.tab6 .button {
-  background-color: #f62459;
-}
-
-.tab7 .icon,
-.tab7 .button {
-  background-color: #ce4125;
-}
-
 .tab1 .button,
 .tab2 .button,
 .tab3 .button,
@@ -369,9 +254,19 @@
   display: inline-block;
 }
 
+.tab1 .icon,
+.tab1 .button {
+  background-color: #67809f;
+}
+
 .tab1:hover .button,
 .tab1:hover .icon {
   color: #67809f;
+}
+
+.tab2 .icon,
+.tab2 .button {
+  background-color: #4183d7;
 }
 
 .tab2:hover .button,
@@ -379,9 +274,19 @@
   color: #4183d7;
 }
 
+.tab3 .icon,
+.tab3 .button {
+  background-color: #2ecc71;
+}
+
 .tab3:hover .button,
 .tab3:hover .icon {
   color: #2ecc71;
+}
+
+.tab4 .icon,
+.tab4 .button {
+  background-color: #d64541;
 }
 
 .tab4:hover .button,
@@ -389,14 +294,29 @@
   color: #d64541;
 }
 
+.tab5 .icon,
+.tab5 .button {
+  background-color: #926fb1;
+}
+
 .tab5:hover .button,
 .tab5:hover .icon {
   color: #926fb1;
 }
 
+.tab6 .icon,
+.tab6 .button {
+  background-color: #f62459;
+}
+
 .tab6:hover .button,
 .tab6:hover .icon {
   color: #f62459;
+}
+
+.tab7 .icon,
+.tab7 .button {
+  background-color: #ce4125;
 }
 
 .tab7:hover .button,
@@ -410,9 +330,11 @@
 }
 
 .btn-prim {
+  color: #fff;
   text-transform: uppercase;
-  line-height: 2rem;
+  text-decoration: none;
   font-size: 1.25rem;
+  line-height: 2rem;
   padding: 10px 20px;
   border-radius: 3px;
   background-color: #272936;
@@ -423,7 +345,11 @@
 }
 
 .google {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
   margin-top: auto;
+  border-radius: 3px;
   background-color: #4387f6;
 }
 .google:hover {
@@ -431,7 +357,11 @@
 }
 
 .trustpilot {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
   margin-top: auto;
+  border-radius: 3px;
   background-color: #00b67b;
 }
 .trustpilot:hover {

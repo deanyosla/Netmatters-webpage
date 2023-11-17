@@ -192,41 +192,6 @@
   cursor: pointer;
 }
 
-.tab1 .icon,
-.tab1 .button {
-  @include tab-styles($tab-colors);
-}
-
-.tab2 .icon,
-.tab2 .button {
-  background-color: #4183d7;
-}
-
-.tab3 .icon,
-.tab3 .button {
-  background-color: #2ecc71;
-}
-
-.tab4 .icon,
-.tab4 .button {
-  background-color: #d64541;
-}
-
-.tab5 .icon,
-.tab5 .button {
-  background-color: #926fb1;
-}
-
-.tab6 .icon,
-.tab6 .button {
-  background-color: #f62459;
-}
-
-.tab7 .icon,
-.tab7 .button {
-  background-color: #ce4125;
-}
-
 .tab1 .button,
 .tab2 .button,
 .tab3 .button,
@@ -237,33 +202,67 @@
   display: inline-block;
 }
 
+.tab1 .icon,
+.tab1 .button {
+  background-color: $nav-color-1n;
+}
 .tab1:hover .button,
 .tab1:hover .icon {
-  color: #67809f;
+  color: $nav-color-1n;
+}
+
+.tab2 .icon,
+.tab2 .button {
+  background-color: $nav-color-2n;
 }
 .tab2:hover .button,
 .tab2:hover .icon {
-  color: #4183d7;
+  color: $nav-color-2n;
+}
+
+.tab3 .icon,
+.tab3 .button {
+  background-color: $nav-color-3n;
 }
 .tab3:hover .button,
 .tab3:hover .icon {
-  color: #2ecc71;
+  color: $nav-color-3n;
+}
+
+.tab4 .icon,
+.tab4 .button {
+  background-color: $nav-color-4n;
 }
 .tab4:hover .button,
 .tab4:hover .icon {
-  color: #d64541;
+  color: $nav-color-4n;
+}
+
+.tab5 .icon,
+.tab5 .button {
+  background-color: $nav-color-5n;
 }
 .tab5:hover .button,
 .tab5:hover .icon {
-  color: #926fb1;
+  color: $nav-color-5n;
+}
+
+.tab6 .icon,
+.tab6 .button {
+  background-color: $nav-color-6n;
 }
 .tab6:hover .button,
 .tab6:hover .icon {
-  color: #f62459;
+  color: $nav-color-6n;
+}
+
+.tab7 .icon,
+.tab7 .button {
+  background-color: $nav-color-7n;
 }
 .tab7:hover .button,
 .tab7:hover .icon {
-  color: #ce4125;
+  color: $nav-color-7n;
 }
 
 .tab-container > div:hover .icon,
@@ -274,29 +273,19 @@
 // Welcome section buttons
 
 .btn-prim {
-  text-transform: uppercase;
-  line-height: 2rem;
-  font-size: 1.25rem;
-  padding: 10px 20px;
-  border-radius: 3px;
-  background-color: $btn-dark;
+  @include button-style(
+    welcome,
+    btn-prim,
+    $custom-padding: 10px 20px,
+    $custom-line-height: 2rem,
+    $custom-font-size: 1.25rem
+  );
   margin-right: 15px;
-  &:hover {
-    background-color: $btn-vdark;
-  }
 }
 
 .google {
-  margin-top: auto;
-  background-color: $btn-google;
-  &:hover {
-    background-color: $google-hover;
-  }
+  @include button-style(welcome, google, $custom-margin-top: auto);
 }
 .trustpilot {
-  margin-top: auto;
-  background-color: $btn-trustp;
-  &:hover {
-    background-color: $trstp-hover;
-  }
+  @include button-style(welcome, trustpilot, $custom-margin-top: auto);
 }
