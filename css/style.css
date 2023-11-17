@@ -1,14 +1,14 @@
 .image-container a {
   color: #fff;
+  text-transform: uppercase;
   text-decoration: none;
   font-size: 1.3em;
-  text-transform: uppercase;
-  display: inline-block;
   margin-top: 1.938rem;
   margin-bottom: 1.125rem;
   padding: 1em;
   border-radius: 3px;
   background-color: #926fb1;
+  display: inline-block;
 }
 .image-container a:hover {
   background-color: #7e57a0;
@@ -33,12 +33,15 @@
 
 .icon-disabled a:nth-child(1) {
   color: #fff;
-  background-color: #4183d7;
-  padding: 15px 20px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 3px;
+  text-transform: uppercase;
   text-decoration: none;
+  font-size: 1.2em;
+  margin-top: revert;
+  margin-bottom: revert;
+  padding: 15px 20px;
+  border-radius: 3px;
+  background-color: #4183d7;
+  border: none;
   margin-right: 15px;
 }
 .icon-disabled a:nth-child(1):hover {
@@ -47,12 +50,15 @@
 
 .icon-disabled a:nth-child(2) {
   color: #fff;
-  background-color: #999aa2;
-  padding: 15px 20px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 3px;
+  text-transform: uppercase;
   text-decoration: none;
+  font-size: 1.2em;
+  margin-top: revert;
+  margin-bottom: revert;
+  padding: 15px 20px;
+  border-radius: 3px;
+  background-color: #999aa2;
+  border: none;
   margin-right: 15px;
   margin-left: -5px;
 }
@@ -67,11 +73,14 @@
 }
 
 .hamburger-box {
-  background-color: #333645;
-  border-radius: 3px;
-  height: 56px !important;
-  padding: 5px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
   font-size: 2em;
+  padding: 5px 30px;
+  border-radius: 3px;
+  background-color: #333645;
+  height: 56px !important;
   margin: 4px -7px 0 13px;
 }
 .hamburger-box:hover {
@@ -96,82 +105,111 @@
 }
 
 .tag-1 {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.75em;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #67809f;
   position: absolute;
+  border-radius: 0;
   right: 0;
   top: -3px;
-  background-color: #67809f;
-  color: #fff;
-  font-size: 0.75em;
   font-weight: 600;
-  padding: 5px 10px;
-  text-transform: uppercase;
+  margin: revert;
+}
+.tag-1:hover {
+  background-color: #526781;
 }
 .tag-1:hover {
   text-decoration: underline;
+  background-color: #67809f;
 }
 
 .tag-2,
 .tag-3 {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.75em;
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #926fb1;
   position: absolute;
+  border-radius: 0;
   right: 0;
   top: -3px;
-  background-color: #926fb1;
-  color: #fff;
-  font-size: 0.75em;
   font-weight: 600;
-  padding: 5px 10px;
-  text-transform: uppercase;
+  margin: revert;
+}
+.tag-2:hover,
+.tag-3:hover {
+  background-color: #7e57a0;
 }
 .tag-2:hover,
 .tag-3:hover {
   text-decoration: underline;
+  background-color: #926fb1;
 }
 
 .readmore1 {
-  background-color: #67809f;
   color: #fff;
-  line-height: 35px;
-  padding: 5px 15px;
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 1.1em;
-  border-radius: 3px;
-  width: fit-content;
+  line-height: 35px;
+  margin-top: revert;
   margin-bottom: 30px;
+  padding: 5px 15px;
+  border-radius: 3px;
+  background-color: #67809f;
+  width: fit-content;
+}
+.readmore1:hover {
+  background-color: #526781;
 }
 
 .readmore2,
 .readmore3 {
-  background-color: #926fb1;
   color: #fff;
-  line-height: 35px;
-  padding: 5px 15px;
   text-transform: uppercase;
+  text-decoration: none;
   font-size: 1.1em;
-  border-radius: 3px;
-  width: fit-content;
+  line-height: 35px;
+  margin-top: revert;
   margin-bottom: 30px;
+  padding: 5px 15px;
+  border-radius: 3px;
+  background-color: #926fb1;
+  width: fit-content;
+}
+.readmore2:hover,
+.readmore3:hover {
+  background-color: #7e57a0;
 }
 
 .tooltiptext .a {
-  display: inline-flex;
-  text-decoration: none;
   color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 3px;
   background-color: #67809f;
+  display: inline-flex;
   margin: auto;
   text-align: center;
-  text-transform: uppercase;
-  padding: 15px;
   filter: none;
-  border-radius: 3px;
 }
 .tooltiptext .a:hover {
   background-color: #526781;
+}
+.tooltiptext .a:hover {
   cursor: pointer;
 }
 
 .subscribe {
-  color: white;
-  background-color: #323544;
+  color: #fff;
   height: auto;
   line-height: 35px;
   padding: 5px 15px;
@@ -181,9 +219,12 @@
   border: none;
   border-radius: 3px;
   white-space: normal;
+  background-color: #323544;
 }
 .subscribe:hover {
   background-color: #22242e;
+}
+.subscribe:hover {
   cursor: pointer;
 }
 
@@ -203,9 +244,89 @@
   cursor: pointer;
 }
 
-.tab1 .icon,
-.tab1 .button {
+.tab1 .icon .tab1 .icon,
+.tab1 .icon .tab1 .button,
+.tab1 .button .tab1 .icon,
+.tab1 .button .tab1 .button {
   background-color: #67809f;
+}
+.tab1 .icon .tab1:hover .button,
+.tab1 .icon .tab1:hover .icon,
+.tab1 .button .tab1:hover .button,
+.tab1 .button .tab1:hover .icon {
+  color: #67809f;
+}
+.tab1 .icon .tab2 .icon,
+.tab1 .icon .tab2 .button,
+.tab1 .button .tab2 .icon,
+.tab1 .button .tab2 .button {
+  background-color: #4183d7;
+}
+.tab1 .icon .tab2:hover .button,
+.tab1 .icon .tab2:hover .icon,
+.tab1 .button .tab2:hover .button,
+.tab1 .button .tab2:hover .icon {
+  color: #4183d7;
+}
+.tab1 .icon .tab3 .icon,
+.tab1 .icon .tab3 .button,
+.tab1 .button .tab3 .icon,
+.tab1 .button .tab3 .button {
+  background-color: #2ecc71;
+}
+.tab1 .icon .tab3:hover .button,
+.tab1 .icon .tab3:hover .icon,
+.tab1 .button .tab3:hover .button,
+.tab1 .button .tab3:hover .icon {
+  color: #2ecc71;
+}
+.tab1 .icon .tab4 .icon,
+.tab1 .icon .tab4 .button,
+.tab1 .button .tab4 .icon,
+.tab1 .button .tab4 .button {
+  background-color: #d64541;
+}
+.tab1 .icon .tab4:hover .button,
+.tab1 .icon .tab4:hover .icon,
+.tab1 .button .tab4:hover .button,
+.tab1 .button .tab4:hover .icon {
+  color: #d64541;
+}
+.tab1 .icon .tab5 .icon,
+.tab1 .icon .tab5 .button,
+.tab1 .button .tab5 .icon,
+.tab1 .button .tab5 .button {
+  background-color: #926fb1;
+}
+.tab1 .icon .tab5:hover .button,
+.tab1 .icon .tab5:hover .icon,
+.tab1 .button .tab5:hover .button,
+.tab1 .button .tab5:hover .icon {
+  color: #926fb1;
+}
+.tab1 .icon .tab6 .icon,
+.tab1 .icon .tab6 .button,
+.tab1 .button .tab6 .icon,
+.tab1 .button .tab6 .button {
+  background-color: #f62459;
+}
+.tab1 .icon .tab6:hover .button,
+.tab1 .icon .tab6:hover .icon,
+.tab1 .button .tab6:hover .button,
+.tab1 .button .tab6:hover .icon {
+  color: #f62459;
+}
+.tab1 .icon .tab7 .icon,
+.tab1 .icon .tab7 .button,
+.tab1 .button .tab7 .icon,
+.tab1 .button .tab7 .button {
+  background-color: #ce4125;
+}
+.tab1 .icon .tab7:hover .button,
+.tab1 .icon .tab7:hover .icon,
+.tab1 .button .tab7:hover .button,
+.tab1 .button .tab7:hover .icon {
+  color: #ce4125;
 }
 
 .tab2 .icon,

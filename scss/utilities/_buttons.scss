@@ -1,7 +1,15 @@
 // ==========================  Banner buttons ============================================================================================
 
 .image-container a {
-  @include button-style(banner, image-container);
+  @include button-style(
+    banner,
+    image-container,
+    $custom-font-size: 1.3em,
+    $custom-padding: 1em,
+    $custom-margin-top: 1.938rem,
+    $custom-margin-bottom: 1.125rem
+  );
+  display: inline-block;
 }
 
 // ==========================  Header buttons ============================================================================================
@@ -22,31 +30,29 @@
   padding-right: 5px;
 }
 .icon-disabled a:nth-child(1) {
-  color: #fff;
-  background-color: #4183d7;
-  padding: 15px 20px;
-  font-size: 1.2em;
+  @include button-style(
+    header,
+    primary,
+    $custom-font-size: 1.2em,
+    $custom-padding: 15px 20px,
+    $custom-margin-top: revert,
+    $custom-margin-bottom: revert
+  );
   border: none;
-  border-radius: 3px;
-  text-decoration: none;
   margin-right: 15px;
-  &:hover {
-    background-color: #2a6ec6;
-  }
 }
 .icon-disabled a:nth-child(2) {
-  color: #fff;
-  background-color: #999aa2;
-  padding: 15px 20px;
-  font-size: 1.2em;
+  @include button-style(
+    header,
+    secondary,
+    $custom-font-size: 1.2em,
+    $custom-padding: 15px 20px,
+    $custom-margin-top: revert,
+    $custom-margin-bottom: revert
+  );
   border: none;
-  border-radius: 3px;
-  text-decoration: none;
   margin-right: 15px;
   margin-left: -5px;
-  &:hover {
-    background-color: #84858f;
-  }
 }
 
 #hamburger-nav {
@@ -55,15 +61,14 @@
   border: none;
 }
 .hamburger-box {
-  background-color: $dark-txt;
-  border-radius: 3px;
+  @include button-style(
+    header,
+    hamburger-nav,
+    $custom-font-size: 2em,
+    $custom-padding: 5px 30px
+  );
   height: 56px !important;
-  padding: 5px 30px;
-  font-size: 2em;
   margin: 4px -7px 0 13px;
-  &:hover {
-    background-color: $vdark-bg;
-  }
 }
 .hamburger-inner {
   left: 10px;
@@ -84,74 +89,78 @@
 // Articles buttons in the news section
 
 .tag-1 {
+  @include button-style(
+    news,
+    tag-1,
+    $custom-font-size: 0.75em,
+    $custom-padding: 5px 10px
+  );
   position: absolute;
+  border-radius: 0;
   right: 0;
   top: -3px;
-  background-color: #67809f;
-  color: #fff;
-  font-size: 0.75em;
   font-weight: 600;
-  padding: 5px 10px;
-  text-transform: uppercase;
+  margin: revert;
   &:hover {
     text-decoration: underline;
+    background-color: #67809f;
   }
 }
 
 .tag-2,
 .tag-3 {
+  @include button-style(
+    news,
+    tag-2,
+    $custom-font-size: 0.75em,
+    $custom-padding: 5px 10px
+  );
   position: absolute;
+  border-radius: 0;
   right: 0;
   top: -3px;
-  background-color: #926fb1;
-  color: #fff;
-  font-size: 0.75em;
   font-weight: 600;
-  padding: 5px 10px;
-  text-transform: uppercase;
+  margin: revert;
   &:hover {
     text-decoration: underline;
+    background-color: #926fb1;
   }
 }
 
 .readmore1 {
-  background-color: #67809f;
-  color: #fff;
-  line-height: 35px;
-  padding: 5px 15px;
-  text-transform: uppercase;
-  font-size: 1.1em;
-  border-radius: 3px;
+  @include button-style(
+    news,
+    readmore1,
+    $custom-margin-bottom: 30px,
+    $custom-font-size: 1.1em,
+    $custom-padding: 5px 15px,
+    $custom-line-height: 35px,
+    $custom-margin-top: revert
+  );
   width: fit-content;
-  margin-bottom: 30px;
 }
 
 .readmore2,
 .readmore3 {
-  background-color: #926fb1;
-  color: #fff;
-  line-height: 35px;
-  padding: 5px 15px;
-  text-transform: uppercase;
-  font-size: 1.1em;
-  border-radius: 3px;
+  @include button-style(
+    news,
+    readmore2,
+    $custom-margin-bottom: 30px,
+    $custom-font-size: 1.1em,
+    $custom-padding: 5px 15px,
+    $custom-line-height: 35px,
+    $custom-margin-top: revert
+  );
   width: fit-content;
-  margin-bottom: 30px;
 }
 
 .tooltiptext .a {
+  @include button-style(news, tooltiptext-a, $custom-padding: 15px);
   display: inline-flex;
-  text-decoration: none;
-  color: #fff;
-  background-color: #67809f;
   margin: auto;
   text-align: center;
-  text-transform: uppercase;
-  padding: 15px;
   filter: none;
-  border-radius: 3px;
   &:hover {
-    background-color: #526781;
     cursor: pointer;
   }
 }
@@ -159,19 +168,8 @@
 // Newsletter button
 
 .subscribe {
-  color: white;
-  background-color: $dark-bg;
-  height: auto;
-  line-height: 35px;
-  padding: 5px 15px;
-  margin-top: 1.5rem;
-  text-transform: uppercase;
-  font-size: 1.063rem;
-  border: none;
-  border-radius: 3px;
-  white-space: normal;
+  @include button-style(newsletter, subscribe);
   &:hover {
-    background-color: $vdark-bg;
     cursor: pointer;
   }
 }
@@ -196,7 +194,7 @@
 
 .tab1 .icon,
 .tab1 .button {
-  background-color: #67809f;
+  @include tab-styles($tab-colors);
 }
 
 .tab2 .icon,

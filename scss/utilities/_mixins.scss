@@ -48,15 +48,13 @@ $button-styles: (
     ),
   ),
   header: (
-    header-btn: (
-      primary: (
-        bg-color: #4183d7,
-        hover-bg-color: #2a6ec6,
-      ),
-      secondary: (
-        bg-color: #999aa2,
-        hover-bg-color: #84858f,
-      ),
+    primary: (
+      bg-color: #4183d7,
+      hover-bg-color: #2a6ec6,
+    ),
+    secondary: (
+      bg-color: #999aa2,
+      hover-bg-color: #84858f,
     ),
     hamburger-nav: (
       bg-color: $dark-txt,
@@ -99,38 +97,6 @@ $button-styles: (
       hover-bg-color: $vdark-bg,
     ),
   ),
-  services: (
-    tab-container: (
-      tab1: (
-        bg-color: #67809f,
-        hover-bg-color: #526781,
-      ),
-      tab2: (
-        bg-color: #4183d7,
-        hover-bg-color: #2a6ec6,
-      ),
-      tab3: (
-        bg-color: #2ecc71,
-        hover-bg-color: #1a8c5d,
-      ),
-      tab4: (
-        bg-color: #d64541,
-        hover-bg-color: #ae3a35,
-      ),
-      tab5: (
-        bg-color: #926fb1,
-        hover-bg-color: #7e57a0,
-      ),
-      tab6: (
-        bg-color: #f62459,
-        hover-bg-color: #d91e4f,
-      ),
-      tab7: (
-        bg-color: #ce4125,
-        hover-bg-color: #a9321d,
-      ),
-    ),
-  ),
   welcome: (
     btn-prim: (
       bg-color: $btn-dark,
@@ -147,9 +113,20 @@ $button-styles: (
   ),
 );
 
-@mixin button-style($type, $style) {
+@mixin button-style(
+  $type,
+  $style,
+  $custom-margin-top: null,
+  $custom-margin-bottom: null,
+  $custom-font-size: null,
+  $custom-line-height: null,
+  $custom-padding: null
+) {
   $style-props: map-get(map-get($button-styles, $type), $style);
+
+  // Applying styles with optional margin, padding, font-size, and line-height
   @if $type == "newsletter" {
+    color: #fff;
     height: auto;
     line-height: 35px;
     padding: 5px 15px;
@@ -159,21 +136,87 @@ $button-styles: (
     border: none;
     border-radius: 3px;
     white-space: normal;
+    background-color: map-get($style-props, bg-color);
+    &:hover {
+      background-color: map-get($style-props, hover-bg-color);
+    }
   } @else {
     color: #fff;
-    text-decoration: none;
-    font-size: 1.3em;
     text-transform: uppercase;
-    display: inline-block;
-    margin-top: 1.938rem;
-    margin-bottom: 1.125rem;
-    padding: 1em;
+    text-decoration: none;
+    font-size: if(
+      $custom-font-size,
+      $custom-font-size,
+      map-get($style-props, font-size, 1em)
+    );
+    line-height: if(
+      $custom-line-height,
+      $custom-line-height,
+      map-get($style-props, line-height, normal)
+    );
+    margin-top: map-get($style-props, margin, 0) + $custom-margin-top;
+    margin-bottom: map-get($style-props, margin, 0) + $custom-margin-bottom;
+    padding: if(
+      $custom-padding,
+      $custom-padding,
+      map-get($style-props, padding, 0)
+    );
     border-radius: 3px;
-  }
 
-  background-color: map-get($style-props, bg-color);
+    background-color: map-get($style-props, bg-color);
 
-  &:hover {
-    background-color: map-get($style-props, hover-bg-color);
+    &:hover {
+      background-color: map-get($style-props, hover-bg-color);
+    }
   }
 }
+
+@mixin tab-styles($tabs) {
+  @each $tab, $colors in $tabs {
+    .#{$tab} {
+      .icon,
+      .button {
+        background-color: map-get($colors, bg-color);
+      }
+
+      &:hover {
+        .button,
+        .icon {
+          color: map-get($colors, bg-color);
+        }
+      }
+    }
+  }
+}
+
+// Example usage
+$tab-colors: (
+  tab1: (
+    bg-color: #67809f,
+    hover-bg-color: #526781,
+  ),
+  tab2: (
+    bg-color: #4183d7,
+    hover-bg-color: #2a6ec6,
+  ),
+  tab3: (
+    bg-color: #2ecc71,
+    hover-bg-color: #1a8c5d,
+  ),
+  tab4: (
+    bg-color: #d64541,
+    hover-bg-color: #ae3a35,
+  ),
+  tab5: (
+    bg-color: #926fb1,
+    hover-bg-color: #7e57a0,
+  ),
+  tab6: (
+    bg-color: #f62459,
+    hover-bg-color: #d91e4f,
+  ),
+  tab7: (
+    bg-color: #ce4125,
+    hover-bg-color: #a9321d,
+  ),
+);
