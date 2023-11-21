@@ -3,106 +3,41 @@
 // ============================================
 
 .header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 32px;
-  margin-bottom: 1em;
-  img {
-    max-width: 100%;
-    display: flex;
-    border: 0;
-  }
+  @include header-container;
 }
 
 // search box styles
 
 .search-mobile {
-  display: flex;
-  position: relative;
-  background-color: $input;
-  height: 45px;
-  border: 1px solid $border-grey;
-  border-right: none;
-  border-radius: 0;
-  margin-right: auto;
-  margin-left: auto;
-  width: calc(100% - 16px);
-  margin-bottom: 20px;
-  input[type="text"] {
-    width: 100%;
-    background-color: $input;
-    border: 1px solid $border-grey;
-    border-right: none;
-    padding: 10px;
-    outline: none;
-  }
-  button[type="submit"] {
-    background-color: $input;
-    border: 1px solid $border-grey;
-    border-left: none;
-    padding: 0;
-    margin: 0;
-    color: #fff;
-    cursor: pointer;
-  }
+  @include mob-search;
 }
 .search-big {
   font-size: 1.5em;
 }
 .icon-search {
-  font-size: 20px;
-  color: black;
-  margin-right: 10px;
+  @include icon-search;
 }
 
 .search-bar {
-  display: flex;
-  align-items: center;
-  margin-right: 15px;
+  @include search-bar;
 }
 
 // Navigation bar styles and media queries
 
 .desktop-nav {
-  display: none;
-  background-color: $dark-txt;
-  nav {
-    position: relative;
-  }
-  a {
-    color: #fff;
-    text-decoration: none;
-  }
-  i {
-    display: block;
-    font-size: 1.2em;
-    text-align: center;
-    padding: 20px 0 15px 0;
-  }
+  @include desktop-nav;
 }
 
 .main-nav {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  margin: 0 auto;
-  overflow: visible;
-  li {
-    list-style: none;
-  }
+  @include main-nav;
 }
 
 .main-nav > li > a {
-  position: relative;
-  display: block;
-  height: 100%;
+  @include pos-anchors;
 }
 
 .main-nav li .hidden-nav {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100vw;
+  @include hidden-nav;
 }
 .main-nav > li:hover > a::after {
   display: block;
@@ -196,17 +131,7 @@
   color: #fff;
 }
 .main-nav > li > a::after {
-  content: "";
-  border-style: solid;
-  border-width: 33px 51px 0;
-  border-color: $nav-color-2n transparent transparent transparent;
-  height: 0;
-  width: 0;
-  left: 0;
-  position: absolute;
-  top: 100%;
-  z-index: 100;
-  display: none;
+  @include a__after;
 }
 .hidden-nav {
   display: none;
@@ -216,57 +141,17 @@
   z-index: 2;
   display: block;
 }
-.hidden-nav .inner-container {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 22px 40px 27px;
-}
-
-.hidden-nav .h2 {
-  width: 100%;
-  display: block;
-  font-size: 2em;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  color: #fff;
-}
-.hidden-nav a {
-  display: flex;
-  margin: 20px 0;
-}
-.hidden-nav span {
-  font-family: Poppins, sans-serif;
-  margin-left: 10px;
-  font-weight: $font-light;
-  font-size: 1rem;
-  line-height: 1.2em;
-  max-width: 75%;
-  &:hover {
-    text-decoration: underline;
+.hidden-nav {
+  .inner-container {
+    @include inner-cont;
   }
-}
-.hidden-nav li {
-  width: 33%;
-}
-
-.hidden-nav i {
-  padding: 0;
-  margin-top: 5px;
-  margin-right: 10px;
-  font-size: 1em;
 }
 
 .nav-section {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  font-weight: $font-bold;
-  line-height: 1em;
+  @include section_nav;
 }
 .small {
-  font-size: 0.65em;
-  margin-bottom: 0;
+  @include span-sm;
 }
 
 @include mq(large) {

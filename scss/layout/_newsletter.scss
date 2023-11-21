@@ -3,65 +3,29 @@
 // ========================================================================
 
 .news-bg {
-  background-color: $med-bg;
-  h2 {
-    font-weight: $font-light;
-    font-size: 2rem;
-  }
-  label {
-    line-height: 32px;
-    font-weight: $font-bold;
-    color: $dark-txt;
-  }
-  .required::after {
-    content: "*";
-    color: red;
-  }
+  @include newsletter;
 }
 
 .privacy {
-  color: $dark-bg;
-  &:hover {
-    color: $vdark-bg;
-  }
+  @include privacy;
 }
 
 .input-group {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
+  @include inputGrp;
 }
 
 #name,
 #email {
-  width: 100%;
-  height: 47px;
-  padding: 5px 15px;
-  border-color: $border-grey;
-  border-radius: 2px;
-  background-color: #fff;
-  border: 1px solid $input;
-
-  &:focus {
-    border-color: $border;
-    outline: 0;
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
-      0 0 8px rgba(91, 192, 222, 0.6);
-  }
+  @include nameEmail;
 }
 
 .pointy {
-  display: table-cell;
-  vertical-align: top;
-  cursor: pointer;
+  @include checked;
 }
 
 .checkbox {
-  display: table-cell;
-  vertical-align: top;
+  @include checked;
   align-items: center;
-  cursor: pointer;
 }
 
 .checkbox__input {
@@ -69,15 +33,7 @@
 }
 
 .checkbox__box {
-  width: 2rem;
-  height: 2rem;
-  border: 3px solid $dark-txt;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 20px;
-  flex-shrink: 0;
+  @include checkBox;
 }
 
 .checkbox__box::after {

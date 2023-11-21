@@ -13,39 +13,10 @@
     $custom-padding: 15px,
     $custom-font-size: 1.7em
   );
-
-  border-radius: 50%;
-  width: 65px;
-  height: 65px;
-  display: flex;
-  margin: 0 auto;
-  i {
-    margin: auto;
-  }
+  @include icon50deg;
 }
 .tab-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2em;
-  text-align: center;
-  cursor: pointer;
-  h3 {
-    color: $dark-txt;
-    font-size: 1.3em;
-    font-weight: $font-light;
-    margin-top: 10px;
-  }
-  p {
-    color: $dark-txt;
-    font-size: 0.8em;
-    line-height: 1.8em;
-    margin: -10px 30px;
-    padding-bottom: 110px;
-  }
-  a {
-    color: $dark-txt;
-    text-decoration: none;
-  }
+  @include tab-container;
 }
 
 .tab-container .tab1,
@@ -55,51 +26,37 @@
 .tab-container .tab5,
 .tab-container .tab6,
 .tab-container .tab7 {
-  background-color: #fff;
-  border: 1px solid $border-grey;
-  border-radius: 15px;
-  padding: 20px 20px;
-  box-shadow: 0px 0px 20px $input;
-  position: relative;
-  top: 0;
-  transition: 0.5s ease;
+  @include tab-default-style;
 }
 
 // Hover styles
 .tab1:hover {
   background-color: $nav-color-1n;
-  top: -10px;
-  transition: 0.5s ease;
+  @include tab-hov;
 }
 .tab2:hover {
   background-color: $nav-color-2n;
-  top: -10px;
-  transition: 0.5s ease;
+  @include tab-hov;
 }
 .tab3:hover {
   background-color: $nav-color-3n;
-  top: -10px;
-  transition: 0.5s ease;
+  @include tab-hov;
 }
 .tab4:hover {
   background-color: $nav-color-4n;
-  top: -10px;
-  transition: 0.5s ease;
+  @include tab-hov;
 }
 .tab5:hover {
   background-color: $nav-color-5n;
-  top: -10px;
-  transition: 0.5s ease;
+  @include tab-hov;
 }
 .tab6:hover {
   background-color: $nav-color-6n;
-  top: -10px;
-  transition: 0.5s ease;
+  @include tab-hov;
 }
 .tab7:hover {
   background-color: $nav-color-7n;
-  top: -10px;
-  transition: 0.5s ease;
+  @include tab-hov;
 }
 .tab-container > div:hover h3,
 .tab-container > div:hover p {
@@ -108,30 +65,15 @@
 
 // Font styles
 .services {
-  color: $dark-txt;
-  font-size: 2.7em;
-  font-weight: 600;
+  @include service-header;
 }
 .view-hidden {
-  font-size: 1.6em;
-  font-weight: $font-bold;
-  color: $dark-txt;
-  text-decoration: none;
-  display: block;
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  text-align: center;
-  visibility: hidden;
+  @include nav-text;
+  @include hidden-link;
 }
 .view-work {
-  font-size: 1.6em;
-  font-weight: $font-bold;
-  color: $dark-txt;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  margin: 35px 0 0 0;
+  @include nav-text;
+  @include margin-view-wk;
 }
 
 .view-hidden:hover,
@@ -172,39 +114,29 @@
 // Work showcase styles
 
 .work-showcase {
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  margin: 50px 0;
+  @include showcase;
 }
 
 .work-showcase a {
-  display: none;
-  cursor: default;
-  margin: 20px 70px;
-  max-height: 70px;
-  width: auto !important;
+  @include work-anchor;
 }
 
 .greyscale {
-  filter: grayscale(1);
-  &:hover {
-    filter: none;
-  }
+  @include greyscale;
 }
 
 .work-showcase a:nth-child(-n + 3) {
-  display: inline-flex;
+  @include work-display;
 }
 
 @media (min-width: 600px) {
   .work-showcase a:nth-child(-n + 5) {
-    display: inline-flex;
+    @include work-display;
   }
 }
 
 @include mq(x-large) {
   .work-showcase a:nth-child(-n + 12) {
-    display: inline-flex;
+    @include work-display;
   }
 }

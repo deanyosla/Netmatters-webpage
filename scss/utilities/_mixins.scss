@@ -38,6 +38,30 @@
   }
 }
 
+// Cursor mixin
+@mixin pointer {
+  &:hover {
+    cursor: pointer;
+  }
+}
+// Icon mixins
+@mixin ico-phone {
+  text-decoration: none;
+  padding-right: 10px;
+  color: #000;
+  font-size: 25px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin social-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  max-width: 200px;
+}
 // Button maps and mixins
 
 $button-styles: (
@@ -186,5 +210,722 @@ $button-styles: (
     &:hover {
       background-color: map-get($style-props, hover-bg-color);
     }
+  }
+}
+// Header mixins
+@mixin header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 1em;
+  img {
+    max-width: 100%;
+    display: flex;
+    border: 0;
+  }
+}
+@mixin mob-search {
+  display: flex;
+  position: relative;
+  background-color: $input;
+  height: 45px;
+  border: 1px solid $border-grey;
+  border-right: none;
+  border-radius: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - 16px);
+  margin-bottom: 20px;
+  input[type="text"] {
+    width: 100%;
+    background-color: $input;
+    border: 1px solid $border-grey;
+    border-right: none;
+    padding: 10px;
+    outline: none;
+  }
+  button[type="submit"] {
+    background-color: $input;
+    border: 1px solid $border-grey;
+    border-left: none;
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+@mixin a__after {
+  content: "";
+  border-style: solid;
+  border-width: 33px 51px 0;
+  border-color: $nav-color-2n transparent transparent transparent;
+  height: 0;
+  width: 0;
+  left: 0;
+  position: absolute;
+  top: 100%;
+  z-index: 100;
+  display: none;
+}
+@mixin icon-search {
+  font-size: 20px;
+  color: black;
+  margin-right: 10px;
+}
+@mixin search-bar {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+@mixin mediaQ_Medium {
+  .phone,
+  .search-mobile {
+    display: none;
+  }
+  .search-bar {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 0;
+    margin-right: 0 !important;
+    height: 57px !important;
+    max-width: 243px;
+  }
+  .search-box {
+    padding: 1em;
+    flex: 1;
+    background-color: #fff;
+    max-width: 175px;
+    &:focus {
+      box-shadow: 0px 0px 7px -1px $border;
+      border-color: $border;
+      border-right: 1px solid $border;
+    }
+  }
+  .search-bar {
+    font-size: 1em;
+    fill: #fff;
+  }
+  input[type="text"] {
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1em;
+    height: 57px;
+  }
+  .search-bar button {
+    @include button-style(
+      header,
+      secondary,
+      $custom-padding: 16px 20px,
+      $custom-font-size: 1em
+    );
+    border: none;
+    outline: none;
+    border-radius: 0 5% 5% 0;
+    cursor: pointer;
+  }
+}
+@mixin mediaQ_Lrg {
+  .header-btn {
+    width: 520px;
+  }
+  .search-bar {
+    max-width: 66px;
+  }
+  .search-bar button {
+    border-radius: 3px;
+  }
+  .search-box {
+    display: none;
+  }
+  .icon-disabled {
+    display: inline;
+  }
+}
+@mixin mediaQ_Xlrg {
+  .search-bar {
+    max-width: 306px;
+    justify-content: flex-end;
+    margin-left: -2px;
+    .search-box {
+      display: block;
+      max-width: 240px;
+    }
+  }
+  .search-bar button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+@mixin desktop-nav {
+  display: none;
+  background-color: $dark-txt;
+  nav {
+    position: relative;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  i {
+    display: block;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 20px 0 15px 0;
+  }
+}
+@mixin main-nav {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0 auto;
+  overflow: visible;
+  li {
+    list-style: none;
+  }
+}
+@mixin hidden-nav {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100vw;
+}
+@mixin pos-anchors {
+  position: relative;
+  display: block;
+  height: 100%;
+}
+@mixin inner-cont {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 22px 40px 27px;
+  .h2 {
+    width: 100%;
+    display: block;
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  a {
+    display: flex;
+    margin: 20px 0;
+  }
+  span {
+    font-family: Poppins, sans-serif;
+    margin-left: 10px;
+    font-weight: $font-light;
+    font-size: 1rem;
+    line-height: 1.2em;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  li {
+    width: 33%;
+  }
+  i {
+    padding: 0;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+  }
+}
+@mixin section_nav {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-weight: $font-bold;
+  line-height: 1em;
+}
+@mixin span-sm {
+  font-size: 0.65em;
+  margin-bottom: 0;
+}
+
+// Banner images mixins
+@mixin first-img {
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(40, 40, 40, 0.4)
+    ),
+    url(../img/slide-1.png);
+  background-position: 50% 5%;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 90px;
+  width: 100%;
+  height: 550px;
+}
+@mixin img-text {
+  padding: 3.75rem 0;
+  .h1 {
+    font-size: 2.5em;
+    font-weight: $font-bold;
+    line-height: 3rem;
+    cursor: default;
+    margin-bottom: 1.8rem;
+  }
+  p {
+    font-size: 1.25em;
+    line-height: 1.75rem;
+    font-weight: $font-bold;
+    margin: -10px 25px 0.375rem 25px;
+    cursor: default;
+  }
+}
+
+// Services section mixins(Grids)
+
+@mixin tab-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2em;
+  text-align: center;
+  h3 {
+    color: $dark-txt;
+    font-size: 1.3em;
+    font-weight: $font-light;
+    margin-top: 10px;
+  }
+  p {
+    color: $dark-txt;
+    font-size: 0.8em;
+    line-height: 1.8em;
+    margin: -10px 30px;
+    padding-bottom: 110px;
+  }
+  a {
+    color: $dark-txt;
+    text-decoration: none;
+  }
+}
+@mixin btn-pos {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  padding: 15px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1em;
+  font-weight: $font-light;
+  text-transform: uppercase;
+  margin: 30px 0 10px 0;
+}
+@mixin tab-default-style {
+  background-color: #fff;
+  border: 1px solid $border-grey;
+  border-radius: 15px;
+  padding: 20px 20px;
+  box-shadow: 0px 0px 20px $input;
+  position: relative;
+  top: 0;
+  transition: 0.5s ease;
+}
+
+@mixin tab-hov {
+  top: -10px;
+  transition: 0.5s ease;
+}
+@mixin icon50deg {
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  display: flex;
+  margin: 0 auto;
+  i {
+    margin: auto;
+  }
+}
+// Services text mixins
+
+@mixin service-header {
+  color: $dark-txt;
+  font-size: 2.7em;
+  font-weight: $font-bold;
+}
+@mixin nav-text {
+  font-size: 1.6em;
+  font-weight: $font-bold;
+  color: $dark-txt;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+@mixin hidden-link {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  visibility: hidden;
+}
+
+@mixin margin-view-wk {
+  margin: 35px 0 0 0;
+}
+@mixin viewAll_hide {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  visibility: hidden;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+@mixin viewAll {
+  margin: 35px 0 70px 0;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+// Work showcase slide(TBA) mixins
+@mixin showcase {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
+@mixin work-anchor {
+  display: none;
+  cursor: default;
+  margin: 20px 70px;
+  max-height: 70px;
+  width: auto !important;
+}
+@mixin greyscale {
+  filter: grayscale(1);
+  &:hover {
+    filter: none;
+  }
+}
+@mixin work-display {
+  display: inline-flex;
+}
+
+// Welcome section mixins
+
+@mixin main-welcome {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: $dark-bg;
+  padding-top: 50px;
+}
+@mixin welcome-h1 {
+  margin-top: -6px;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #fff;
+  &:first-child {
+    font-weight: $font-bold;
+  }
+}
+
+@mixin welcome-p {
+  line-height: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: $font-light;
+  color: #fff;
+  margin-top: 0;
+}
+
+@mixin welcome-a {
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin btn-welcome {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: start;
+  margin-top: auto;
+  margin-bottom: 25px;
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin client-quote {
+  font-weight: $font-bold;
+  font-size: 1.3rem;
+  font-style: italic;
+}
+@mixin quote-author {
+  font-weight: $font-bold;
+  color: #a3a8ac;
+  font-size: 1.1rem;
+}
+@mixin stars {
+  height: 3rem;
+  width: 3rem;
+  flex-shrink: 0;
+  margin-bottom: 25px;
+  padding-right: 5px;
+}
+// News section mixins
+@mixin tooltipNews {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  background-color: $dark-txt;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  overflow-wrap: break-word;
+  font-size: 1.1em;
+  i {
+    margin: 0;
+    margin-top: 2px;
+  }
+  p {
+    height: auto;
+    text-wrap: wrap;
+  }
+  &::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -30px;
+    border-width: 30px;
+    border-style: solid;
+    border-color: $dark-txt transparent transparent transparent;
+  }
+  .tooltip-description {
+    font-size: 0.8em;
+  }
+}
+@mixin hover_tooltip {
+  visibility: visible;
+  filter: none;
+}
+@mixin grid-md {
+  .news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: -40px;
+    margin-bottom: -20px;
+  }
+}
+@mixin grid-xl {
+  .news-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
+@mixin tag {
+  position: absolute;
+  border-radius: 0;
+  right: 0;
+  top: -3px;
+  font-weight: $font-bold;
+}
+@mixin tag-1 {
+  &:hover {
+    text-decoration: underline;
+    background-color: $nav-color-1n;
+  }
+}
+@mixin tag-2 {
+  &:hover {
+    text-decoration: underline;
+    background-color: $nav-color-5n;
+  }
+}
+@mixin tooltip-btn {
+  display: inline-flex;
+  margin: auto;
+  text-align: center;
+  filter: none;
+}
+@mixin news-h3 {
+  font-size: 2.25em;
+  font-weight: 600;
+  color: $dark-txt;
+  letter-spacing: 2px;
+}
+@mixin hr {
+  color: #ccc;
+  border-width: 1px;
+  border-top: none;
+}
+@mixin articles {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 20px #e9e9e9;
+  margin: 40px 0;
+  position: relative;
+  border-radius: 3px;
+  top: 0;
+  transition: 0.5s ease;
+  &:hover {
+    top: -10px;
+    transition: 0.5s ease;
+  }
+  a {
+    color: $dark-txt;
+    text-decoration: none;
+  }
+  img {
+    width: 100%;
+  }
+}
+@mixin article-titleOne {
+  color: #67809f;
+  font-weight: $font-bold;
+  span {
+    font-size: 0.9em;
+    color: #aaa;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
+@mixin article-titleTwo {
+  color: #926fb1;
+  font-weight: $font-bold;
+}
+@mixin description {
+  font-size: 0.822em;
+  margin-right: 20px;
+  line-height: 1.7em;
+}
+@mixin author {
+  display: flex;
+  line-height: 1.25em;
+  font-size: 0.9em;
+  font-weight: 600;
+  margin: 20px auto -20px 25px;
+  img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    border-radius: 50%;
+  }
+}
+
+// Newsletter section mixins
+@mixin newsletter {
+  background-color: $med-bg;
+  h2 {
+    font-weight: $font-light;
+    font-size: 2rem;
+  }
+  label {
+    line-height: 32px;
+    font-weight: $font-bold;
+    color: $dark-txt;
+  }
+  .required::after {
+    content: "*";
+    color: red;
+  }
+}
+@mixin privacy {
+  color: $dark-bg;
+  &:hover {
+    color: $vdark-bg;
+  }
+}
+@mixin inputGrp {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+@mixin nameEmail {
+  width: 100%;
+  height: 47px;
+  padding: 5px 15px;
+  border-color: $border-grey;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid $input;
+  &:focus {
+    border-color: $border;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+      0 0 8px rgba(91, 192, 222, 0.6);
+  }
+}
+@mixin checked {
+  display: table-cell;
+  vertical-align: top;
+  cursor: pointer;
+}
+@mixin checkBox {
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid $dark-txt;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+// Footer mixins
+
+@mixin soc-link-a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin main-link-a {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin bot-footer {
+  display: flex;
+  flex-direction: row;
+  background: $vdark-bg;
+  color: #fff;
+  gap: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  font-size: 13px;
+}
+
+@mixin footer-H4 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: $font-light;
+  margin-bottom: 26px;
+}
+
+@mixin sitemap {
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    text-decoration: underline;
   }
 }

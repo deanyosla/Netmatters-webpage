@@ -1,7 +1,9 @@
 // ==========================================
 // Footer
 // ==========================================
-
+footer h4 {
+  @include footer-H4;
+}
 .footer-outer {
   background-color: $dark-bg;
   width: 100%;
@@ -11,22 +13,13 @@
   display: flex;
   flex-direction: column;
 }
-footer h4 {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 26px;
-}
-.socials-container a {
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-}
-.socials-container a:hover {
-  text-decoration: underline;
-}
 
+.socials-container a {
+  @include soc-link-a;
+}
+.socials-container img {
+  width: 320px;
+}
 .nm-logo-wh {
   margin-top: 3rem;
 }
@@ -34,38 +27,17 @@ footer h4 {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.sitemap {
-  text-decoration: none;
-  color: #fff;
-}
-.sitemap:hover {
-  text-decoration: underline;
-}
-.socials-container img {
-  width: 320px;
-}
-
-.link-title {
-  padding: 0;
-}
-.main-links a {
-  color: #fff;
-  font-size: 13px;
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
+  .main-links a {
+    @include main-link-a;
+  }
+  .link-title {
+    padding: 0;
   }
 }
 
 .footer-bottom {
-  display: flex;
-  flex-direction: row;
-  background: $vdark-bg;
-  color: #fff;
-  gap: 1rem;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  font-size: 13px;
+  @include bot-footer;
+  .sitemap {
+    @include sitemap;
+  }
 }

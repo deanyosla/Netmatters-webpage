@@ -91,15 +91,8 @@
     $custom-font-size: 0.75em,
     $custom-padding: 5px 10px
   );
-  position: absolute;
-  border-radius: 0;
-  right: 0;
-  top: -3px;
-  font-weight: $font-bold;
-  &:hover {
-    text-decoration: underline;
-    background-color: $nav-color-1n;
-  }
+  @include tag;
+  @include tag-1;
 }
 
 .tag-2,
@@ -110,15 +103,8 @@
     $custom-font-size: 0.75em,
     $custom-padding: 5px 10px
   );
-  position: absolute;
-  border-radius: 0;
-  right: 0;
-  top: -3px;
-  font-weight: $font-bold;
-  &:hover {
-    text-decoration: underline;
-    background-color: $nav-color-5n;
-  }
+  @include tag;
+  @include tag-2;
 }
 
 .readmore1 {
@@ -150,40 +136,21 @@
 
 .tooltiptext .a {
   @include button-style(news, tooltiptext-a, $custom-padding: 15px);
-  display: inline-flex;
-  margin: auto;
-  text-align: center;
-  filter: none;
-  &:hover {
-    cursor: pointer;
-  }
+  @include tooltip-btn;
+  @include pointer;
 }
 
 // Newsletter button
 
 .subscribe {
   @include button-style(newsletter, subscribe);
-  &:hover {
-    cursor: pointer;
-  }
+  @include pointer;
 }
 
 // Services buttons and icons
 
 .tab-container .button {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 18px;
-  padding: 15px;
-  border: none;
-  border-radius: 3px;
-  color: #fff;
-  font-size: 1em;
-  font-weight: $font-light;
-  text-transform: uppercase;
-  margin: 30px 0 10px 0;
-  cursor: pointer;
+  @include btn-pos;
 }
 
 .tab1 .button,
