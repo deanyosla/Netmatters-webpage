@@ -1014,6 +1014,7 @@ li a {
 .small {
   font-size: 0.65em;
   margin-bottom: 0;
+  display: block;
 }
 
 @media (min-width: 992px) {
@@ -1039,6 +1040,120 @@ li a {
     margin-left: -10px;
   }
 }
+#sideMenu {
+  position: fixed;
+  background-color: #333645;
+  z-index: -1;
+  height: 100vh;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  overflow-y: scroll;
+  text-align: center;
+  text-transform: uppercase;
+}
+#sideMenu .is-active {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+}
+#sideMenu ul {
+  padding: 0;
+  margin: 0;
+}
+#sideMenu a {
+  color: #fff;
+  display: block;
+}
+#sideMenu .linkTxt {
+  font-size: 0.875em;
+}
+#sideMenu .icon-hidden {
+  padding: 5px;
+  font-size: 1.2em;
+}
+#sideMenu .link-icon {
+  display: none;
+}
+#sideMenu .link-icon-vis {
+  font-size: 0.5em;
+  padding: 0 10px;
+}
+#sideMenu .mobile-hidden {
+  display: none;
+}
+#sideMenu .menu-cat {
+  text-align: left;
+}
+#sideMenu .menu-cat .nav-item {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 16px;
+}
+
+.menu-cat > a {
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+.menu-cat > a:hover {
+  background-color: #444753;
+}
+
+.mobile-menuBtn:hover {
+  background-color: #444753;
+}
+
+.mobile-cat > a,
+.top-title {
+  margin: 20px;
+  padding: 20px 0;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0em 0em 2px #666;
+  border-radius: 3px;
+}
+
+.nav-item-hidden li {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.nav-item-hidden li a {
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 8px 0;
+}
+.nav-item-hidden li:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.45);
+}
+
+#sideMenu .mobile-cat:first-child .icon-hidden i {
+  color: #67809f;
+}
+
+#sideMenu .mobile-cat:nth-child(2) .icon-hidden i {
+  color: #4183d7;
+}
+
+#sideMenu .mobile-cat:nth-child(3) .icon-hidden i {
+  color: #2ecc71;
+}
+
+#sideMenu .mobile-cat:nth-child(4) .icon-hidden i {
+  color: #d64541;
+}
+
+#sideMenu .mobile-cat:nth-child(5) .icon-hidden i {
+  color: #926fb1;
+}
+
+#sideMenu .mobile-cat:nth-child(6) .icon-hidden i {
+  color: #f62459;
+}
+
+#sideMenu .mobile-cat:last-child .icon-hidden i {
+  color: #ce4125;
+}
+
 footer h4 {
   color: #fff;
   text-transform: uppercase;

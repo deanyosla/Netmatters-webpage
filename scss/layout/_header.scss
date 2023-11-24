@@ -179,3 +179,107 @@
     margin-left: -10px;
   }
 }
+
+#sideMenu {
+  position: fixed;
+  background-color: $dark-txt;
+  z-index: -1;
+  height: 100vh;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  overflow-y: scroll;
+  text-align: center;
+  text-transform: uppercase;
+  .is-active {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    color: #fff;
+    display: block;
+  }
+  .linkTxt {
+    font-size: 0.875em;
+  }
+  .icon-hidden {
+    padding: 5px;
+    font-size: 1.2em;
+  }
+  .link-icon {
+    display: none;
+  }
+  .link-icon-vis {
+    font-size: 0.5em;
+    padding: 0 10px;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+  .menu-cat {
+    text-align: left;
+    .nav-item {
+      background-color: rgba(0, 0, 0, 0.25);
+      padding: 16px;
+    }
+  }
+}
+
+.menu-cat > a {
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  &:hover {
+    background-color: $side-btn-hov;
+  }
+}
+.mobile-menuBtn:hover {
+  background-color: $side-btn-hov;
+}
+.mobile-cat > a,
+.top-title {
+  margin: 20px;
+  padding: 20px 0;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0em 0em 2px #666;
+  border-radius: 3px;
+}
+.nav-item-hidden li {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  a {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 8px 0;
+  }
+  &:not(:first-child) {
+    border-top: 1px solid rgba(0, 0, 0, 0.45);
+  }
+}
+#sideMenu .mobile-cat:first-child .icon-hidden i {
+  color: $nav-color-1n;
+}
+#sideMenu .mobile-cat:nth-child(2) .icon-hidden i {
+  color: $nav-color-2n;
+}
+#sideMenu .mobile-cat:nth-child(3) .icon-hidden i {
+  color: $nav-color-3n;
+}
+#sideMenu .mobile-cat:nth-child(4) .icon-hidden i {
+  color: $nav-color-4n;
+}
+#sideMenu .mobile-cat:nth-child(5) .icon-hidden i {
+  color: $nav-color-5n;
+}
+#sideMenu .mobile-cat:nth-child(6) .icon-hidden i {
+  color: $nav-color-6n;
+}
+#sideMenu .mobile-cat:last-child .icon-hidden i {
+  color: $nav-color-7n;
+}

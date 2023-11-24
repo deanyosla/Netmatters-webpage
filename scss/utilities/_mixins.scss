@@ -443,6 +443,7 @@ $button-styles: (
 @mixin span-sm {
   font-size: 0.65em;
   margin-bottom: 0;
+  display: block;
 }
 
 // Banner images mixins
