@@ -12,6 +12,9 @@ html,
 body {
   overflow-x: hidden;
 }
+html {
+  background-color: #fff;
+}
 body {
   font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -46,6 +49,25 @@ footer {
   padding-right: 1em;
 }
 
+.message {
+  position: fixed;
+  right: 1%;
+  bottom: 3%;
+  z-index: 2;
+  button {
+    background-color: $dark-txt;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  i {
+    font-size: 2em;
+    color: #fff;
+  }
+}
 // ===================================================================
 // Text styles
 // ===================================================================

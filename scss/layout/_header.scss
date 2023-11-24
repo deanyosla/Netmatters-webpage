@@ -186,6 +186,7 @@ body {
 }
 body.side-menu-active {
   right: 280px;
+  cursor: pointer;
 }
 .stop-scroll {
   overflow-y: hidden;
@@ -309,4 +310,20 @@ body.side-menu-active {
 }
 #sideMenu .mobile-cat:last-child .icon-hidden i {
   color: $nav-color-7n;
+}
+
+// Media query for the side-nav
+
+@include mq(large) {
+  #sideMenu {
+    width: 350px;
+  }
+  .top-title,
+  .top-title + li {
+    display: none;
+  }
+  body.side-menu-active,
+  #close-side-menu.side-menu-active {
+    right: 350px;
+  }
 }
