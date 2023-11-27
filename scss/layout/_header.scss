@@ -328,20 +328,22 @@ body.side-menu-active {
   }
 }
 
-.nav {
+.header {
   width: 100%;
-  height: var(--nav-height);
-  position: fixed;
-  top: 0;
-  display: block;
-  justify-content: center;
-  transition: transform 0.5s;
-  z-index: 100;
+  transition: top 0.6s ease-in-out;
+  z-index: 4;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.nav--hidden {
-  transform: translateY(calc(-1 * var(--nav-height)));
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.stickyH {
+  top: -250px;
+  z-index: 3;
+  position: fixed;
+  visibility: hidden;
+  transition: top 0.6s ease-in-out;
+}
+.sticky {
+  top: 0;
+  visibility: visible;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
 }

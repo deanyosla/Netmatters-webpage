@@ -95,6 +95,9 @@
 
 @include mq(medium) {
   @include mediaQ_Medium;
+  // main {
+  //   margin-top: 116px;
+  // }
 }
 
 @include medium-max {
@@ -104,11 +107,17 @@
 }
 @include mq(large) {
   @include mediaQ_Lrg;
+  // main {
+  //   margin-top: 218px;
+  // }
 }
 @include mq(x-large) {
   .header-btn {
     width: 1100px;
   }
+  // main {
+  //   margin-top: 212px;
+  // }
 }
 @include mq(x-large) {
   @include mediaQ_Xlrg;
