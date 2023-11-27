@@ -327,3 +327,21 @@ body.side-menu-active {
     right: 350px;
   }
 }
+
+.nav {
+  width: 100%;
+  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  display: block;
+  justify-content: center;
+  transition: transform 0.5s;
+  z-index: 100;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav--hidden {
+  transform: translateY(calc(-1 * var(--nav-height)));
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

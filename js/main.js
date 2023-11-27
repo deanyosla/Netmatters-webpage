@@ -1,5 +1,4 @@
 
-
 const hamburger = document.querySelector('.hamburger');
 const menu_nav = document.querySelector('#sideMenu');
 const closeSideMenu = document.getElementById('close-side-menu');
@@ -19,3 +18,20 @@ function toggleSideMenu() {
 hamburger.addEventListener('click', toggleSideMenu);
 closeSideMenu.addEventListener('click', toggleSideMenu);
 
+const nav = document.querySelector(".nav");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if (lastScrollY < window.scrollY) {
+      nav.classList.add("nav--hidden");
+    } else {
+      nav.classList.remove("nav--hidden");
+    }
+
+    lastScrollY = window.scrollY;
+    if (window.scrollY <= 0 ) {
+
+        nav.classList.remove('nav--hidden');
+    }
+
+  });
