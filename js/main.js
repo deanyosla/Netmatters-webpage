@@ -52,3 +52,50 @@ function addSticky() {
 function removeSticky() {
     head.addClass('sticky');
 }
+
+//  Set up to use local storage
+const storageType = localStorage;
+const consentPropertyName = 'jdc_consent';
+// Check if the user should see the consent popup
+const shouldShowPopup = () => !storageType.getItem(consentPropertyName);
+// Save user's consent to local storage
+const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+// Get references to HTML elements
+const body = document.getElementsByTagName('body');
+const html = document.getElementsByTagName('html');
+const consentParent = document.querySelector('.consent-div');
+let consentPopup;
+let background;
+// Run this code when the webpage finishes loading
+window.onload = () => {
+// Function to run when the user clicks "Accept"
+  const acceptFn = event => {
+      saveToStorage(storageType);
+      background.classList.add('bg-hidden');
+      consentParent.classList.add('hide');
+      body[0].classList.remove('stop-scroll');
+      html[0].classList.remove('stop-scroll');
+  };
+// Get references to HTML elements inside the page
+  consentPopup = document.getElementById('consent-popup');
+  const acceptBtn = document.getElementById('accept');
+  background = document.getElementById('bground');
+  // Set up "Accept" button to run the function when clicked
+  acceptBtn.addEventListener('click', acceptFn);
+
+  if (shouldShowPopup(storageType)) {
+          background.classList.remove('bg-hidden');
+          consentParent.classList.remove('hide');
+          body.classList.add('stop-scroll');
+          html.classList.add('stop-scroll');
+  }
+
+};
+const consentButton = document.getElementById('consent-btn');
+
+consentButton.addEventListener('click', () => {
+  background.classList.toggle('bg-hidden');
+  consentParent.classList.toggle('hide');
+  body.classList.toggle('stop-scroll');
+  html.classList.toggle('stop-scroll');
+});

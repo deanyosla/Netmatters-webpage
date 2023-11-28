@@ -1,0 +1,102 @@
+// ========================================================================================
+// Consent and cookies
+// ========================================================================================
+
+.message {
+  position: fixed;
+  right: 1%;
+  bottom: 3%;
+  z-index: 2;
+  button {
+    background-color: $dark-txt;
+    height: 60px;
+    width: 60px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  i {
+    font-size: 2em;
+    color: #fff;
+  }
+}
+
+.consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  #consent-btn {
+    background-color: $consent-btn;
+    color: #fff;
+    border-top-right-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 3px 12px;
+    cursor: pointer;
+    border-style: none;
+    &:hover {
+      background-color: $btn-contact;
+      border-color: $btn-contact;
+      box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.consent-div {
+  display: flex;
+  position: fixed;
+  z-index: 120;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 30px;
+  #consent-popup {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: auto;
+    @include mq(medium) {
+      width: 600px;
+    }
+    h5 {
+      color: $dark-txt;
+      font-size: 1.6em;
+      margin: 15px 20px;
+    }
+    hr {
+      color: $border-grey;
+      border-width: 1px;
+      border-top: none;
+    }
+    p {
+      color: #666;
+      line-height: 2em;
+      margin: 15px 25px 40px 20px;
+    }
+    a {
+      text-decoration: none;
+      color: #666;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.cookie-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.cookie-background.bg-hidden {
+  display: none;
+}
+.hide {
+  display: none;
+}

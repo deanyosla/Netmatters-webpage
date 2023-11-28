@@ -250,3 +250,51 @@
 .trustpilot {
   @include button-style(welcome, trustpilot, $custom-margin-top: auto);
 }
+
+// cookie policy buttons
+.btn-popup {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  @include mq(medium) {
+    flex-wrap: nowrap;
+  }
+}
+#setting {
+  @include button-style(
+    header,
+    secondary,
+    $custom-padding: 5px 35px,
+    $custom-font-size: 1.1em,
+    $custom-line-height: 2em,
+    $custom-margin-bottom: 20px
+  );
+  margin: 15px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  @include mq(medium) {
+    width: 50%;
+  }
+}
+
+#accept {
+  @include button-style(
+    banner,
+    image-container,
+    $custom-padding: 5px 35px,
+    $custom-font-size: 1.1em,
+    $custom-line-height: 2em,
+    $custom-margin-bottom: 20px
+  );
+  margin: 15px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  @include mq(medium) {
+    width: 50%;
+  }
+}

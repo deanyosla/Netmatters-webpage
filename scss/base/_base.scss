@@ -56,47 +56,6 @@ footer {
   padding-right: 1em;
 }
 
-.message {
-  position: fixed;
-  right: 1%;
-  bottom: 3%;
-  z-index: 2;
-  button {
-    background-color: $dark-txt;
-    height: 60px;
-    width: 60px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  i {
-    font-size: 2em;
-    color: #fff;
-  }
-}
-
-.consent {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-  #consent-btn {
-    background-color: $consent-btn;
-    color: #fff;
-    border-top-right-radius: 10px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 3px 12px;
-    cursor: pointer;
-    border-style: none;
-    &:hover {
-      background-color: $btn-contact;
-      border-color: $btn-contact;
-      box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-    }
-  }
-}
 // ===================================================================
 // Text styles
 // ===================================================================

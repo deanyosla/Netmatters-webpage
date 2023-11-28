@@ -361,6 +361,68 @@
   background-color: #009b69;
 }
 
+.btn-popup {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .btn-popup {
+    flex-wrap: nowrap;
+  }
+}
+
+#setting {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.1em;
+  line-height: 2em;
+  margin-bottom: 20px;
+  padding: 5px 35px;
+  border-radius: 3px;
+  background-color: #999aa2;
+  margin: 15px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+#setting:hover {
+  background-color: #84858f;
+}
+@media (min-width: 768px) {
+  #setting {
+    width: 50%;
+  }
+}
+
+#accept {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.1em;
+  line-height: 2em;
+  margin-bottom: 20px;
+  padding: 5px 35px;
+  border-radius: 3px;
+  background-color: #926fb1;
+  margin: 15px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+}
+#accept:hover {
+  background-color: #7e57a0;
+}
+@media (min-width: 768px) {
+  #accept {
+    width: 50%;
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -714,48 +776,6 @@ footer {
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
-}
-
-.message {
-  position: fixed;
-  right: 1%;
-  bottom: 3%;
-  z-index: 2;
-}
-.message button {
-  background-color: #333645;
-  height: 60px;
-  width: 60px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.message i {
-  font-size: 2em;
-  color: #fff;
-}
-
-.consent {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-}
-.consent #consent-btn {
-  background-color: #75788a;
-  color: #fff;
-  border-top-right-radius: 10px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 3px 12px;
-  cursor: pointer;
-  border-style: none;
-}
-.consent #consent-btn:hover {
-  background-color: #999aa2;
-  border-color: #999aa2;
-  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 }
 
 .socials p {
@@ -2104,6 +2124,108 @@ hr {
     display: inline-flex;
   }
 }
+.message {
+  position: fixed;
+  right: 1%;
+  bottom: 3%;
+  z-index: 2;
+}
+.message button {
+  background-color: #333645;
+  height: 60px;
+  width: 60px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.message i {
+  font-size: 2em;
+  color: #fff;
+}
+
+.consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+.consent #consent-btn {
+  background-color: #75788a;
+  color: #fff;
+  border-top-right-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 3px 12px;
+  cursor: pointer;
+  border-style: none;
+}
+.consent #consent-btn:hover {
+  background-color: #999aa2;
+  border-color: #999aa2;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+
+.consent-div {
+  display: flex;
+  position: fixed;
+  z-index: 120;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 30px;
+}
+.consent-div #consent-popup {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .consent-div #consent-popup {
+    width: 600px;
+  }
+}
+.consent-div #consent-popup h5 {
+  color: #333645;
+  font-size: 1.6em;
+  margin: 15px 20px;
+}
+.consent-div #consent-popup hr {
+  color: #ccc;
+  border-width: 1px;
+  border-top: none;
+}
+.consent-div #consent-popup p {
+  color: #666;
+  line-height: 2em;
+  margin: 15px 25px 40px 20px;
+}
+.consent-div #consent-popup a {
+  text-decoration: none;
+  color: #666;
+}
+.consent-div #consent-popup a:hover {
+  text-decoration: underline;
+}
+
+.cookie-background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+.cookie-background.bg-hidden {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .links-container {
     flex-direction: row;
