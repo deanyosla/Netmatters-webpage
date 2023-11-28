@@ -126,23 +126,23 @@
 // Banner image media queries
 
 @media (min-width: 280px) and (max-width: 460px) {
-  .first-image {
+  .banner {
     height: 580px;
   }
 }
 
 @include mq(large) {
-  .first-image {
+  .banner {
     text-align: left;
     height: 547px;
   }
-  .first-image .h1 {
-    font-size: 4em;
+  .banner .h1 {
+    font-size: 3.5rem;
     line-height: 5rem;
     padding: 0;
     margin-left: 0;
   }
-  .first-image p {
+  .banner p {
     font-size: 1.625em;
     margin-left: 0;
     line-height: 2.5rem;
@@ -153,15 +153,15 @@
   .image-container {
     padding: 87px 0;
   }
-  @include mq(large) {
-    .image-container {
-      padding: 60px 0;
-    }
-    @include mq(x-large) {
-      .image-container {
-        padding: 87px 0;
-      }
-    }
+}
+@include mq(x-large) {
+  .image-container {
+    padding: 87px 0;
+  }
+}
+@include mq(large) {
+  .image-container {
+    padding: 60px 0;
   }
 }
 

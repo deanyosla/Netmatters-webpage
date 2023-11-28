@@ -82,7 +82,7 @@ window.onload = () => {
   background = document.getElementById('bground');
   // Set up "Accept" button to run the function when clicked
   acceptBtn.addEventListener('click', acceptFn);
-
+ // If the user hasn't given consent, show the popup when the page loads
   if (shouldShowPopup(storageType)) {
           background.classList.remove('bg-hidden');
           consentParent.classList.remove('hide');
@@ -91,8 +91,9 @@ window.onload = () => {
   }
 
 };
+// Get reference to the consent button
 const consentButton = document.getElementById('consent-btn');
-
+// Set up the consent button to toggle visibility and scrolling when clicked
 consentButton.addEventListener('click', () => {
   background.classList.toggle('bg-hidden');
   consentParent.classList.toggle('hide');
