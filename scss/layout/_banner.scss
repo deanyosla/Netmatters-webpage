@@ -14,6 +14,62 @@
 }
 
 .slider {
+  &.main {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-1.png);
+  }
+  &.second {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-2.jpg);
+  }
+  &.third {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-3.png);
+  }
+  &.fourth {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-4.png);
+  }
+  &.fifth {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-5.png);
+  }
+  &.sixth {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-6.jpg);
+  }
+  &.seventh {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-7.png);
+  }
   background-position: 50% 5%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -23,54 +79,7 @@
   width: 100%;
   height: 680px;
   transition: height 0.25s ease-out;
-  .second {
-    background-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.8),
-        rgba(40, 40, 40, 0.4)
-      ),
-      url(../../img/slide-1.png);
-  }
-  .third {
-    background-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.8),
-        rgba(40, 40, 40, 0.4)
-      ),
-      url(../../img/slide-1.png);
-  }
-  .fourth {
-    background-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.8),
-        rgba(40, 40, 40, 0.4)
-      ),
-      url(../../img/slide-1.png);
-  }
-  .fifth {
-    background-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.8),
-        rgba(40, 40, 40, 0.4)
-      ),
-      url(../../img/slide-1.png);
-  }
-  .sixth {
-    background-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.8),
-        rgba(40, 40, 40, 0.4)
-      ),
-      url(../../img/slide-1.png);
-  }
-  .seventh {
-    background-image: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.8),
-        rgba(40, 40, 40, 0.4)
-      ),
-      url(../../img/slide-1.png);
-  }
+
   @include mq(x-small) {
     height: 600px;
   }
@@ -87,14 +96,6 @@
   }
 }
 
-.main {
-  background-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.8),
-      rgba(40, 40, 40, 0.4)
-    ),
-    url(../../img/slide-1.png);
-}
 // Media styles
 
 .image-container {
