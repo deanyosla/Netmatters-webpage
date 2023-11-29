@@ -86,8 +86,8 @@ window.onload = () => {
   if (shouldShowPopup(storageType)) {
           background.classList.remove('bg-hidden');
           consentParent.classList.remove('hide');
-          body.classList.add('stop-scroll');
-          html.classList.add('stop-scroll');
+          body[0].classList.add('stop-scroll');
+          html[0].classList.add('stop-scroll');
   }
 
 };
@@ -97,6 +97,6 @@ const consentButton = document.getElementById('consent-btn');
 consentButton.addEventListener('click', () => {
   background.classList.toggle('bg-hidden');
   consentParent.classList.toggle('hide');
-  body.classList.toggle('stop-scroll');
-  html.classList.toggle('stop-scroll');
+  body[0].classList.toggle('stop-scroll');
+  html[0].classList.toggle('stop-scroll');
 });
