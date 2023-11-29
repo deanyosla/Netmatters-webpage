@@ -4,13 +4,13 @@
 .banner-container {
   position: relative;
   display: flex;
+  margin-bottom: -2rem;
 }
 .banner {
   position: relative;
   width: 100%;
   display: flex;
   transition: right 0.35s ease-out;
-  // First image styles //
 }
 
 .slider {
