@@ -149,22 +149,6 @@
   }
 }
 
-@include mq(small) {
-  .image-container {
-    padding: 87px 0;
-  }
-}
-@include mq(x-large) {
-  .image-container {
-    padding: 87px 0;
-  }
-}
-@include mq(large) {
-  .image-container {
-    padding: 60px 0;
-  }
-}
-
 @include mq(medium) {
   .view-hidden {
     visibility: visible;

@@ -2145,20 +2145,50 @@ hr {
 .slider.second {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-2.jpg);
 }
+.slider.second a {
+  background-color: #67809f;
+}
+.slider.second a:hover {
+  background-color: #526781;
+}
 .slider.third {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-3.png);
+}
+.slider.third a {
+  background-color: #4183d7;
+}
+.slider.third a:hover {
+  background-color: #2a6ec6;
 }
 .slider.fourth {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-4.png);
 }
+.slider.fourth a {
+  background-color: #2ecc71;
+}
+.slider.fourth a:hover {
+  background-color: #1a8c5d;
+}
 .slider.fifth {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-5.png);
+}
+.slider.fifth a {
+  background-color: #d64541;
+}
+.slider.fifth a:hover {
+  background-color: #ae3a35;
 }
 .slider.sixth {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-6.jpg);
 }
 .slider.seventh {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-7.png);
+}
+.slider.seventh a {
+  background-color: #f62459;
+}
+.slider.seventh a:hover {
+  background-color: #d91e4f;
 }
 @media (min-width: 1px) and (max-width: 460px) {
   .slider {
@@ -2172,8 +2202,8 @@ hr {
 }
 @media (min-width: 992px) {
   .slider {
+    height: 550px;
     text-align: left;
-    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.1));
   }
 }
 
@@ -2717,21 +2747,6 @@ hr {
     font-size: 1.625em;
     margin-left: 0;
     line-height: 2.5rem;
-  }
-}
-@media (min-width: 461px) {
-  .image-container {
-    padding: 87px 0;
-  }
-}
-@media (min-width: 1201px) {
-  .image-container {
-    padding: 87px 0;
-  }
-}
-@media (min-width: 992px) {
-  .image-container {
-    padding: 60px 0;
   }
 }
 @media (min-width: 768px) {

@@ -29,6 +29,12 @@
         rgba(40, 40, 40, 0.4)
       ),
       url(../../img/slide-2.jpg);
+    a {
+      background-color: $nav-color-1n;
+      &:hover {
+        background-color: $nav-color-1dk;
+      }
+    }
   }
   &.third {
     background-image: linear-gradient(
@@ -37,6 +43,12 @@
         rgba(40, 40, 40, 0.4)
       ),
       url(../../img/slide-3.png);
+    a {
+      background-color: $nav-color-2n;
+      &:hover {
+        background-color: $nav-color-2dk;
+      }
+    }
   }
   &.fourth {
     background-image: linear-gradient(
@@ -45,6 +57,12 @@
         rgba(40, 40, 40, 0.4)
       ),
       url(../../img/slide-4.png);
+    a {
+      background-color: $nav-color-3n;
+      &:hover {
+        background-color: $nav-color-3dk;
+      }
+    }
   }
   &.fifth {
     background-image: linear-gradient(
@@ -53,6 +71,12 @@
         rgba(40, 40, 40, 0.4)
       ),
       url(../../img/slide-5.png);
+    a {
+      background-color: $nav-color-4n;
+      &:hover {
+        background-color: $nav-color-4dk;
+      }
+    }
   }
   &.sixth {
     background-image: linear-gradient(
@@ -69,6 +93,12 @@
         rgba(40, 40, 40, 0.4)
       ),
       url(../../img/slide-7.png);
+    a {
+      background-color: $nav-color-6n;
+      &:hover {
+        background-color: $nav-color-6dk;
+      }
+    }
   }
   background-position: 50% 5%;
   background-size: cover;
@@ -87,12 +117,8 @@
     height: 530px;
   }
   @include mq(large) {
+    height: 550px;
     text-align: left;
-    background-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.8),
-      rgba(255, 255, 255, 0.1)
-    );
   }
 }
 
