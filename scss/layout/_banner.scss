@@ -14,12 +14,6 @@
 }
 
 .slider {
-  background-image: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.8),
-      rgba(40, 40, 40, 0.4)
-    ),
-    url("../img/slide-1.png");
   background-position: 50% 5%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,6 +23,54 @@
   width: 100%;
   height: 680px;
   transition: height 0.25s ease-out;
+  .second {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-1.png);
+  }
+  .third {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-1.png);
+  }
+  .fourth {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-1.png);
+  }
+  .fifth {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-1.png);
+  }
+  .sixth {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-1.png);
+  }
+  .seventh {
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        rgba(40, 40, 40, 0.4)
+      ),
+      url(../../img/slide-1.png);
+  }
   @include mq(x-small) {
     height: 600px;
   }
@@ -45,35 +87,14 @@
   }
 }
 
-.slick-slide {
-  height: unset;
+.main {
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(40, 40, 40, 0.4)
+    ),
+    url(../../img/slide-1.png);
 }
-// .slider-dot {
-//   display: flex;
-//   position: absolute;
-//   bottom: 25px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   button {
-//     .fa-cirle-dot {
-//       font-size: 2.3em;
-//       color: #fff;
-//     }
-//     cursor: pointer;
-//     background: none;
-//     border: none;
-//     padding: 7px;
-//     color: rgba(255, 255, 255, 0.5);
-//     font-size: 0.7em;
-//   }
-//   @include mq(medium) {
-//     margin-top: 50px;
-//   }
-//   @include mq(large) {
-//     margin-top: 0;
-//   }
-// }
-
 // Media styles
 
 .image-container {

@@ -1883,7 +1883,6 @@ hr {
 }
 
 .slider {
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url("../img/slide-1.png");
   background-position: 50% 5%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1893,6 +1892,24 @@ hr {
   width: 100%;
   height: 680px;
   transition: height 0.25s ease-out;
+}
+.slider .second {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-1.png);
+}
+.slider .third {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-1.png);
+}
+.slider .fourth {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-1.png);
+}
+.slider .fifth {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-1.png);
+}
+.slider .sixth {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-1.png);
+}
+.slider .seventh {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-1.png);
 }
 @media (min-width: 1px) and (max-width: 460px) {
   .slider {
@@ -1911,8 +1928,8 @@ hr {
   }
 }
 
-.slick-slide {
-  height: unset;
+.main {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgba(40, 40, 40, 0.4)), url(../../img/slide-1.png);
 }
 
 .image-container {
