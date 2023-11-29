@@ -53,58 +53,34 @@ function removeSticky() {
     head.addClass('sticky');
 }
 
-// Set up to use local storage
-const storageType = localStorage;
-const consentPropertyName = 'jdc_consent';
+$(document).ready(function() {
+    const popup = $('#consent-popup');
 
-// Check if the user should see the consent popup
-const showPopup = () => !storageType.getItem(consentPropertyName);
+    // Check if the user has accepted the cookie
+    const hasAcceptedCookie = localStorage.getItem('jdc_consent');
 
-// Save user's consent to local storage
-const saveToStorage = () => storageType.setItem(consentPropertyName, true);
+    // If the cookie has not been accepted, show the popup
+    if (!hasAcceptedCookie) {
+      popup.show();
+    }
 
-// Get references to HTML elements
-const body = document.getElementsByTagName('body');
-const html = document.getElementsByTagName('html');
-const consentParent = document.querySelector('.consent-div');
+    // Function to run when the user clicks "Accept"
+    $('#accept').click(function() {
+      // Save the acceptance in localStorage
+      localStorage.setItem('jdc_consent', true);
 
-// Run this code when the DOM content has fully loaded
-document.addEventListener('DOMContentLoaded', () => {
+      // Hide the cookie popup
+      popup.hide();
+      $('body, html').removeClass('stop-scroll');
+      $('#bground').removeClass('cookie-background');
+    });
 
-  // Function to run when the user clicks "Accept"
-  const acceptFn = event => {
-    saveToStorage(storageType);
-    background.classList.add('bg-hidden');
-    consentParent.classList.add('hide');
-    body[0].classList.remove('stop-scroll');
-    html[0].classList.remove('stop-scroll');
-  };
+    // Get reference to the consent button
+    const consentButton = $('#consent-btn');
 
-  // Get references to HTML elements inside the page
-  consentPopup = document.getElementById('consent-popup');
-  const acceptBtn = document.getElementById('accept');
-  background = document.getElementById('bground');
-
-  // Set up "Accept" button to run the function when clicked
-  acceptBtn.addEventListener('click', acceptFn);
-
-  // If the user hasn't given consent, show the popup when the page loads
-  if (showPopup(storageType)) {
-    background.classList.remove('bg-hidden');
-    consentParent.classList.remove('hide');
-    body[0].classList.add('stop-scroll');
-    html[0].classList.add('stop-scroll');
-  }
-
-  // Get reference to the consent button
-  const consentButton = document.getElementById('consent-btn');
-
-  // Set up the consent button to toggle visibility and scrolling when clicked
-  consentButton.addEventListener('click', () => {
-    background.classList.toggle('bg-hidden');
-    consentParent.classList.toggle('hide');
-    body[0].classList.toggle('stop-scroll');
-    html[0].classList.toggle('stop-scroll');
+    // Set up the consent button to toggle visibility and scrolling when clicked
+    consentButton.click(function() {
+      popup.toggle();
+      $('body, html').toggleClass('stop-scroll');
+    });
   });
-
-});
