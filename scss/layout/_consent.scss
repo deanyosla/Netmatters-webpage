@@ -92,10 +92,9 @@
   z-index: 100;
   top: 0;
   left: 0;
-}
-
-.cookie-background.bg-hidden {
-  display: none;
+  &.bg-hidden {
+    display: none;
+  }
 }
 .hide {
   display: none;
