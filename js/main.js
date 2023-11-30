@@ -104,10 +104,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const consentButton = document.getElementById('consent-btn');
   // Set up the consent button to toggle visibility and scrolling when clicked
   consentButton.addEventListener('click', () => {
-    background.classList.toggle('bg-hidden');
+    background.classList.toggle('cookie-background');
+    background.classList.remove('bg-hidden');
     consentParent.classList.toggle('hide');
     body[0].classList.toggle('stop-scroll');
     html[0].classList.toggle('stop-scroll');
   });
 
 });
+

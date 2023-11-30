@@ -96,6 +96,10 @@ hr {
   @include hover_tooltip;
 }
 
+.work-showcase img {
+  max-height: 70px;
+  max-width: 200px;
+}
 // Grid container styles
 
 @include mq(medium) {
