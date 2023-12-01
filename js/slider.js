@@ -9,7 +9,6 @@
     });
 
     $(".work-showcase").slick({
-        // control the width of the images in the slider
         variableWidth: true,
         autoplay: true,
         pauseOnHover: false,
