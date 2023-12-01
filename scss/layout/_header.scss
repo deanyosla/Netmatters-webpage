@@ -4,6 +4,9 @@
 
 .header-container {
   @include header-container;
+  img {
+    max-width: 100%;
+  }
 }
 
 // search box styles

@@ -119,9 +119,14 @@
   @include mq(large) {
     height: 550px;
     text-align: left;
+    background-size: cover;
+    background-position: 40% 60%;
   }
 }
 
+.slick-list {
+  overflow: unset !important;
+}
 // Media styles
 
 .image-container {
