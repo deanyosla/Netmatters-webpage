@@ -142,6 +142,15 @@
   @include button-style(news, tooltiptext-a, $custom-padding: 15px);
   @include tooltip-btn;
   @include pointer;
+  &.trustpilot {
+    @include button-style(welcome, trustpilot, $custom-padding: 15px);
+  }
+  &.google {
+    @include button-style(welcome, google, $custom-padding: 15px);
+  }
+  &.purple {
+    @include button-style(banner, image-container, $custom-padding: 15px);
+  }
 }
 
 // Newsletter button

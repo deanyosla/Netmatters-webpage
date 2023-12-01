@@ -127,7 +127,7 @@
 }
 .slick-dots li button:hover:before, .slick-dots li button:focus:before {
   opacity: 1;
-  font-size: 1rem;
+  font-size: .8rem;
 }
 .slick-dots li button:before {
   position: absolute;
@@ -148,5 +148,5 @@
 .slick-dots li.slick-active button:before {
   color: #fff;
   opacity: 1;
-  font-size: 1rem;
+  font-size: 1.1rem;
 }/*# sourceMappingURL=slick-theme.css.map */
