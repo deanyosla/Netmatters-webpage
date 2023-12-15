@@ -128,11 +128,15 @@
   overflow: unset !important;
 }
 // Media styles
-
 .image-container {
   @include img-text;
-  &.image-container:nth-of-type(2) {
-    padding: 4.5rem 0;
+  &.banner2,
+  &.banner3,
+  &.banner4,
+  &.banner5,
+  &.banner6,
+  &.banner7 {
+    padding: 8.5rem 0;
   }
   @include mq(large) {
     margin-left: 10px;
