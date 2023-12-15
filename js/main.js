@@ -20,8 +20,6 @@ $(document).ready(function() {
         $closeSideMenu.click(toggleSideMenu);
     });
 
-
-
 const head = $('.stickyH');
 const mainHeader = $('.header'); 
 const headerHeight = mainHeader.height() + 40;

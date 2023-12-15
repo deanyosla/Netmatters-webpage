@@ -175,7 +175,7 @@
 }
 
 @include mq(x-large) {
-  .hidden-nav a {
+  .hidden-nav .inner-container a {
     margin-left: -10px;
   }
   .hidden-nav .h2 {

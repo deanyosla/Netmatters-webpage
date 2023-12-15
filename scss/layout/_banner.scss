@@ -131,6 +131,9 @@
 
 .image-container {
   @include img-text;
+  &.image-container:nth-of-type(2) {
+    padding: 4.5rem 0;
+  }
   @include mq(large) {
     margin-left: 10px;
   }

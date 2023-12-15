@@ -23,6 +23,7 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  gap: 20px;
 }
 
 .icon-disabled {
@@ -36,21 +37,18 @@
     header,
     primary,
     $custom-font-size: 1.2em,
-    $custom-padding: 15px 20px
+    $custom-padding: 18px 15px
   );
   border: none;
-  margin-right: 15px;
 }
 .icon-disabled a:nth-child(2) {
   @include button-style(
     header,
     secondary,
     $custom-font-size: 1.2em,
-    $custom-padding: 15px 20px
+    $custom-padding: 18px 15px
   );
   border: none;
-  margin-right: 15px;
-  margin-left: -5px;
 }
 
 .hamburger-nav {
@@ -66,7 +64,6 @@
     $custom-padding: 5px 30px
   );
   height: 56px !important;
-  margin: 4px -7px 0 13px;
 }
 .hamburger-inner {
   left: 10px;
