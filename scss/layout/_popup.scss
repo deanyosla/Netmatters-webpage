@@ -61,7 +61,8 @@
     h5 {
       color: $dark-txt;
       font-size: 1.6em;
-      margin: 15px 20px;
+      margin: 18px 20px;
+      font-weight: $font-light;
     }
     hr {
       color: $border-grey;
@@ -71,7 +72,7 @@
     p {
       color: #666;
       line-height: 2em;
-      margin: 15px 25px 40px 20px;
+      margin: 20px 25px 40px 20px;
     }
     a {
       text-decoration: none;
