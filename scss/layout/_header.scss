@@ -343,7 +343,7 @@ body.side-menu-active {
   z-index: 3;
   position: fixed;
   visibility: hidden;
-  transition: top 0.5s ease-in;
+  transition: all 0.5s ease-in-out;
 }
 .sticky {
   top: 0;
