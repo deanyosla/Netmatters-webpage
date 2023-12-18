@@ -144,6 +144,17 @@
 }
 
 @media (min-width: 767px) and (min-height: 1024px) {
+  .image-container {
+    padding: 3.75rem 0;
+    &.banner2,
+    &.banner3,
+    &.banner4,
+    &.banner5,
+    &.banner6,
+    &.banner7 {
+      padding: 5.5rem 0;
+    }
+  }
   .image-container .h1 {
     margin-top: 45px;
   }

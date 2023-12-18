@@ -196,4 +196,12 @@
         "tabfour tabfour tabfour tabfive tabfive tabfive tabsix tabsix tabsix tabseven tabseven tabseven";
     }
   }
+  @include mq(x-large) {
+    .tab-container .tab4,
+    .tab-container .tab5,
+    .tab-container .tab6,
+    .tab-container .tab7 {
+      width: 270px;
+    }
+  }
 }

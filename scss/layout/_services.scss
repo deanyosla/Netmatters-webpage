@@ -115,6 +115,9 @@
 
 .work-showcase {
   @include showcase;
+  &.top-partners {
+    margin: 5rem 0 6rem;
+  }
 }
 
 .work-showcase a {

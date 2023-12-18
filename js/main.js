@@ -21,34 +21,30 @@ $(document).ready(function() {
     });
 
 const head = $('.stickyH');
-const mainHeader = $('.header'); 
-const headerHeight = mainHeader.height() + 40;
 let lastScrollTop = 0;
 
 window.onscroll = function(e) {
     const currentScrollTop = window.scrollY;
-    const isScrollingDown = currentScrollTop > lastScrollTop;
+    const isScrollingUp = currentScrollTop < lastScrollTop;
 
-    onScroll(isScrollingDown);
+    onScroll(isScrollingUp);
     lastScrollTop = currentScrollTop;
 };
 
-function onScroll(isScrollingDown) {
-    let scroll = window.scrollY;
-
-    if (isScrollingDown && scroll > headerHeight) {
-        removeSticky();
-    } else {
+function onScroll(isScrollingUp) {
+    if (isScrollingUp) {
         addSticky();
+    } else {
+        removeSticky();
     }
 }
 
 function addSticky() {
-    head.removeClass('sticky');
+    head.addClass('sticky');
 }
 
 function removeSticky() {
-    head.addClass('sticky');
+    head.removeClass('sticky');
 }
 
 

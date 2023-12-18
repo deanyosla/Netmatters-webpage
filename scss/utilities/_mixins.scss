@@ -507,7 +507,6 @@ $button-styles: (
   background-color: #fff;
   border: 1px solid $border-grey;
   border-radius: 15px;
-  padding: 20px 20px;
   box-shadow: 0px 0px 20px $input;
   position: relative;
   top: 0;
@@ -523,7 +522,7 @@ $button-styles: (
   width: 65px;
   height: 65px;
   display: flex;
-  margin: 0 auto;
+  margin: 25px auto 0;
   i {
     margin: auto;
   }
@@ -573,12 +572,12 @@ $button-styles: (
   white-space: nowrap;
   display: flex;
   align-items: center;
-  margin: 50px 10px;
+  margin: 60px 0 25px;
 }
 @mixin work-anchor {
   display: none;
   cursor: default;
-  margin: 20px 70px;
+  margin: 20px 45px;
   max-height: 70px;
   width: auto !important;
 }
@@ -650,6 +649,7 @@ $button-styles: (
   font-weight: $font-bold;
   color: #a3a8ac;
   font-size: 1.1rem;
+  font-style: normal;
 }
 @mixin stars {
   height: 3rem;
