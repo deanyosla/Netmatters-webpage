@@ -1114,7 +1114,7 @@ li a {
 }
 
 .small {
-  font-size: 0.65em;
+  font-size: 0.625rem;
   margin-bottom: 0;
   display: block;
 }
@@ -1178,7 +1178,7 @@ body.side-menu-active {
   display: block;
 }
 #sideMenu .linkTxt {
-  font-size: 1.125em;
+  font-size: 0.875rem;
 }
 #sideMenu .icon-hidden {
   padding: 5px;
@@ -1234,6 +1234,10 @@ body.side-menu-active {
 }
 .menu-cat > a:hover {
   background-color: #444753;
+}
+
+.mobile-menuBtn .linkTxt {
+  font-size: 1.125rem !important;
 }
 
 .mobile-menuBtn:hover {
@@ -1293,6 +1297,9 @@ body.side-menu-active {
 @media (min-width: 992px) {
   #sideMenu {
     width: 350px;
+  }
+  .only-mobile {
+    display: none;
   }
   .top-title,
   .top-title + li {

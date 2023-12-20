@@ -215,7 +215,7 @@ body.side-menu-active {
     display: block;
   }
   .linkTxt {
-    font-size: 1.125em;
+    font-size: 0.875rem;
   }
   .icon-hidden {
     padding: 5px;
@@ -270,6 +270,9 @@ body.side-menu-active {
     background-color: $side-btn-hov;
   }
 }
+.mobile-menuBtn .linkTxt {
+  font-size: 1.125rem !important;
+}
 .mobile-menuBtn:hover {
   background-color: $side-btn-hov;
 }
@@ -320,6 +323,9 @@ body.side-menu-active {
 @include mq(large) {
   #sideMenu {
     width: 350px;
+  }
+  .only-mobile {
+    display: none;
   }
   .top-title,
   .top-title + li {
