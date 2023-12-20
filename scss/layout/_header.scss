@@ -236,6 +236,8 @@ body.side-menu-active {
     .nav-item {
       background-color: rgba(0, 0, 0, 0.25);
       padding: 16px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
     }
   }
 }
