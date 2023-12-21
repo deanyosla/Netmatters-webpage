@@ -371,7 +371,7 @@ $button-styles: (
   }
   i {
     display: block;
-    font-size: 1.2em;
+    font-size: 1.35rem;
     text-align: center;
     padding: 20px 0 15px 0;
   }
@@ -413,9 +413,8 @@ $button-styles: (
     margin: 20px 0;
   }
   span {
-    margin-left: 10px;
     font-weight: $font-light;
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     line-height: 1.2em;
     &:hover {
       text-decoration: underline;
@@ -436,8 +435,8 @@ $button-styles: (
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
-  font-weight: $font-bold;
   line-height: 1em;
+  font-size: 1.125rem;
 }
 @mixin span-sm {
   font-size: 0.625rem;
@@ -572,7 +571,6 @@ $button-styles: (
   white-space: nowrap;
   display: flex;
   align-items: center;
-  margin: 60px 0 25px;
 }
 @mixin work-anchor {
   display: none;
@@ -599,11 +597,12 @@ $button-styles: (
   flex-direction: column;
   background-color: $dark-bg;
   padding-top: 50px;
+  padding-bottom: 13px;
 }
 @mixin welcome-h1 {
   margin-top: -6px;
   margin-bottom: 40px;
-  font-size: 2.2rem;
+  font-size: 2.15rem;
   font-weight: 400;
   color: #fff;
   &:first-child {
@@ -612,7 +611,8 @@ $button-styles: (
 }
 
 @mixin welcome-p {
-  line-height: 1.8rem;
+  line-height: 1.875rem;
+  font-size: 15.5px;
   margin-bottom: 25px;
   font-weight: $font-light;
   color: #fff;
@@ -648,7 +648,7 @@ $button-styles: (
 @mixin quote-author {
   font-weight: $font-bold;
   color: #a3a8ac;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-style: normal;
 }
 @mixin stars {

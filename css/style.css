@@ -361,7 +361,8 @@
   padding: 10px 20px;
   border-radius: 3px;
   background-color: #272936;
-  margin-right: 15px;
+  margin-right: 10px;
+  border-radius: 6px !important;
 }
 .btn-prim:hover {
   background-color: #121318;
@@ -374,6 +375,7 @@
   margin-top: auto;
   border-radius: 3px;
   background-color: #4387f6;
+  border-radius: 6px !important;
 }
 .google:hover {
   background-color: #166af4;
@@ -386,6 +388,7 @@
   margin-top: auto;
   border-radius: 3px;
   background-color: #00b67b;
+  border-radius: 6px !important;
 }
 .trustpilot:hover {
   background-color: #009b69;
@@ -901,7 +904,7 @@ li a {
 }
 .desktop-nav i {
   display: block;
-  font-size: 1.2em;
+  font-size: 1.35rem;
   text-align: center;
   padding: 20px 0 15px 0;
 }
@@ -1086,9 +1089,8 @@ li a {
   margin: 20px 0;
 }
 .hidden-nav .inner-container span {
-  margin-left: 10px;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   line-height: 1.2em;
 }
 .hidden-nav .inner-container span:hover {
@@ -1109,8 +1111,8 @@ li a {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 20px;
-  font-weight: 600;
   line-height: 1em;
+  font-size: 1.125rem;
 }
 
 .small {
@@ -1610,6 +1612,7 @@ footer h4 {
   flex-direction: column;
   background-color: #323544;
   padding-top: 50px;
+  padding-bottom: 13px;
 }
 
 .div-one,
@@ -1621,7 +1624,7 @@ footer h4 {
 .div-two .h1 {
   margin-top: -6px;
   margin-bottom: 40px;
-  font-size: 2.2rem;
+  font-size: 2.15rem;
   font-weight: 400;
   color: #fff;
 }
@@ -1631,7 +1634,8 @@ footer h4 {
 }
 .div-one p,
 .div-two p {
-  line-height: 1.8rem;
+  line-height: 1.875rem;
+  font-size: 15.5px;
   margin-bottom: 25px;
   font-weight: 400;
   color: #fff;
@@ -1669,7 +1673,7 @@ footer h4 {
 .div-two .quote-author {
   font-weight: 600;
   color: #a3a8ac;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-style: normal;
 }
 .div-two .stars {
@@ -2232,10 +2236,17 @@ hr {
   white-space: nowrap;
   display: flex;
   align-items: center;
-  margin: 60px 0 25px;
 }
 .work-showcase.top-partners {
-  margin: 5rem 0 6rem;
+  padding: 80px 0 100px;
+}
+@media (max-width: 768px) {
+  .work-showcase.top-partners {
+    padding: 35px 0 100px;
+  }
+}
+.work-showcase.bottom-clients {
+  padding: 65px 0 30px;
 }
 
 .work-showcase a {
@@ -2442,7 +2453,8 @@ hr {
   .div-one,
   .div-two {
     width: 50%;
-    padding-left: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media (min-width: 992px) {

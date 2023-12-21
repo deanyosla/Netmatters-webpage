@@ -116,7 +116,13 @@
 .work-showcase {
   @include showcase;
   &.top-partners {
-    margin: 5rem 0 6rem;
+    padding: 80px 0 100px;
+    @include medium-max {
+      padding: 35px 0 100px;
+    }
+  }
+  &.bottom-clients {
+    padding: 65px 0 30px;
   }
 }
 

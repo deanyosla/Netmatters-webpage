@@ -249,14 +249,17 @@
     $custom-line-height: 2rem,
     $custom-font-size: 1.25rem
   );
-  margin-right: 15px;
+  margin-right: 10px;
+  border-radius: 6px !important;
 }
 
 .google {
   @include button-style(welcome, google, $custom-margin-top: auto);
+  border-radius: 6px !important;
 }
 .trustpilot {
   @include button-style(welcome, trustpilot, $custom-margin-top: auto);
+  border-radius: 6px !important;
 }
 
 // cookie policy buttons
