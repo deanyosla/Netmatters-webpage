@@ -205,6 +205,7 @@
   padding: 15px;
   border-radius: 3px;
   background-color: #00b67b;
+  border-radius: 3px !important;
 }
 .tooltiptext .a.trustpilot:hover {
   background-color: #009b69;
@@ -216,6 +217,7 @@
   padding: 15px;
   border-radius: 3px;
   background-color: #4387f6;
+  border-radius: 3px !important;
 }
 .tooltiptext .a.google:hover {
   background-color: #166af4;

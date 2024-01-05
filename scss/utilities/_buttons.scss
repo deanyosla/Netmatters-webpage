@@ -139,9 +139,11 @@
   @include pointer;
   &.trustpilot {
     @include button-style(welcome, trustpilot, $custom-padding: 15px);
+    border-radius: 3px !important;
   }
   &.google {
     @include button-style(welcome, google, $custom-padding: 15px);
+    border-radius: 3px !important;
   }
   &.purple {
     @include button-style(banner, image-container, $custom-padding: 15px);
