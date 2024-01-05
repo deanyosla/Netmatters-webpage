@@ -1890,7 +1890,7 @@ hr {
   max-width: 200px;
 }
 .work-showcase img.center {
-  margin-top: 13px;
+  padding-top: 13px;
 }
 
 @media (min-width: 768px) {
