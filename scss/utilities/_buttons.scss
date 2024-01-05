@@ -276,7 +276,7 @@
   @include button-style(
     header,
     secondary,
-    $custom-padding: 5px 35px,
+    $custom-padding: 5px 15px,
     $custom-font-size: 1.1em,
     $custom-line-height: 2em,
     $custom-margin-bottom: 20px
@@ -295,7 +295,7 @@
   @include button-style(
     banner,
     image-container,
-    $custom-padding: 5px 35px,
+    $custom-padding: 5px 15px,
     $custom-font-size: 1.1em,
     $custom-line-height: 2em,
     $custom-margin-bottom: 20px

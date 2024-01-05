@@ -99,3 +99,9 @@
 .hide {
   display: none;
 }
+
+#accept {
+  @include mq(x-small) {
+    margin: 15px 20px 20px 20px;
+  }
+}
