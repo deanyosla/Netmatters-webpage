@@ -2244,7 +2244,7 @@ hr {
 .work-showcase.top-partners {
   padding: 80px 0 100px;
 }
-@media (max-width: 768px) {
+@media (min-width: 767px) and (max-width: 768px) {
   .work-showcase.top-partners {
     padding: 35px 0 100px;
   }
@@ -2440,7 +2440,7 @@ hr {
     column-gap: 2rem;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 767px) and (max-width: 768px) {
   .footer-bottom .license {
     padding-bottom: 0;
   }
@@ -2525,7 +2525,7 @@ hr {
     background-color: #84858f;
   }
 }
-@media (max-width: 768px) {
+@media (min-width: 767px) and (max-width: 768px) {
   .search-bar {
     display: none;
   }

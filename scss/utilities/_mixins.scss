@@ -4,36 +4,36 @@
 
 // Media queries ==========================================================================
 
-@mixin mq($break) {
-  @if $break == "x-small" {
+@mixin mq($breakpoint) {
+  @if $breakpoint == "x-small" {
     @media (min-width: $break--x-sml) and (max-width: $break--sml) {
       @content;
     }
-  } @else if $break == "small" {
-    @media (min-width: $break--sml + 1) {
+  } @else if $breakpoint == "small" {
+    @media (min-width: #{$break--sml + 1}) {
       @content;
     }
-  } @else if $break == "medium" {
-    @media (min-width: $break--med + 1) {
+  } @else if $breakpoint == "medium" {
+    @media (min-width: #{$break--med + 1}) {
       @content;
     }
-  } @else if $break == "large" {
-    @media (min-width: $break--lrg + 1) {
+  } @else if $breakpoint == "large" {
+    @media (min-width: #{$break--lrg + 1}) {
       @content;
     }
-  } @else if $break == "x-large" {
-    @media (min-width: $break--x-lrg + 1) {
+  } @else if $breakpoint == "x-large" {
+    @media (min-width: #{$break--x-lrg + 1}) {
       @content;
     }
   } @else {
-    @error "#{$break} isnt a valid media query size!!";
+    @error "#{$breakpoint} isn't a valid media query size!";
   }
 }
 
 // Max width 768px
 
 @mixin medium-max {
-  @media (max-width: 768px) {
+  @media (min-width: 767px) and (max-width: 768px) {
     @content;
   }
 }
