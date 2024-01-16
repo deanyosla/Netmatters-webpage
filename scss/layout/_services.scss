@@ -70,10 +70,16 @@
 .view-hidden {
   @include nav-text;
   @include hidden-link;
+  @include mq(x-large) {
+    right: -25px;
+  }
 }
 .view-work {
   @include nav-text;
   @include margin-view-wk;
+  @include mq(x-large) {
+    right: -25px;
+  }
 }
 
 .view-hidden:hover,

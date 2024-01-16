@@ -33,6 +33,10 @@
 
 .main-nav {
   @include main-nav;
+  &.inner-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .main-nav > li > a {
@@ -162,14 +166,14 @@
     display: block;
   }
   .main-nav > li a::after {
-    border-right-width: 67px;
-    border-left-width: 67px;
+    border-right-width: 70px;
+    border-left-width: 70px;
   }
 }
 
 @include mq(x-large) {
   .main-nav > li a:after {
-    border-right-width: 80px;
+    border-right-width: 84px;
     border-left-width: 84px;
   }
 }

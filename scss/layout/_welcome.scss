@@ -4,6 +4,12 @@
 
 .welcome-section {
   @include main-welcome;
+  @include mq(large) {
+    .inner-container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .div-one,

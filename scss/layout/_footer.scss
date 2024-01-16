@@ -40,4 +40,10 @@ footer h4 {
   .sitemap {
     @include sitemap;
   }
+  @media (min-width: 767px) and (max-width: 769px) {
+    .license {
+      display: flex;
+      justify-content: center;
+    }
+  }
 }
