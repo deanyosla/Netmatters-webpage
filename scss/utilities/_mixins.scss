@@ -33,7 +33,7 @@
 // Max width 768px
 
 @mixin medium-max {
-  @media (min-width: 767px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     @content;
   }
 }
