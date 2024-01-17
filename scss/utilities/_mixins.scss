@@ -561,7 +561,7 @@ $button-styles: (
   }
 }
 @mixin viewAll {
-  margin: 35px 0 70px 0;
+  margin-top: 50px;
   &:hover {
     text-decoration: underline;
   }

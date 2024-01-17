@@ -1837,7 +1837,7 @@ hr {
   text-decoration: none;
   display: block;
   text-align: center;
-  margin: 35px 0 70px 0;
+  margin-top: 50px;
 }
 .view-work-all:hover {
   text-decoration: underline;
