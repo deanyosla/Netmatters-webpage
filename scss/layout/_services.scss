@@ -122,9 +122,9 @@
 .work-showcase {
   @include showcase;
   &.top-partners {
-    padding: 80px 0 100px;
+    padding: 80px 0 30px;
     @include medium-max {
-      padding: 35px 0 100px;
+      padding: 35px 0 30px;
     }
   }
   &.bottom-clients {
