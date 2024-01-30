@@ -2319,6 +2319,7 @@ hr {
   .contact-nav {
     display: block;
     margin-bottom: 0;
+    border-top: 1px solid #333645;
   }
 }
 @media (min-width: 992px) {
@@ -2436,12 +2437,13 @@ hr {
 .offices-cards-wrap .office-card .card-image img {
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
-  width: 100%;
-  height: auto;
 }
 .offices-cards-wrap .office-card .card-map img {
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
+}
+.offices-cards-wrap .office-card .card-image img,
+.offices-cards-wrap .office-card .card-map img {
   width: 100%;
   height: auto;
 }

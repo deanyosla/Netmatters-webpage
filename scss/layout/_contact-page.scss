@@ -10,6 +10,7 @@
     @include mq(medium) {
         display: block;
         margin-bottom: 0;
+        border-top: 1px solid $dark-txt;
     }
     @include mq(large) {
         margin-bottom: 50px;
@@ -110,12 +111,13 @@
         .card-image img {
             border-top-left-radius: 2rem;
             border-top-right-radius: 2rem;
-            width: 100%;
-            height: auto;
         }
         .card-map img {
             border-bottom-left-radius: 2rem;
             border-bottom-right-radius: 2rem;
+        }
+        .card-image img,
+        .card-map img {
             width: 100%;
             height: auto;
         }

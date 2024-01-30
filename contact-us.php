@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="office-card">
-              <div class="card-main">
+              <div class="office-card-main">
                 <div class="card-image">
                     <img src="img/offices/cambridge.webp" alt="cambridge office">
                   </div>
@@ -65,7 +65,7 @@
                 </div>
             </div>
             <div class="office-card">
-               <div class="card-main">
+               <div class="office-card-main">
                <div class="card-image">
                   <img src="img/offices/wymondham.webp" alt="wymondham office">
                 </div>
@@ -87,7 +87,7 @@
                </div>
             </div>
             <div class="office-card">
-              <div class="card-main">
+              <div class="office-card-main">
               <div class="card-image">
                   <img src="img/offices/yarmouth.webp" alt="great yarmouth office">
                 </div>
