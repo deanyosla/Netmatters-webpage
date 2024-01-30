@@ -2309,6 +2309,16 @@ hr {
     display: inline-flex;
   }
 }
+.contact-nav {
+  display: none;
+  padding: 15px 0;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+.contact-nav-inner {
+  font-size: 0.8rem;
+}
+
 .message {
   position: fixed;
   right: 1%;
