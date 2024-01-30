@@ -7,7 +7,117 @@
     padding: 15px 0;
     box-shadow: 0 5px 35px rgba(0,0,0,0.1);
     margin-bottom: 50px; 
+    @include mq(medium) {
+        display: block;
+        margin-bottom: 0;
+    }
+    @include mq(large) {
+        margin-bottom: 50px;
+    }
     &-inner {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
+        a {
+            font-weight: $font-bold;
+            text-decoration: none;
+            color: $dark-txt;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.offices-heading-wrap {
+        background-color: $dark-txt;
+        padding: 1.5rem;
+        @include mq(large) {
+            background-color: #fff;
+            padding: 0;
+        }
+    .offices-heading {
+      margin: 0;
+      color: #fff;
+      font-size: 2.25rem;
+      font-weight: 400;
+      @include mq(large) {
+        color: $dark-txt;   
+      }
+    }
+}
+
+.offices-cards-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 80px;
+    @include mq(large) {
+        flex-direction: row;
+    }
+    .office-card {
+        display: flex;
+        flex-direction: column;
+        @include mq(large) {
+            flex: 1 1 35%;
+        }
+        &-main {
+            box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+        }
+        &-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 1.25rem;
+                font-weight: $font-light;
+                margin: 0 0 15px;
+                a {
+                    color: $dark-txt;
+                    text-decoration: none;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            address {
+                font-style: normal;
+                font-size: 0.8125rem;
+                line-height: 1.375rem;
+                font-weight: $font-light;
+                margin-bottom: 15px;
+            }
+            .office-telephone {
+                color: #926fb1;
+                font-weight: 700;
+                text-decoration: none;
+                font-size: 1.625rem;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .office-btn {
+                @include button-style(
+                    news,
+                    readmore2, 
+                    $custom-padding: 12.5px 20px);
+                margin-top: 1rem;
+                align-self: flex-start;
+            }
+        }
+        .card-image img {
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            width: 100%;
+            height: auto;
+        }
+        .card-map img {
+            border-bottom-left-radius: 2rem;
+            border-bottom-right-radius: 2rem;
+            width: 100%;
+            height: auto;
+        }
     }
 }

@@ -2315,8 +2315,135 @@ hr {
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   margin-bottom: 50px;
 }
+@media (min-width: 767px) {
+  .contact-nav {
+    display: block;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 992px) {
+  .contact-nav {
+    margin-bottom: 50px;
+  }
+}
 .contact-nav-inner {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+.contact-nav-inner a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #333645;
+}
+.contact-nav-inner a:hover {
+  text-decoration: underline;
+}
+
+.offices-heading-wrap {
+  background-color: #333645;
+  padding: 1.5rem;
+}
+@media (min-width: 992px) {
+  .offices-heading-wrap {
+    background-color: #fff;
+    padding: 0;
+  }
+}
+.offices-heading-wrap .offices-heading {
+  margin: 0;
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+@media (min-width: 992px) {
+  .offices-heading-wrap .offices-heading {
+    color: #333645;
+  }
+}
+
+.offices-cards-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 80px;
+}
+@media (min-width: 992px) {
+  .offices-cards-wrap {
+    flex-direction: row;
+  }
+}
+.offices-cards-wrap .office-card {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .offices-cards-wrap .office-card {
+    flex: 1 1 35%;
+  }
+}
+.offices-cards-wrap .office-card-main {
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+.offices-cards-wrap .office-card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.offices-cards-wrap .office-card-content h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0 0 15px;
+}
+.offices-cards-wrap .office-card-content h2 a {
+  color: #333645;
+  text-decoration: none;
+}
+.offices-cards-wrap .office-card-content h2 a:hover {
+  text-decoration: underline;
+}
+.offices-cards-wrap .office-card-content address {
+  font-style: normal;
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.offices-cards-wrap .office-card-content .office-telephone {
+  color: #926fb1;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.625rem;
+}
+.offices-cards-wrap .office-card-content .office-telephone:hover {
+  text-decoration: underline;
+}
+.offices-cards-wrap .office-card-content .office-btn {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12.5px 20px;
+  border-radius: 3px;
+  background-color: #926fb1;
+  margin-top: 1rem;
+  align-self: flex-start;
+}
+.offices-cards-wrap .office-card-content .office-btn:hover {
+  background-color: #7e57a0;
+}
+.offices-cards-wrap .office-card .card-image img {
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  width: 100%;
+  height: auto;
+}
+.offices-cards-wrap .office-card .card-map img {
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  width: 100%;
+  height: auto;
 }
 
 .message {

@@ -22,7 +22,7 @@
           </div>
           <div class="offices-cards-wrap inner-container">
             <div class="office-card">
-              <div class="card-main">
+              <div class="office-card-main">
                 <div class="card-image">
                   <img src="img/offices/london.webp" alt="london office">
                 </div>
