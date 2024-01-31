@@ -126,10 +126,11 @@
                   <h4>Out of Hours IT Support <i class="fa-solid fa-chevron-down"></i></h4>
                   <div class="content-container">
                     <div class="content">
-                      <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
-                      <p> Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00<br>
+                      <p class="text-light">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                      <p> Monday - Friday 18:00 - 22:00
+                          Saturday 08:00 - 16:00<br>
                           Sunday 10:00 - 18:00</p>
-                      <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail.
+                      <p class="text-light">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail.
                          A technician will contact you on the number provided within 45 minutes of your call.</p>
                     </div>
                   </div>
@@ -140,41 +141,46 @@
                 <form action="contact-us.php#contact-form" class="contact-form" method="post">
                   <div class="contact-inputs">
                     <div class="contact-form-group">
-                        <label for="name">Your Name</label>
-                        <input id="name" type="text" class="" value="" required="">
+                        <label for="contact-name">Your Name</label>
+                        <input id="contact-name" type="text" class="" value="" required="">
                     </div>
                     <div class="contact-form-group">
                         <label for="company">Your Company</label>
                         <input id="company" type="text"  value="">
                     </div>
                     <div class="contact-form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" value="" required="">
+                        <label for="contact-email">Your Email</label>
+                        <input type="email" id="contact-email" name="email" value="" required="">
                     </div>
                     <div class="contact-form-group">
                         <label for="telephone">Your Telephone Number</label>
                         <input type="tel" id="telephone" name="telephone" value="" required="">
                     </div>
                     <div class="contact-form-group">
-                        <label for="message">Your Telephone Number</label>
-                        <textarea name="message" id="message" rows="5" cols="30" class="" required="">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                        <label for="message">Message</label>
+                        <textarea name="message" id="message" rows="5" cols="30" class="" required="">
+                          Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?
+                        </textarea>
                     </div>
                   </div>
-                  <div class="checkbox-wrap">
-                      <label class="checkbox" for="myCheckboxId">
-                              <input class="checkbox__input" type="checkbox" name="myCheckboxName" id="myCheckboxId">
+                  <div class="checkbox-wrap-contact">
+                      <label class="checkbox" for="checkbox-contact">
+                              <input class="checkbox__input" type="checkbox" name="myCheckboxName" id="checkbox-contact">
                               <span class="checkbox__box"></span>
                       </label>
-                        <label for="myCheckboxId" class="pointy">
+                        <label for="checkbox-contact" class="pointy">
                               Please tick this box if you wish to receive marketing
                               information from us. Please see our
                               <a href="#" target="_blank" class="privacy">Privacy Policy</a>
                               for more information on how we keep your data safe.
                         </label>
                   </div>
+                  <div class="captcha-wrap">
+                    <span>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</span>
+                  </div>
                   <div class="button-container">
                     <button type="submit" class="subscribe">send inquiry</button>
-                    <span>* Fields Required</span>
+                    <span><span class="notice">*</span> Fields Required</span>
                   </div>
             
                 </form>
