@@ -176,7 +176,7 @@
     display: none;
 }
 .content-container.show {
-    display: block;
+    display: block;  
 }
 
 .contact-form-wrap {
@@ -188,6 +188,32 @@
     @include mq(large) {
       flex: 2;
       align-self: flex-start;
+    }
+    .alert {
+        display: flex;
+        justify-content: space-between;
+        font-weight: $font-light;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        &.alert-success {
+            color: $text-green;
+            background-color: $background-green;
+            border-color: $border-green;
+        }
+        &.alert-fail {
+            color: $text-red;
+            background-color: $background-red;
+            border-color: $background-red;
+        }
+        .close {
+            position: relative;
+            padding: 0;
+            cursor: pointer;
+            background: transparent;
+            border: 0;
+        }
     }
     .contact-form-group {
         label:not(label[for="company"])::after {
@@ -201,7 +227,6 @@
             color: #555;
             border-color: #ccc;
             background-color: #fff;
-            background-image: none;
             border: 1px solid #e5e5e5;
             border-radius: 2px;
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);

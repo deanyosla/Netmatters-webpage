@@ -138,11 +138,26 @@
               </div>
             <!-- contact form -->
               <div class="contact-form-wrap" id="contact-form">
-                <form action="contact-us.php#contact-form" class="contact-form" method="post">
+                 <div class="alert-wrap">
+                        <!-- alert success and fail messages needs to be appended by JS later  -->
+
+                        <div class="alert-success alert">
+                               <span>Your message has been sent!</span> 
+                               <button class="close">x</button>
+                        </div>
+                        <!-- <div class="alert-fail alert">
+                        <span>Please enter a value into name.<br>
+                          <br>Please enter a value into email.<br>
+                          <br>Please enter a value into telephone.</span>
+                          <button class="close">x</button>
+                        </div> -->
+
+                      </div>
+                <form action="contact-us.php#contact-form" class="contact-form" method="POST">
                   <div class="contact-inputs">
-                    <div class="contact-form-group">
+                    <div class="contact-form-group">    
                         <label for="contact-name">Your Name</label>
-                        <input id="contact-name" type="text" class="" value="" required="">
+                        <input id="contact-name" type="text" class="" value="">
                     </div>
                     <div class="contact-form-group">
                         <label for="company">Your Company</label>
@@ -150,15 +165,15 @@
                     </div>
                     <div class="contact-form-group">
                         <label for="contact-email">Your Email</label>
-                        <input type="email" id="contact-email" name="email" value="" required="">
+                        <input type="email" id="contact-email" name="email" value="">
                     </div>
                     <div class="contact-form-group">
                         <label for="telephone">Your Telephone Number</label>
-                        <input type="tel" id="telephone" name="telephone" value="" required="">
+                        <input type="tel" id="telephone" name="telephone" value="">
                     </div>
                     <div class="contact-form-group">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="5" cols="30" class="" required="">
+                        <textarea name="message" id="message" rows="5" cols="30" class="">
                           Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?
                         </textarea>
                     </div>
@@ -177,9 +192,10 @@
                   </div>
                   <div class="captcha-wrap">
                     <span>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</span>
+                    <?php include ("includes/db-conn.php") ?>
                   </div>
                   <div class="button-container">
-                    <button type="submit" class="subscribe">send inquiry</button>
+                    <button type="submit" class="subscribe" action="contact-us.php#contact-form">send inquiry</button>
                     <span><span class="notice">*</span> Fields Required</span>
                   </div>
             
