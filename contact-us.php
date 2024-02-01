@@ -9,7 +9,7 @@
      <div class="contact-nav">
       <div class="contact-nav-inner inner-container">
         <span>
-          <a href="index.php">Home</a>/ Our Offices
+          <a href="index.php">Home &nbsp;</a>/ Our Offices
         </span> 
       </div>
      </div>
@@ -127,7 +127,7 @@
                   <div class="content-container">
                     <div class="content">
                       <p class="text-light">Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
-                      <p> Monday - Friday 18:00 - 22:00
+                      <p> Monday - Friday 18:00 - 22:00<br>
                           Saturday 08:00 - 16:00<br>
                           Sunday 10:00 - 18:00</p>
                       <p class="text-light">To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours voicemail.

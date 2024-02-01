@@ -2592,6 +2592,12 @@ hr {
   color: #a94442;
 }
 
+@media (max-width: 375px) {
+  .button-container {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+}
 .contact-form-group {
   display: flex;
   flex-direction: column;
