@@ -141,10 +141,10 @@
                  <div class="alert-wrap">
                         <!-- alert success and fail messages needs to be appended by JS later  -->
 
-                        <div class="alert-success alert">
+                        <!-- <div class="alert-success alert">
                                <span>Your message has been sent!</span> 
                                <button class="close">x</button>
-                        </div>
+                        </div> -->
                         <!-- <div class="alert-fail alert">
                         <span>Please enter a value into name.<br>
                           <br>Please enter a value into email.<br>
