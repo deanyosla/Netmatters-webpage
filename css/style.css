@@ -2560,6 +2560,9 @@ hr {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   padding: 5px 15px;
 }
+.contact-form-wrap .contact-form-group .error {
+  border-color: #d64541;
+}
 .contact-form-wrap .contact-inputs {
   display: flex;
   flex-direction: column;

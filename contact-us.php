@@ -173,9 +173,7 @@
                     </div>
                     <div class="contact-form-group">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="5" cols="30" class="">
-                          Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?
-                        </textarea>
+                        <textarea name="message" id="message" rows="5" cols="30" class="">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
                     </div>
                   </div>
                   <div class="checkbox-wrap-contact">

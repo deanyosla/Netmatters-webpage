@@ -233,6 +233,9 @@
             transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
             padding: 5px 15px;
         }
+        .error {
+            border-color: $nav-color-4n;
+        }
     }
     .contact-inputs {
         display: flex;
