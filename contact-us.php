@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="">
-    <?php include ("includes/head.php") ?>
-    <?php include ("includes/close_sidemenu.php") ?>
-    <?php include ("includes/message_btn.php") ?>
-    <?php include ("includes/consent_btn.php"); ?>
-    <?php include ("includes/header.php"); ?>
+    <?php 
+     include ("includes/head.php");
+     include ("includes/close_sidemenu.php");
+     include ("includes/message_btn.php");
+     include ("includes/consent_btn.php");
+     include ("includes/header.php");
+    ?>
     <main>
      <div class="contact-nav">
       <div class="contact-nav-inner inner-container">
@@ -144,8 +146,8 @@
                         <!-- <div class="alert-success alert">
                                <span>Your message has been sent!</span> 
                                <button class="close">x</button>
-                        </div> -->
-                        <!-- <div class="alert-fail alert">
+                        </div> 
+                        <div class="alert-fail alert">
                         <span>Please enter a value into name.<br>
                           <br>Please enter a value into email.<br>
                           <br>Please enter a value into telephone.</span>
@@ -153,19 +155,19 @@
                         </div> -->
 
                       </div>
-                <form action="contact-us.php#contact-form" class="contact-form" method="POST">
+                <form action="contact.php#contact-form" class="contact-form" method="POST">
                   <div class="contact-inputs">
                     <div class="contact-form-group">    
                         <label for="contact-name">Your Name</label>
-                        <input id="contact-name" type="text" class="" value="">
+                        <input id="contact-name" type="text" class="" value="" name="contact-name">
                     </div>
                     <div class="contact-form-group">
                         <label for="company">Your Company</label>
-                        <input id="company" type="text"  value="">
+                        <input id="company" type="text"  value="" name="company">
                     </div>
                     <div class="contact-form-group">
                         <label for="contact-email">Your Email</label>
-                        <input type="email" id="contact-email" name="email" value="">
+                        <input type="email" id="contact-email" name="contact-email" value="">
                     </div>
                     <div class="contact-form-group">
                         <label for="telephone">Your Telephone Number</label>
@@ -190,7 +192,6 @@
                   </div>
                   <div class="captcha-wrap">
                     <span>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</span>
-                    <?php include ("includes/db-conn.php") ?>
                   </div>
                   <div class="button-container">
                     <button type="submit" class="subscribe" action="contact-us.php#contact-form">send inquiry</button>
@@ -201,7 +202,7 @@
               </div>
           </div>
         </div>
-
+        <?php include ("includes/validate.php") ?>
       <!-- contact wrapper end -->
     <!-- =========================== Newsletter =============================== -->
       <?php include ("includes/newsletter.php") ?>

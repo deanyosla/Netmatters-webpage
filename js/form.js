@@ -32,6 +32,22 @@ document.addEventListener("DOMContentLoaded", function() {
         displayErrorMessage("Please enter a valid telephone number.", telephoneInput);
       }
 
+     // Send data to server for validation
+        const formData = new FormData(form);
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'validate.php', true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            if (response.success) {
+              displaySuccessMessage('Your message has been sent!');
+            } else {
+              displayErrorMessage(response.message, form.querySelector('[name="' + response.field + '"]'));
+            }
+          }
+      };
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send(formData);
       // Focus on the first input field with an error
       const firstErrorInput = form.querySelector(".error");
       if (firstErrorInput) {
