@@ -2579,6 +2579,9 @@ hr {
 .contact-form-group.error input {
   border-color: #d64541;
 }
+.contact-form-group.error input:focus {
+  border-color: #d64541;
+}
 
 .contact-inputs {
   display: flex;

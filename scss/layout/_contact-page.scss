@@ -251,6 +251,9 @@
         }
         &.error input {
             border-color: $nav-color-4n;
+            &:focus {
+                border-color:  $nav-color-4n;
+            }
         }
     }
     .contact-inputs {
