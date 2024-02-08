@@ -189,23 +189,29 @@
       flex: 2;
       align-self: flex-start;
     }
-    .alert {
-        display: flex;
-        justify-content: space-between;
-        font-weight: $font-light;
-        padding: 15px;
-        margin-bottom: 20px;
-        border: 1px solid transparent;
-        border-radius: 4px;
-        &.alert-success {
+   .alert-success {
             color: $text-green;
             background-color: $background-green;
             border-color: $border-green;
+            display: flex;
+            justify-content: space-between;
+            font-weight: $font-light;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
         }
-        &.alert-fail {
+        .alert-fail {
             color: $text-red;
             background-color: $background-red;
             border-color: $background-red;
+            display: flex;
+            justify-content: space-between;
+            font-weight: $font-light;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 4px;
         }
         .close {
             position: relative;
@@ -214,7 +220,17 @@
             background: transparent;
             border: 0;
         }
-    }
+        & button i {
+            color: #000;
+            font-weight: $font-bolder;
+            font-size: 0.9rem;
+            opacity: .2;
+            text-shadow: 0 1px 0 #fff;
+            &:hover {
+                opacity: .5;
+            }
+        }     
+    }  
     .contact-form-group {
         label:not(label[for="company"])::after {
             content: " *";
@@ -233,7 +249,7 @@
             transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
             padding: 5px 15px;
         }
-        .error {
+        &.error input {
             border-color: $nav-color-4n;
         }
     }
@@ -266,6 +282,9 @@
             color: #a94442;
         }
     }
+
+.alert-hidden {
+    display: none;
 }
 
 @media (max-width: 375px) {

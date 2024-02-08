@@ -1,91 +1,155 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector(".contact-form");
-    const alertWrap = document.querySelector(".alert-wrap");
+const nameEl = document.querySelector("#contact-name");
+const companyNameEl = document.querySelector("#company");
+const emailEl = document.querySelector("#contact-email");
+const phoneEl = document.querySelector("#telephone");
+const messageEl = document.querySelector("#message");
+const btnClose = document.querySelector(".close");
 
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
+const errorValidation = document.querySelector(".alert-fail");
+const successValidation = document.querySelector(".alert-success");
 
-      // Reset previous messages and styling
-      alertWrap.innerHTML = "";
-      resetInputStyles(form);
+const form = document.querySelector("#contact-form");
 
-      // Validation logic
-      const nameInput = form.querySelector("#contact-name");
-      const emailInput = form.querySelector("#contact-email");
-      const telephoneInput = form.querySelector("#telephone");
+const isRequired = value => value === "" ? false : true; 
+const isNameValid = (name) => {
+    const regex = /^[A-Za-z\s-]+$/;
+    return regex.test(name);
+}
 
-      // Email and telephone validation regex
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const telephoneRegex = /^\+?\(?([0-9]{2,4})[)\s\d.-]+([0-9]{3,4})([\s.-]+([0-9]{3,4}))?$/;
+const isEmailValid = (email) => {
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(email);
+}
 
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-      const telephone = telephoneInput.value.trim();
+const isPhoneValid = (number) => {
+    
+    
+    const  regex = /^\+?\(?([0-9]{2,4})[)\s\d.-]+([0-9]{3,4})([\s.-]+([0-9]{3,4}))?$/
 
-      if (name === "") {
-        displayErrorMessage("Please enter your name.", nameInput);
-      }
-      if (email === "" || !emailRegex.test(email)) {
-        displayErrorMessage("Please enter a valid email address.", emailInput);
-      }
-      if (telephone === "" || !telephoneRegex.test(telephone)) {
-        displayErrorMessage("Please enter a valid telephone number.", telephoneInput);
-      }
+    return regex.test(number);
+}
 
-     // Send data to server for validation
-        const formData = new FormData(form);
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', 'validate.php', true);
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState === 4 && xhr.status === 200) {
-            const response = JSON.parse(xhr.responseText);
-            if (response.success) {
-              displaySuccessMessage('Your message has been sent!');
-            } else {
-              displayErrorMessage(response.message, form.querySelector('[name="' + response.field + '"]'));
-            }
-          }
-      };
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.send(formData);
-      // Focus on the first input field with an error
-      const firstErrorInput = form.querySelector(".error");
-      if (firstErrorInput) {
-        firstErrorInput.focus();
-      } else {
-        displaySuccessMessage("Your message has been sent!");
-      }
-    });
+const showError = (input) => {
+    const formField = input.parentElement;
+    
+    formField.classList.remove("success");
+    formField.classList.add("error");
+}
 
-    function displayErrorMessage(message, inputElement) {
-      const errorDiv = createAlertDiv("alert-fail", message);
-      alertWrap.appendChild(errorDiv);
-      inputElement.classList.add("error");
+const showSuccess = (input) => {
+    const formField = input.parentElement;
+
+    formField.classList.remove("error");
+    formField.classList.add("success");
+}
+
+const checkName = () => {
+    let valid = false;
+
+    const name = nameEl.value;
+
+    if (!isRequired(name) || !isNameValid(name))
+    {
+        showError(nameEl)
+    }
+    else
+    {
+        showSuccess(nameEl);
+        valid = true;
     }
 
-    function displaySuccessMessage(message) {
-      const successDiv = createAlertDiv("alert-success", message);
-      alertWrap.appendChild(successDiv);
+    return valid;
+}
+
+const checkMessage = () => {
+    let valid = false;
+
+    const message = messageEl.value;
+
+    if (!isRequired(message))
+    {
+        showError(messageEl);
+    }
+    else
+    {
+        showSuccess(messageEl);
+        valid = true;
     }
 
-    function createAlertDiv(className, message) {
-      const div = document.createElement("div");
-      div.classList.add(className, "alert");
-      div.innerHTML = "<span>" + message + "</span><button class='close'>x</button>";
-      div.querySelector(".close").addEventListener("click", function() {
-        div.style.display = "none";
-      });
-      return div;
+    return valid;
+}
+
+const checkEmail = () => {
+    let valid = false;
+
+    const email = emailEl.value.trim();
+    console.log(email);
+
+    
+    if (!isEmailValid(email))
+    {
+        showError(emailEl);
+    }
+    else
+    {
+        showSuccess(emailEl);
+        valid = true;
     }
 
-    function resetInputStyles(form) {
-      const inputElements = form.querySelectorAll("input");
-      inputElements.forEach(function(input) {
-        input.classList.remove("error");
-      });
-    }
-    window.addEventListener('load', function() {
-        resetInputStyles(form);
-      });
-  });
+    return valid;
+}
 
+const checkPhoneNumber = () => {
+    let valid = false;
+
+    const phoneNumber = phoneEl.value.trim();
+    console.log(phoneNumber);
+
+    if (!isPhoneValid(phoneNumber))
+    {
+        showError(phoneEl);
+    }
+    else
+    {
+        showSuccess(phoneEl);
+        valid = true;
+    }
+
+    return valid;
+}
+
+btnClose.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (errorValidation != null)
+    {
+        e.target.closest('div.alert-fail').remove();
+    }
+    
+    if (successValidation != null)
+    {
+        e.target.closest('div.alert-success').remove();
+    }
+    
+});
+
+form.addEventListener("input", function (e){
+    switch (e.target.id)
+    {
+        case "contact-name":
+            checkName();
+            break;
+
+        case "contact-email":
+            checkEmail();
+            break;
+
+        case "telephone":
+            checkPhoneNumber();
+            break;
+
+        case "message":
+            checkMessage();
+            break;
+    }
+});

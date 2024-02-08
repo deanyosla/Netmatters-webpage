@@ -1,4 +1,103 @@
 <!DOCTYPE html>
+<?php
+ session_start();
+
+    include("includes/contact_data.php");
+    
+    $placeholderText = "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?";
+
+    if (!isset($_SESSION['success']))
+    {
+        $_SESSION['success'] = false;
+    }
+    
+    if (!isset($_SESSION['errorMessage']))
+    {
+        $_SESSION['errorMessage'] = [];
+    }
+    
+    function sanatiseInput($input)
+    {
+        $input = htmlspecialchars($input);
+        $input = trim($input);
+        $input = stripslashes($input);
+        return $input;
+    }
+
+    function validateInput($postData, $input, $regex=true)
+    {
+        if (empty($postData) == true)
+        {
+            array_push($_SESSION['errorMessage'], "Please enter a value into " . $input . ".");
+            return false;
+        }
+        else if ($regex == false)
+        {
+            array_push($_SESSION['errorMessage'], "The " . $input . " format is incorrect.");
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+        
+    }
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST")
+    {
+        $name = sanatiseInput($_POST['contact-name']);
+        $_SESSION['name'] = $name;
+
+        $company = sanatiseInput($_POST['company']);
+        $_SESSION['company'] = $company;
+
+        $email = sanatiseInput($_POST['contact-email']);
+        $_SESSION['email'] = $email;
+
+        $telephone = sanatiseInput($_POST['telephone']);
+        $_SESSION['telephone'] = $telephone;
+
+        $message = sanatiseInput($_POST['message']);
+        $_SESSION['message'] = $message;
+        
+        $nameRegex = "/^[a-zA-Z-' ]*$/";
+        $phoneRegex = "/^\+?\(?([0-9]{2,4})[)\s\d.-]+([0-9]{3,4})([\s.-]+([0-9]{3,4}))?$/";
+
+        $isNameValid = validateInput($name, "name", preg_match($nameRegex, $name));
+        $isEmailValid = validateInput($email, "email", filter_var($email, FILTER_VALIDATE_EMAIL));
+        $isPhoneValid = validateInput($telephone, "telephone", preg_match($phoneRegex, $telephone));
+        $isMessageValid = validateInput($message, "message");
+
+        if ($isNameValid && $isEmailValid && $isPhoneValid && $isMessageValid)
+        {
+            postData($name, $email, $company, $telephone, $message);
+
+            unset($_SESSION['contact-name']);
+            unset($_SESSION['contact-email']);
+            unset($_SESSION['company']);
+            unset($_SESSION['telephone']);
+            unset($_SESSION['message']);
+
+            $_SESSION['success'] = true;
+            $_SESSION['errorMessage'] = [];
+
+            $_SESSION['form_sent'] = true;
+
+            echo 'Data submitted to the Database Successfully';
+            header("Location: contact-us.php#contact-form");
+        
+            exit();
+
+        }
+        else
+        {
+            $_SESSION['form_sent'] = false;
+            header("Location: contact-us.php#contact-form");
+
+            exit();
+        }
+    }
+    ?>
 <html lang="en" class="">
     <?php 
      include ("includes/head.php");
@@ -140,42 +239,47 @@
               </div>
             <!-- contact form -->
               <div class="contact-form-wrap" id="contact-form">
-                 <div class="alert-wrap">
-                        <!-- alert success and fail messages needs to be appended by JS later  -->
-
-                        <!-- <div class="alert-success alert">
-                               <span>Your message has been sent!</span> 
-                               <button class="close">x</button>
-                        </div> 
-                        <div class="alert-fail alert">
-                        <span>Please enter a value into name.<br>
-                          <br>Please enter a value into email.<br>
-                          <br>Please enter a value into telephone.</span>
-                          <button class="close">x</button>
-                        </div> -->
-
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#contact-form" class="contact-form" method="POST">
+                      <div class="alert-wrap">                        
+                          <div class="alert-hidden alert <?php if ($_SESSION['form_sent'] == true) {
+                                                   echo 'alert-success';
+                                                  } else if (!empty($_SESSION['errorMessage'])){
+                                                   echo 'alert-fail';
+                                                  } else {
+                                                    echo '';
+                                                    }
+                                                   ?>">
+                                        <span><?php if($_SESSION['form_sent'] == true) {
+                                                echo 'Your Enquiry has been Submitted';
+                                                } else {
+                                                  echo implode("<br><br>",$_SESSION['errorMessage']);
+                                                                $_SESSION['errorMessage'] = [];
+                                                                }
+                                               ?>
+                                         </span>
+                                        <button type="button" class="close"><i class="fa-solid fa-xmark"></i></button>
+                           </div>
                       </div>
-                <form action="contact.php#contact-form" class="contact-form" method="POST">
                   <div class="contact-inputs">
                     <div class="contact-form-group">    
                         <label for="contact-name">Your Name</label>
-                        <input id="contact-name" type="text" class="" value="" name="contact-name">
+                        <input id="contact-name" type="text" class="" value="<?php echo $_SESSION['contact-name'] ?? ''; ?>" name="contact-name">
                     </div>
                     <div class="contact-form-group">
                         <label for="company">Your Company</label>
-                        <input id="company" type="text"  value="" name="company">
+                        <input id="company" type="text"  value="<?php echo $_SESSION['company'] ?? ''?>" name="company">
                     </div>
                     <div class="contact-form-group">
                         <label for="contact-email">Your Email</label>
-                        <input type="email" id="contact-email" name="contact-email" value="">
+                        <input type="email" id="contact-email" name="contact-email" value="<?php echo $_SESSION['contact-email'] ?? ''; ?>">
                     </div>
                     <div class="contact-form-group">
                         <label for="telephone">Your Telephone Number</label>
-                        <input type="tel" id="telephone" name="telephone" value="">
+                        <input type="tel" id="telephone" name="telephone" value="<?php echo $_SESSION['telephone'] ?? ''?>">
                     </div>
                     <div class="contact-form-group">
                         <label for="message">Message</label>
-                        <textarea name="message" id="message" rows="5" cols="30" class="">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
+                        <textarea name="message" id="message" rows="5" cols="30" name="message" value="<?php echo $_SESSION['message'] ?? ''?>"><?php echo $placeholderText; ?></textarea>
                     </div>
                   </div>
                   <div class="checkbox-wrap-contact">
@@ -194,7 +298,7 @@
                     <span>This site is protected by reCAPTCHA and the Google <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a> apply.</span>
                   </div>
                   <div class="button-container">
-                    <button type="submit" class="subscribe" action="contact-us.php#contact-form">send inquiry</button>
+                    <button type="submit" class="subscribe" action="#contact-form">send inquiry</button>
                     <span><span class="notice">*</span> Fields Required</span>
                   </div>
             
@@ -202,7 +306,6 @@
               </div>
           </div>
         </div>
-        <?php include ("includes/validate.php") ?>
       <!-- contact wrapper end -->
     <!-- =========================== Newsletter =============================== -->
       <?php include ("includes/newsletter.php") ?>
