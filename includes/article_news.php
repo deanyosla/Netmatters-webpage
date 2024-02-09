@@ -47,7 +47,7 @@ function articleContent($image, $imageAlt, $title, $readTime, $info, $type, $aut
       <div class="article-container">
         <h4 class="article-title' . $counter . '">
             ' . $title . '
-          <span><br>' . $readTime . '</span>
+          <span>' . $readTime . '</span>
         </h4>
         <p class="article-description">' . $info . '</p>
         <p class="readmore' . $counter . '">read more</p>

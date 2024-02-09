@@ -4,12 +4,12 @@
           <form id="signup-form">
             <div class="input-wrap">
               <div class="input-group">
-                <label for="name" class="required">Your Name</label>
+                <label for="name" class="required">Your Name&nbsp;</label>
                 <input type="text" id="name" name="name" required>
               </div>
 
               <div class="input-group">
-                <label for="email" class="required">Your Email</label>
+                <label for="email" class="required">Your Email&nbsp;</label>
                 <input type="email" id="email" name="email" required>
               </div>
             </div>

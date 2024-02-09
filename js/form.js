@@ -1,8 +1,8 @@
-const nameEl = document.querySelector("#contact-name");
-const companyNameEl = document.querySelector("#company");
-const emailEl = document.querySelector("#contact-email");
-const phoneEl = document.querySelector("#telephone");
-const messageEl = document.querySelector("#message");
+const nameElement = document.querySelector("#contact-name");
+const companyNameElement = document.querySelector("#company");
+const emailElement = document.querySelector("#contact-email");
+const phoneElelent = document.querySelector("#telephone");
+const messageElement = document.querySelector("#message");
 const btnClose = document.querySelector(".close");
 
 const errorValidation = document.querySelector(".alert-fail");
@@ -46,15 +46,15 @@ const showSuccess = (input) => {
 const checkName = () => {
     let valid = false;
 
-    const name = nameEl.value;
+    const name = nameElement.value;
 
     if (!isRequired(name) || !isNameValid(name))
     {
-        showError(nameEl)
+        showError(nameElement)
     }
     else
     {
-        showSuccess(nameEl);
+        showSuccess(nameElement);
         valid = true;
     }
 
@@ -64,15 +64,15 @@ const checkName = () => {
 const checkMessage = () => {
     let valid = false;
 
-    const message = messageEl.value;
+    const message = messageElement.value;
 
     if (!isRequired(message))
     {
-        showError(messageEl);
+        showError(messageElement);
     }
     else
     {
-        showSuccess(messageEl);
+        showSuccess(messageElement);
         valid = true;
     }
 
@@ -82,17 +82,17 @@ const checkMessage = () => {
 const checkEmail = () => {
     let valid = false;
 
-    const email = emailEl.value.trim();
+    const email = emailElement.value.trim();
     console.log(email);
 
     
     if (!isEmailValid(email))
     {
-        showError(emailEl);
+        showError(emailElement);
     }
     else
     {
-        showSuccess(emailEl);
+        showSuccess(emailElement);
         valid = true;
     }
 
@@ -102,16 +102,16 @@ const checkEmail = () => {
 const checkPhoneNumber = () => {
     let valid = false;
 
-    const phoneNumber = phoneEl.value.trim();
+    const phoneNumber = phoneElelent.value.trim();
     console.log(phoneNumber);
 
     if (!isPhoneValid(phoneNumber))
     {
-        showError(phoneEl);
+        showError(phoneElelent);
     }
     else
     {
-        showSuccess(phoneEl);
+        showSuccess(phoneElelent);
         valid = true;
     }
 
