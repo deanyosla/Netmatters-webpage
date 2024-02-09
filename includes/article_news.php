@@ -27,7 +27,7 @@ function getNews()
     }
 }
 
-function articleContent($image, $imageAlt, $title, $readTime, $info, $authorImage, $authorName, $date, $counter)
+function articleContent($image, $imageAlt, $title, $readTime, $info, $type, $authorImage, $authorName, $date, $counter)
 {
      // tag-1 , tag-2, tag-3  = "tag-' . $counter . '"
      // <img src="img/how-are-mobile-Zikv.jpg" alt="5 mobile application benefits"> = src="' . $image . '" && alt="' . $imageAlt . '"
@@ -41,7 +41,7 @@ function articleContent($image, $imageAlt, $title, $readTime, $info, $authorImag
      return ' <div class="article' . $counter . '">
     <a href="#">
       <div class="tag-container">
-        <p class="tag-' . $counter . '">news</p>  
+        <p class="tag-' . $counter . '">' . $type . '</p>
       </div>
       <img src="' . $image . '" alt="' . $imageAlt . '">
       <div class="article-container">
@@ -74,7 +74,8 @@ function articleContent($image, $imageAlt, $title, $readTime, $info, $authorImag
                                     $article["image_alt"], 
                                     $article["title"], 
                                     $article["read_time"], 
-                                    $article["info"], 
+                                    $article["info"],
+                                    $article['type'], 
                                     $article["author_image"], 
                                     $article["author_name"], 
                                     $article["date"], 
