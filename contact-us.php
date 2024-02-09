@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<?php include ("includes/validate.php") ?>
+<?php session_start();
+include ("includes/validate.php");
+?>
 <html lang="en" class="">
     <?php 
      include ("includes/head.php");
@@ -141,9 +143,9 @@
               </div>
             <!-- contact form -->
               <div class="contact-form-wrap" id="contact-form">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#contact-form" class="contact-form" method="POST">
+                <form action="contact-us.php" class="contact-form" method="POST">
                       <div class="alert-wrap">                        
-                          <div class="alert-hidden alert <?php if ($_SESSION['form_sent'] == true) {
+                          <div class="alert-hidden <?php if ($_SESSION['form_sent'] == true) {
                                                    echo 'alert-success';
                                                   } else if (!empty($_SESSION['errorMessage'])){
                                                    echo 'alert-fail';

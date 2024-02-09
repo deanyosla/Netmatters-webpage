@@ -1,6 +1,4 @@
 <?php
- session_start();
-
     include("includes/contact_data.php");
     
     $placeholderText = "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?";
@@ -82,7 +80,7 @@
 
             $_SESSION['form_sent'] = true;
 
-            echo 'Data submitted to the Database Successfully';
+            //echo 'Data submitted to the Database Successfully';
             header("Location: contact-us.php#contact-form");
         
             exit();
