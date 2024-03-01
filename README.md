@@ -40,6 +40,9 @@ Follow these steps to set up the project locally and view it:
     Import the provided MySQL dump or set up your database structure using the provided schema.
 <<<<<<< HEAD
     I have used XAMPP along with phpmyadmin. 
+=======
+    I have used XAMPP along with phpmyadmin, however there might be better options. 
+>>>>>>> a9f92def5346f867be138fcaf29610e8c4d47d1d
 
 5. **Start a Local Server:**
 
