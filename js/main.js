@@ -107,3 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// Accordion effect on contact page for "Out of Hours ->" field
+document.querySelector(".out-of-hours h4").addEventListener("click", function () {
+  document.querySelector(".content-container").classList.toggle("show");
+});
