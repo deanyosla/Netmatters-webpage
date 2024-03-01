@@ -2,22 +2,17 @@
 
 function getNews()
 {
-    $env = parse_ini_file('db.env');
-    $host = $env["DB_HOST"];
-    $dbname = $env["DB_NAME"];
-    $username = $env["DB_USER"];
-    $password = $env["DB_PASSWORD"];
+    include("db-conn.php");
 
     try {
-        $conn = new PDO("mysql:host=$host;dbname=$dbname;", $username, $password);
         $statement = $conn->query(
             '
             SELECT *
             FROM news
+            ORDER BY STR_TO_DATE(date, "%D %M %Y") DESC
             LIMIT 3 
             '
         );
-       //echo 'Query success';
         return $statement->fetchAll();
     }
     catch (PDOException $e)
@@ -29,14 +24,6 @@ function getNews()
 
 function articleContent($image, $imageAlt, $title, $readTime, $info, $type, $authorImage, $authorName, $date, $counter)
 {
-     // tag-1 , tag-2, tag-3  = "tag-' . $counter . '"
-     // <img src="img/how-are-mobile-Zikv.jpg" alt="5 mobile application benefits"> = src="' . $image . '" && alt="' . $imageAlt . '"
-     // article-title1 = article-title 
-     //  How are Mobile Applications Benefiting the... = ' . $title . '
-     // - 4 minute read = ' . $readTime . '
-     // In the modern world, it is common practice that our days are becoming filled with short breaks in...= ' . $info . '
-     // <img src="img/netmatters-ltd-VXAv.png" alt="author avatar" class="author-img"> ' . $authorImage . ' 
-     // 12th October 2023 = ' . $date . '
 
      return ' <div class="article' . $counter . '">
     <a href="#">

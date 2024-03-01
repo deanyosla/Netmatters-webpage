@@ -1,96 +1,98 @@
 <?php
-    include("includes/contact_data.php");
-    
-    $placeholderText = "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?";
+include("includes/contact_data.php");
 
-    if (!isset($_SESSION['success']))
-    {
-        $_SESSION['success'] = false;
+$placeholderText = "Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?";
+
+if (!isset($_SESSION['success'])) {
+    $_SESSION['success'] = false;
+}
+
+if (!isset($_SESSION['errorMessage'])) {
+    $_SESSION['errorMessage'] = [];
+}
+
+function sanitizeInput($input)
+{
+    $input = htmlspecialchars($input);
+    $input = trim($input);
+    $input = stripslashes($input);
+    return $input;
+}
+
+function validateInput($postData, $input, $regex = true)
+{
+    if (empty($postData) == true) {
+        array_push($_SESSION['errorMessage'], "Please enter a value into " . $input . ".");
+        return false;
+    } else if ($regex == false) {
+        array_push($_SESSION['errorMessage'], "The " . $input . " format is incorrect.");
+        return false;
+    } else {
+        return true;
     }
-    
-    if (!isset($_SESSION['errorMessage']))
-    {
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = sanitizeInput($_POST['contact-name']);
+    $_SESSION['name'] = $name;
+
+    $company = sanitizeInput($_POST['company']);
+    $_SESSION['company'] = $company;
+
+    $email = sanitizeInput($_POST['contact-email']);
+    $_SESSION['email'] = $email;
+
+    $telephone = sanitizeInput($_POST['telephone']);
+    $_SESSION['telephone'] = $telephone;
+
+    $message = sanitizeInput($_POST['message']);
+    $_SESSION['message'] = $message;
+
+    $marketing = sanitizeInput($_POST['marketing']);
+
+    $nameRegex = "/^[a-zA-Z-' ]*$/";
+    $phoneRegex = "/^\+?\(?([0-9]{2,4})[)\s\d.-]+([0-9]{3,4})([\s.-]+([0-9]{3,4}))?$/";
+
+    $isNameValid = validateInput($name, "name", preg_match($nameRegex, $name));
+    $isEmailValid = validateInput($email, "email", filter_var($email, FILTER_VALIDATE_EMAIL));
+    $isPhoneValid = validateInput($telephone, "telephone", preg_match($phoneRegex, $telephone));
+    $isMessageValid = validateInput($message, "message");
+
+    $formFields = [
+        'contact-name' => $name,
+        'contact-email' => $email,
+        'company' => $company,
+        'telephone' => $telephone,
+        'message' => $message,
+    ];
+
+    if ($isNameValid && $isEmailValid && $isPhoneValid && $isMessageValid) {
+        postData($name, $email, $company, $telephone, $message, $marketing);
+
         $_SESSION['errorMessage'] = [];
-    }
-    
-    function sanatiseInput($input)
-    {
-        $input = htmlspecialchars($input);
-        $input = trim($input);
-        $input = stripslashes($input);
-        return $input;
-    }
 
-    function validateInput($postData, $input, $regex=true)
-    {
-        if (empty($postData) == true)
-        {
-            array_push($_SESSION['errorMessage'], "Please enter a value into " . $input . ".");
-            return false;
+        // Unset session variables only after successful submission
+        foreach ($formFields as $field => $value) {
+            unset($_SESSION[$field]);
         }
-        else if ($regex == false)
-        {
-            array_push($_SESSION['errorMessage'], "The " . $input . " format is incorrect.");
-            return false;
+
+        // Set form_sent to true for successful submission
+        $_SESSION['form_sent'] = true;
+    } else {
+        // Set form_sent to false on validation error
+        $_SESSION['form_sent'] = false;
+
+        // Set session variables to retain form field values on validation error
+        foreach ($formFields as $field => $value) {
+            $_SESSION[$field] = $value;
         }
-        else
-        {
-            return true;
-        }
-        
+
+        // Clear the success message on page load
+        unset($_SESSION['success']);
     }
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST")
-    {
-        $name = sanatiseInput($_POST['contact-name']);
-        $_SESSION['name'] = $name;
+    // Redirect to prevent form resubmission on page reload
+    header("Location: contact-us.php#contact-form");
+    exit();
+}
 
-        $company = sanatiseInput($_POST['company']);
-        $_SESSION['company'] = $company;
-
-        $email = sanatiseInput($_POST['contact-email']);
-        $_SESSION['email'] = $email;
-
-        $telephone = sanatiseInput($_POST['telephone']);
-        $_SESSION['telephone'] = $telephone;
-
-        $message = sanatiseInput($_POST['message']);
-        $_SESSION['message'] = $message;
-        
-        $nameRegex = "/^[a-zA-Z-' ]*$/";
-        $phoneRegex = "/^\+?\(?([0-9]{2,4})[)\s\d.-]+([0-9]{3,4})([\s.-]+([0-9]{3,4}))?$/";
-
-        $isNameValid = validateInput($name, "name", preg_match($nameRegex, $name));
-        $isEmailValid = validateInput($email, "email", filter_var($email, FILTER_VALIDATE_EMAIL));
-        $isPhoneValid = validateInput($telephone, "telephone", preg_match($phoneRegex, $telephone));
-        $isMessageValid = validateInput($message, "message");
-
-        if ($isNameValid && $isEmailValid && $isPhoneValid && $isMessageValid)
-        {
-            postData($name, $email, $company, $telephone, $message);
-
-            unset($_SESSION['contact-name']);
-            unset($_SESSION['contact-email']);
-            unset($_SESSION['company']);
-            unset($_SESSION['telephone']);
-            unset($_SESSION['message']);
-
-            $_SESSION['success'] = true;
-            $_SESSION['errorMessage'] = [];
-
-            $_SESSION['form_sent'] = true;
-
-            //echo 'Data submitted to the Database Successfully';
-            header("Location: contact-us.php#contact-form");
-        
-            exit();
-
-        }
-        else
-        {
-            $_SESSION['form_sent'] = false;
-            header("Location: contact-us.php#contact-form");
-
-            exit();
-        }
-    }

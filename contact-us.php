@@ -155,6 +155,7 @@ include ("includes/validate.php");
                                                    ?>">
                                         <span><?php if($_SESSION['form_sent'] == true) {
                                                 echo 'Your Enquiry has been Submitted';
+                                                $_SESSION['form_sent'] = false;
                                                 } else {
                                                   echo implode("<br><br>",$_SESSION['errorMessage']);
                                                                 $_SESSION['errorMessage'] = [];
@@ -188,7 +189,7 @@ include ("includes/validate.php");
                   </div>
                   <div class="checkbox-wrap-contact">
                       <label class="checkbox" for="checkbox-contact">
-                              <input class="checkbox__input" type="checkbox" name="myCheckboxName" id="checkbox-contact">
+                              <input class="checkbox__input" type="checkbox" name="marketing" id="checkbox-contact" value="1">
                               <span class="checkbox__box"></span>
                       </label>
                         <label for="checkbox-contact" class="pointy">
