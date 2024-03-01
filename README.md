@@ -38,6 +38,7 @@ Follow these steps to set up the project locally and view it:
 4. **Import the Database:**
 
     Import the provided MySQL dump or set up your database structure using the provided schema.
+<<<<<<< HEAD
     I have used XAMPP along with phpmyadmin. 
 
 5. **Start a Local Server:**
