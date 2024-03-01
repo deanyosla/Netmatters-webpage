@@ -2,7 +2,7 @@
 
 function getNews()
 {
-    include("db-conn.php");
+    include "db-conn.php";
 
     try {
         $statement = $conn->query(
