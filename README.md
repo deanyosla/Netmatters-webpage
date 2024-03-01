@@ -1,6 +1,6 @@
 # Netmatters Webpage
 
-[Live Site](https://deanyosla.github.io/Netmatters-webpage/)
+[Live Site HTML/CSS & JavaScript](https://deanyosla.github.io/Netmatters-webpage/)
 
 ## Netmatters PHP Assessment Update
 
@@ -38,10 +38,7 @@ Follow these steps to set up the project locally and view it:
 4. **Import the Database:**
 
     Import the provided MySQL dump or set up your database structure using the provided schema.
-
-    ```bash
-    mysql -u your_database_user -p your_database_name < path/to/schema.sql
-    ```
+    I have used XAMPP along with phpmyadmin. 
 
 5. **Start a Local Server:**
 
@@ -59,12 +56,14 @@ Follow these steps to set up the project locally and view it:
 
 ### Project Structure
 
-- **`index.html`**: Main HTML file.
-- **`css/`**: Directory containing stylesheets.
+- **`index.php`**: Main PHP file.
+- **`contact-us.php`**: Contact page PHP file.
+- **`css/`**: Directory containing compiled stylesheet from Sass.
+- **`scss/`**: Directory containing Sass partials and output Sass stylesheet. 
 - **`js/`**: Directory containing JavaScript files.
 - **`includes/`**: Directory containing PHP files and server-side logic.
 - **`img/`**: Directory containing project images.
-- **`schema.sql`**: MySQL database schema file.
+- **`db-dump.sql`**: MySQL database dump file.
 
 Feel free to explore the project, and if you have any questions or issues, please don't hesitate to reach out.
 
