@@ -38,10 +38,7 @@ Follow these steps to set up the project locally and view it:
 4. **Import the Database:**
 
     Import the provided MySQL dump or set up your database structure using the provided schema.
-
-    ```bash
-    mysql -u your_database_user -p your_database_name < path/to/schema.sql
-    ```
+    I have used XAMPP along with phpmyadmin, however there might be better options. 
 
 5. **Start a Local Server:**
 
