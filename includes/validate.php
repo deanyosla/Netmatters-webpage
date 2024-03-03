@@ -19,18 +19,29 @@ function sanitizeInput($input)
     return $input;
 }
 
-function validateInput($postData, $input, $regex = true)
+function validateInput($postData, $input, $regex = true, $maxLength = null)
 {
-    if (empty($postData) == true) {
+    if (empty($postData) == true)
+    {
         array_push($_SESSION['errorMessage'], "Please enter a value into " . $input . ".");
         return false;
-    } else if ($regex == false) {
+    }
+    else if ($maxLength !== null && strlen($postData) > $maxLength)
+    {
+        array_push($_SESSION['errorMessage'], "The " . $input . " must not exceed " . $maxLength . " characters.");
+        return false;
+    }
+    else if ($regex == false)
+    {
         array_push($_SESSION['errorMessage'], "The " . $input . " format is incorrect.");
         return false;
-    } else {
+    }
+    else
+    {
         return true;
     }
 }
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = sanitizeInput($_POST['contact-name']);
@@ -55,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $isNameValid = validateInput($name, "name", preg_match($nameRegex, $name));
     $isEmailValid = validateInput($email, "email", filter_var($email, FILTER_VALIDATE_EMAIL));
-    $isPhoneValid = validateInput($telephone, "telephone", preg_match($phoneRegex, $telephone));
+    $isPhoneValid = validateInput($telephone, "telephone", preg_match($phoneRegex, $telephone), 20);
     $isMessageValid = validateInput($message, "message");
 
     $formFields = [

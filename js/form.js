@@ -22,11 +22,11 @@ const isEmailValid = (email) => {
 }
 
 const isPhoneValid = (number) => {
-    
-    
-    const  regex = /^\+?\(?([0-9]{2,4})[)\s\d.-]+([0-9]{3,4})([\s.-]+([0-9]{3,4}))?$/
-
-    return regex.test(number);
+    const  regex = /^[\d\s+()-]*$/;
+    // Trim the input value to remove extra spaces
+    const trimmedNumber = number.trim();
+    // Check if the trimmed number matches the regular expression and has a length of at most 20
+    return regex.test(trimmedNumber) && trimmedNumber.length <= 20;
 }
 
 const showError = (input) => {
