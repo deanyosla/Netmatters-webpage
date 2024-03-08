@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="">
-    <?php include ("includes/head.php") ?>
-    <?php include ("includes/close_sidemenu.php") ?>
-    <?php include ("includes/message_btn.php") ?>
-    <?php include ("includes/consent_btn.php"); ?>
-    <?php include ("includes/header.php"); ?>
+   <?php 
+     include ("includes/head.php");
+     include ("includes/close_sidemenu.php");
+     include ("includes/message_btn.php");
+     include ("includes/consent_btn.php");
+     include ("includes/header.php");
+    ?>
     <main>
       <!-- ====================================== Banner images ================================== -->
       <?php include ("includes/banner.php") ?>
