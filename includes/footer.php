@@ -74,7 +74,7 @@
         </div>
         <div class="footer-bottom">
           <div class="license inner-container">
-            <span class="copyright">&copy; Copyright Netmatters 2023.</span>
+            <span class="copyright">&copy; Copyright Netmatters <?php echo date("Y"); ?></span>
             <span class="rights">All rights reserved. </span>
             <span class="hyphen">-</span>
             <a href="index.php" class="sitemap"> Sitemap</a>
