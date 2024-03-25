@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $isNameValid = validateInput($name, "name", preg_match($nameRegex, $name));
     $isEmailValid = validateInput($email, "email", filter_var($email, FILTER_VALIDATE_EMAIL));
     $isPhoneValid = validateInput($telephone, "telephone", preg_match($phoneRegex, $telephone), 20);
-    $isMessageValid = validateInput($message, "message");
+    $isMessageValid = validateInput($message, "message", 500);
 
     $formFields = [
         'contact-name' => $name,
