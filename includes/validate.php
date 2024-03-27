@@ -64,8 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nameRegex = "/^[a-zA-Z-' ]*$/";
     $phoneRegex = "/^\+?\(?([0-9]{2,4})[)\s\d.-]+([0-9]{3,4})([\s.-]+([0-9]{3,4}))?$/";
 
-    $isNameValid = validateInput($name, "name", preg_match($nameRegex, $name));
-    $isEmailValid = validateInput($email, "email", filter_var($email, FILTER_VALIDATE_EMAIL));
+    $isNameValid = validateInput($name, "name", preg_match($nameRegex, $name), 250);
+    $isEmailValid = validateInput($email, "email", filter_var($email, FILTER_VALIDATE_EMAIL), 250);
     $isPhoneValid = validateInput($telephone, "telephone", preg_match($phoneRegex, $telephone), 20);
     $isMessageValid = validateInput($message, "message", 500);
 
